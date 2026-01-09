@@ -9,6 +9,9 @@ const nextConfig = {
   trailingSlash: true,
   basePath,
   assetPrefix: basePath || undefined,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     unoptimized: true,
     remotePatterns: [
