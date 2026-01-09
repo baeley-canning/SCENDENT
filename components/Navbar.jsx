@@ -12,7 +12,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50">
       <div className="hidden md:flex items-center justify-between px-6 md:px-16 lg:px-32 py-2 text-[11px] uppercase tracking-[0.28em] text-ink-700 bg-linen-50/75 border-b border-ink-900/10">
         <span className="flex items-center gap-2">
-          <span className="h-1.5 w-1.5 rounded-full bg-clay-600"></span>
+          <span className="h-1.5 w-1.5 rounded-full bg-sage-500"></span>
           50% of profits fund youth mental health
         </span>
         <Link href="/resources" className="hover:text-ink-900 transition">
@@ -63,7 +63,7 @@ const Navbar = () => {
           >
             Checkout
           </Link>
-          <span className="rounded-full bg-ink-900/10 px-2 py-1 text-[10px] tracking-[0.2em] text-ink-900">
+          <span className="rounded-full bg-sage-500/15 px-2 py-1 text-[10px] tracking-[0.2em] text-sage-300">
             Cart {cartCount}
           </span>
         </div>

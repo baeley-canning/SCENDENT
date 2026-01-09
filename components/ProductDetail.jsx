@@ -190,7 +190,7 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
               </button>
               <button
                 onClick={() => { addToCart(product._id); router.push("/cart"); }}
-                className="w-full py-3.5 bg-ink-900 text-linen-50 hover:bg-sage-700 transition rounded-full"
+                className="w-full py-3.5 bg-sage-500 text-linen-50 hover:bg-sage-600 transition rounded-full"
               >
                 Buy now
               </button>

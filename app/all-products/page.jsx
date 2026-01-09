@@ -47,8 +47,8 @@ const AllProducts = () => {
                 <div className="flex flex-wrap items-center gap-2 mt-8">
                     <button
                         className={`px-4 py-1.5 rounded-full text-sm border transition ${activeCategory === "All"
-                            ? "bg-ink-900 text-linen-50 border-ink-900"
-                            : "border-ink-900/15 text-ink-700 hover:border-ink-900/35 hover:bg-linen-100"
+                            ? "bg-sage-500 text-linen-50 border-sage-500"
+                            : "border-ink-900/15 text-ink-700 hover:border-sage-500/60 hover:text-sage-300 hover:bg-linen-100"
                         }`}
                         onClick={() => setActiveCategory("All")}
                     >
@@ -58,8 +58,8 @@ const AllProducts = () => {
                         <button
                             key={category}
                             className={`px-4 py-1.5 rounded-full text-sm border transition ${activeCategory === category
-                                ? "bg-ink-900 text-linen-50 border-ink-900"
-                                : "border-ink-900/15 text-ink-700 hover:border-ink-900/35 hover:bg-linen-100"
+                                ? "bg-sage-500 text-linen-50 border-sage-500"
+                                : "border-ink-900/15 text-ink-700 hover:border-sage-500/60 hover:text-sage-300 hover:bg-linen-100"
                             }`}
                             onClick={() => setActiveCategory(category)}
                         >

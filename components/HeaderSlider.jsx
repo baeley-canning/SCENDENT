@@ -118,7 +118,7 @@ const HeaderSlider = () => {
               key={index}
               onClick={() => handleSlideChange(index)}
               className={`h-2 w-2 rounded-full cursor-pointer ${
-              currentSlide === index ? "bg-ink-900" : "bg-ink-500/30"
+              currentSlide === index ? "bg-sage-500" : "bg-ink-500/40"
             }`}
               aria-label={`Go to slide ${index + 1}`}
             ></button>

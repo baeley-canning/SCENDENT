@@ -85,7 +85,7 @@ const OrderSummary = () => {
       </div>
 
       {error ? (
-        <p className="text-sm text-clay-600 mt-4">{error}</p>
+        <p className="text-sm text-red-400 mt-4">{error}</p>
       ) : null}
 
       <div className="mt-4 text-xs text-ink-500 space-y-1">
@@ -96,7 +96,7 @@ const OrderSummary = () => {
       <button
         onClick={createOrder}
         disabled={isLoading || cartCount === 0}
-        className="w-full bg-ink-900 text-linen-50 py-3 mt-5 hover:bg-sage-700 disabled:opacity-70 disabled:cursor-not-allowed rounded-full"
+        className="w-full bg-sage-500 text-linen-50 py-3 mt-5 hover:bg-sage-600 disabled:opacity-70 disabled:cursor-not-allowed rounded-full"
       >
         {isLoading ? "Opening Stripe..." : "Checkout with Stripe"}
       </button>

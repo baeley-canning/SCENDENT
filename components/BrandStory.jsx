@@ -48,8 +48,8 @@ const BrandStory = () => {
               alt="Scendent community"
             />
           </div>
-          <div className="absolute left-3 -bottom-6 sm:left-6 rounded-2xl border border-ink-900/10 bg-ink-900 text-linen-50 px-4 py-3 shadow-lg">
-            <p className="text-xs uppercase tracking-[0.2em] text-linen-50/80">
+          <div className="absolute left-3 -bottom-6 sm:left-6 rounded-2xl border border-sage-500/30 bg-linen-100 text-ink-900 px-4 py-3 shadow-lg">
+            <p className="text-xs uppercase tracking-[0.2em] text-sage-300/80">
               Scendent means rise
             </p>
             <p className="text-sm font-semibold">Community is the fuel.</p>

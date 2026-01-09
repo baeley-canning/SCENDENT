@@ -129,7 +129,7 @@ const Cart = () => {
                                 min="0"
                                 value={cartItems[itemId]}
                                 aria-label={`${product.name} quantity`}
-                                className="w-10 border border-ink-900/15 rounded-md text-center appearance-none bg-white/70 text-ink-900"
+                                className="w-10 border border-ink-900/15 rounded-md text-center appearance-none bg-linen-50/70 text-ink-900"
                               />
                               <button onClick={() => addToCart(product._id)}>
                                 <Image

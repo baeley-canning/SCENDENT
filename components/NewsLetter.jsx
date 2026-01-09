@@ -24,7 +24,7 @@ const NewsLetter = () => {
           aria-label="Email address"
           placeholder="Enter your email"
         />
-        <button className="md:px-12 px-8 h-full text-linen-50 bg-ink-900 rounded-full rounded-l-none hover:bg-sage-700 transition">
+        <button className="md:px-12 px-8 h-full text-linen-50 bg-sage-500 rounded-full rounded-l-none hover:bg-sage-600 transition">
           Get updates
         </button>
       </div>
