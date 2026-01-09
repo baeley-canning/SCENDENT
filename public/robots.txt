@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://scendent.co.nz/sitemap.xml

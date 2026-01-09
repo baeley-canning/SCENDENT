@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Cormorant Garamond";
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url("/fonts/cormorant-garamond-variable.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Source Sans 3";
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url("/fonts/source-sans-3-variable.woff2") format("woff2");
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+@layer base {
+    :root {
+        --ink-900: 10 13 18;
+        --ink-700: 39 47 58;
+        --ink-500: 92 103 116;
+        --sage-700: 12 72 88;
+        --sage-600: 18 108 127;
+        --sage-500: 57 149 171;
+        --sage-300: 160 210 222;
+        --clay-600: 216 110 58;
+        --clay-500: 240 148 80;
+        --clay-300: 250 204 150;
+        --linen-50: 249 247 244;
+        --linen-100: 239 234 226;
+        --mist-200: 194 214 232;
+        --blush-200: 234 210 197;
+        --background: var(--linen-50);
+        --foreground: var(--ink-900);
+        --font-display: "Cormorant Garamond", serif;
+        --font-body: "Source Sans 3", sans-serif;
+    }
+
+    body {
+        font-family: var(--font-body);
+        color: rgb(var(--ink-900));
+        background:
+            radial-gradient(1200px 900px at 6% -20%, rgb(var(--sage-300) / 0.4), transparent 60%),
+            radial-gradient(1100px 800px at 100% 0%, rgb(var(--clay-300) / 0.45), transparent 65%),
+            linear-gradient(140deg, rgb(var(--linen-50)) 0%, rgb(var(--linen-100)) 50%, rgb(var(--mist-200) / 0.2) 100%);
+    }
+
+    @media (max-width: 768px) {
+        html {
+            font-size: 18px;
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: var(--font-display);
+        letter-spacing: -0.02em;
+    }
+
+    .font-display {
+        font-family: var(--font-display);
+    }
+
+    .font-body {
+        font-family: var(--font-body);
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply inline-flex items-center justify-center rounded-full bg-sage-700 px-6 py-2.5 text-sm font-semibold text-linen-50 shadow-[0_14px_36px_-20px_rgba(12,42,54,0.75)] transition hover:bg-ink-900;
+    }
+
+    .btn-outline {
+        @apply inline-flex items-center justify-center rounded-full border border-ink-900/15 bg-linen-50/80 px-6 py-2.5 text-sm font-semibold text-ink-900 transition hover:border-ink-900/35 hover:bg-linen-100;
+    }
+
+    .btn-ghost {
+        @apply inline-flex items-center gap-2 text-ink-700 transition hover:text-ink-900;
+    }
+
+    .section-kicker {
+        @apply text-xs uppercase tracking-[0.32em] text-sage-600;
+    }
+
+    .section-title {
+        @apply font-display text-3xl md:text-[44px] leading-tight;
+    }
+
+    .card-surface {
+        @apply rounded-[28px] border border-ink-900/10 bg-linen-50/90 shadow-[0_30px_70px_-55px_rgba(6,10,16,0.65)];
+        background: linear-gradient(140deg, rgb(var(--linen-50)) 0%, rgb(var(--linen-100)) 60%, rgb(var(--mist-200) / 0.24) 100%);
+    }
+
+    .hero-surface {
+        @apply relative overflow-hidden rounded-[36px] border border-ink-900/10 bg-linen-50/95 shadow-[0_34px_90px_-65px_rgba(6,10,16,0.75)];
+        background: linear-gradient(135deg, rgb(var(--linen-50)) 0%, rgb(var(--linen-100)) 45%, rgb(var(--mist-200) / 0.25) 100%);
+    }
+
+    .pill-tag {
+        @apply inline-flex items-center rounded-full border border-ink-900/10 bg-linen-50/85 px-4 py-1 text-[11px] uppercase tracking-[0.3em] text-ink-700;
+    }
+}
+
+@keyframes scendent-rise {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-animate {
+    animation: scendent-rise 0.8s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .section-animate {
+        animation: none;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

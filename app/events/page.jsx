@@ -1,0 +1,74 @@
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+export const metadata = {
+  title: "Scendent Events | Community Workshops + Pop-Ups",
+  description:
+    "Scendent events bring people together to connect, learn, and fund youth mental health support across Aotearoa.",
+};
+
+const events = [
+  {
+    title: "Community workshops",
+    description: "Skill-building sessions on mindset, self-care, and growth.",
+  },
+  {
+    title: "Pop-up merch nights",
+    description: "Local collabs that bring the community together and fund the mission.",
+  },
+  {
+    title: "Festival activations",
+    description: "On-site experiences that spark conversation and connection.",
+  },
+  {
+    title: "Youth meet-ups",
+    description: "Safe spaces for sharing stories, wins, and support.",
+  },
+];
+
+const EventsPage = () => {
+  return (
+    <>
+      <Navbar />
+      <main className="px-6 md:px-16 lg:px-32 py-14">
+        <div className="max-w-3xl">
+          <p className="section-kicker">Events</p>
+          <h1 className="section-title mt-2">Spaces to connect and grow</h1>
+          <p className="mt-3 text-sm md:text-base text-ink-500">
+            Scendent events are designed to create community, celebrate progress, and fund
+            youth mental health initiatives. Each gathering helps build momentum for the
+            mission.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {events.map((event) => (
+            <div key={event.title} className="card-surface p-6">
+              <h2 className="text-lg font-semibold text-ink-900">{event.title}</h2>
+              <p className="mt-2 text-sm text-ink-500">{event.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 card-surface p-6 md:p-8">
+          <h2 className="text-xl font-semibold text-ink-900">Partner with Scendent</h2>
+          <p className="mt-3 text-sm md:text-base text-ink-500">
+            Interested in hosting an event or supporting the mission? We partner with
+            local businesses and venues to create impact-led experiences.
+          </p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <a className="btn-primary inline-flex" href="mailto:hello@scendent.co.nz">
+              Talk to the team
+            </a>
+            <a className="btn-outline inline-flex" href="/#contact">
+              Get event updates
+            </a>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+};
+
+export default EventsPage;

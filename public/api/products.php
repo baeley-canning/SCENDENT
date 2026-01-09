@@ -1,0 +1,42 @@
+<?php
+header('Content-Type: application/json');
+
+require_once __DIR__ . '/../_shared/db.php';
+
+$pdo = db();
+if (!$pdo) {
+    http_response_code(500);
+    echo json_encode(['error' => 'Database not configured.']);
+    exit;
+}
+
+$stmt = $pdo->query('SELECT id, name, description, price, offer_price, category, images, image_alt, seo_title, seo_description FROM products WHERE is_active = 1 ORDER BY created_at DESC');
+$products = [];
+while ($row = $stmt->fetch()) {
+    $images = [];
+    if (!empty($row['images'])) {
+        $decoded = json_decode($row['images'], true);
+        if (is_array($decoded)) {
+            $images = $decoded;
+        }
+    }
+
+    if (!$images) {
+        $images = ['/images/scendent_product_tee.svg'];
+    }
+
+    $products[] = [
+        '_id' => $row['id'],
+        'name' => $row['name'],
+        'description' => $row['description'],
+        'price' => (float)$row['price'],
+        'offerPrice' => (float)$row['offer_price'],
+        'category' => $row['category'],
+        'image' => $images,
+        'imageAlt' => $row['image_alt'] ?? '',
+        'seoTitle' => $row['seo_title'] ?? '',
+        'seoDescription' => $row['seo_description'] ?? '',
+    ];
+}
+
+echo json_encode($products);

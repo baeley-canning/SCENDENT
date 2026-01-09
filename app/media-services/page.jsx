@@ -1,0 +1,111 @@
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+export const metadata = {
+  title: "Scendent Media | Purpose-Led Content + Strategy",
+  description:
+    "Content creation, social strategy, and TikTok training for purpose-led brands. Half of profits fund youth mental health support in New Zealand.",
+};
+
+const services = [
+  {
+    title: "Full content creation",
+    description:
+      "End-to-end production for social, web, and campaigns. Strategy, shoot day, edit, and delivery.",
+  },
+  {
+    title: "Social media management",
+    description:
+      "Content calendars, posting, community engagement, and performance reporting.",
+  },
+  {
+    title: "TikTok training",
+    description:
+      "A structured program designed to grow followers and improve retention with repeatable systems.",
+  },
+  {
+    title: "Strategy + brand positioning",
+    description:
+      "Clarity on messaging, offers, and content pillars to drive conversions.",
+  },
+  {
+    title: "Consultations",
+    description:
+      "One-off sessions to review your channels, identify gaps, and map next steps.",
+  },
+];
+
+const MediaServicesPage = () => {
+  return (
+    <>
+      <Navbar />
+      <main className="px-6 md:px-16 lg:px-32 py-14">
+        <div className="max-w-3xl">
+          <p className="section-kicker">Scendent Media</p>
+          <h1 className="section-title mt-2">Purpose-led media that converts</h1>
+          <p className="mt-3 text-sm md:text-base text-ink-500">
+            Scendent Media is the creative arm of Scendent. We build content, strategy,
+            and social systems for brands that want to grow with purpose. Half of profits
+            fund youth mental health support in Aotearoa.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {services.map((service) => (
+            <div key={service.title} className="card-surface p-6">
+              <h2 className="text-lg font-semibold text-ink-900">{service.title}</h2>
+              <p className="mt-2 text-sm text-ink-500">{service.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 card-surface p-6 md:p-8">
+          <h2 className="text-xl font-semibold text-ink-900">Impact built in</h2>
+          <p className="mt-3 text-sm md:text-base text-ink-500">
+            Every Scendent Media project funds the wider mission. Your campaigns help
+            expand resources, partnerships, and support for young people.
+          </p>
+          <div className="mt-4 grid gap-3 text-sm text-ink-700 md:grid-cols-3">
+            <div className="rounded-2xl border border-ink-900/10 bg-linen-50/80 p-4">
+              Half of profits support mental health
+            </div>
+            <div className="rounded-2xl border border-ink-900/10 bg-linen-50/80 p-4">
+              Community-first storytelling
+            </div>
+            <div className="rounded-2xl border border-ink-900/10 bg-linen-50/80 p-4">
+              Strategy that serves people
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 card-surface p-6 md:p-8">
+          <h2 className="text-xl font-semibold text-ink-900">Why Scendent Media</h2>
+          <p className="mt-3 text-sm md:text-base text-ink-500">
+            We build content that reflects the deeper values of your business while still
+            driving leads and sales. Our team handles strategy through to delivery so you
+            can focus on the bigger picture.
+          </p>
+          <ul className="mt-4 grid gap-3 text-sm text-ink-700 md:grid-cols-3">
+            <li className="rounded-2xl border border-linen-100/70 bg-linen-50/80 p-4">Clear content direction</li>
+            <li className="rounded-2xl border border-linen-100/70 bg-linen-50/80 p-4">Systems for consistent output</li>
+            <li className="rounded-2xl border border-linen-100/70 bg-linen-50/80 p-4">Impact-led storytelling</li>
+          </ul>
+        </div>
+
+        <div className="mt-12 card-surface p-6 md:p-8">
+          <h2 className="text-xl font-semibold text-ink-900">Book a consult</h2>
+          <p className="mt-3 text-sm md:text-base text-ink-500">
+            Tell us about your brand, goals, and upcoming campaigns. We will respond with
+            a tailored plan and timeline.
+          </p>
+          <a className="btn-primary mt-5 inline-flex" href="mailto:hello@scendent.co.nz">
+            Email Scendent Media
+          </a>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+};
+
+export default MediaServicesPage;
