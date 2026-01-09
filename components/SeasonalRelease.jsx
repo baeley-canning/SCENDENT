@@ -18,14 +18,14 @@ const SeasonalRelease = () => {
               From workshops to festivals, Scendent events bring people together and
               fund mental health support for young adults.
             </p>
-            <div className="flex flex-wrap gap-3 text-sm text-ink-700">
-              <span className="rounded-full border border-ink-900/10 bg-linen-50/90 px-4 py-1.5">
+            <div className="flex flex-wrap gap-3 text-sm text-sage-300">
+              <span className="rounded-full border border-sage-500/30 bg-linen-100/90 px-4 py-1.5">
                 Purpose-led gatherings
               </span>
-              <span className="rounded-full border border-ink-900/10 bg-linen-50/90 px-4 py-1.5">
+              <span className="rounded-full border border-sage-500/30 bg-linen-100/90 px-4 py-1.5">
                 Local collabs and pop-ups
               </span>
-              <span className="rounded-full border border-ink-900/10 bg-linen-50/90 px-4 py-1.5">
+              <span className="rounded-full border border-sage-500/30 bg-linen-100/90 px-4 py-1.5">
                 All profits fuel the mission
               </span>
             </div>

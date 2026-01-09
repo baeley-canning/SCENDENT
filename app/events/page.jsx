@@ -43,7 +43,7 @@ const EventsPage = () => {
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {events.map((event) => (
-            <div key={event.title} className="card-surface p-6">
+            <div key={event.title} className="card-surface p-6 transition hover:-translate-y-1 hover:border-sage-500/50">
               <h2 className="text-lg font-semibold text-ink-900">{event.title}</h2>
               <p className="mt-2 text-sm text-ink-500">{event.description}</p>
             </div>

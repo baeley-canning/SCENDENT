@@ -82,11 +82,11 @@ const HeaderSlider = () => {
               <p className="mt-3 max-w-lg text-sm md:text-base text-ink-700">
                 {slide.description}
               </p>
-              <div className="mt-4 flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.24em] text-ink-700">
+              <div className="mt-4 flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.24em] text-sage-300">
                 {slide.highlights.map((highlight) => (
                   <span
                     key={highlight}
-                    className="rounded-full border border-ink-900/10 bg-linen-50/80 px-3 py-1"
+                    className="rounded-full border border-sage-500/30 bg-linen-100/80 px-3 py-1"
                   >
                     {highlight}
                   </span>
@@ -105,7 +105,7 @@ const HeaderSlider = () => {
               <Image
                 className="md:w-80 w-56 drop-shadow-[0_24px_60px_rgba(11,14,18,0.28)]"
                 src={slide.imgSrc}
-                alt={`Slide ${index + 1}`}
+                alt={slide.title}
               />
             </div>
           </div>

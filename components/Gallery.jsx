@@ -26,14 +26,14 @@ const Gallery = () => {
         {galleryImages.map((image) => (
           <div
             key={image.label}
-            className="group rounded-[24px] overflow-hidden border border-ink-900/10 bg-linen-50/90 shadow-[0_16px_40px_-30px_rgba(11,14,18,0.45)]"
+            className="group rounded-[24px] overflow-hidden border border-sage-500/20 bg-linen-100/90 shadow-[0_18px_45px_-32px_rgba(0,0,0,0.7)] transition hover:shadow-[0_18px_55px_-28px_rgba(57,255,20,0.2)]"
           >
             <Image
               className="w-full h-auto object-cover group-hover:scale-[1.02] transition"
               src={image.src}
               alt={image.label}
             />
-            <div className="px-4 py-3 text-xs uppercase tracking-[0.2em] text-ink-700">
+            <div className="px-4 py-3 text-xs uppercase tracking-[0.2em] text-sage-300">
               {image.label}
             </div>
           </div>

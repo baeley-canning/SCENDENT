@@ -18,7 +18,7 @@ const OrderPlacedClient = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-6">
       <div className="card-surface max-w-lg w-full text-center px-8 py-10">
-        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-ink-900/10 bg-linen-50/90">
+        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-sage-500/30 bg-linen-100/90">
           <Image className="w-10 h-10" src={assets.checkmark} alt="Order confirmed" />
         </div>
         <h1 className="text-2xl md:text-3xl font-semibold mt-6">Order confirmed</h1>
@@ -31,7 +31,7 @@ const OrderPlacedClient = () => {
           .
         </p>
         {orderRef ? (
-          <div className="mt-6 rounded-[22px] border border-ink-900/10 bg-linen-50/90 px-4 py-3 text-sm text-ink-700">
+          <div className="mt-6 rounded-[22px] border border-sage-500/20 bg-linen-100/90 px-4 py-3 text-sm text-ink-700">
             <p className="text-xs uppercase tracking-[0.2em] text-ink-500">Order reference</p>
             <p className="mt-2 font-semibold text-ink-900">{orderRef}</p>
             <p className="text-xs text-ink-500 mt-2">

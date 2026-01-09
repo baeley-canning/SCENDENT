@@ -68,7 +68,7 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
       <>
         <Navbar />
         <div className="px-6 md:px-16 lg:px-32 pt-16">
-          <div className="rounded-[24px] border border-ink-900/10 bg-linen-50/90 p-10 text-center">
+          <div className="card-surface p-10 text-center">
             <p className="text-ink-900 text-lg font-medium">Product not found.</p>
             <p className="text-sm text-ink-700 mt-2">
               Try browsing the merch drop to find something similar.
@@ -92,7 +92,7 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
       <div className="px-6 md:px-16 lg:px-32 pt-14 space-y-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="px-5 lg:px-16 xl:px-20">
-            <div className="rounded-2xl overflow-hidden bg-linen-50/90 border border-ink-900/10 mb-4">
+            <div className="rounded-2xl overflow-hidden bg-linen-100/90 border border-sage-500/20 mb-4">
               <Image
                 src={mainImage || product.image[0]}
                 alt={imageAlt}
@@ -107,7 +107,7 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
                 <div
                   key={index}
                   onClick={() => setMainImage(image)}
-                  className="cursor-pointer rounded-xl overflow-hidden bg-linen-50/90 border border-ink-900/10"
+                  className="cursor-pointer rounded-xl overflow-hidden bg-linen-100/90 border border-sage-500/20"
                 >
                   <Image
                     src={image}
@@ -166,15 +166,15 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
 
             {detail ? (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 text-sm text-ink-700">
-                <div className="rounded-2xl border border-ink-900/10 bg-linen-50/90 p-4">
+                <div className="rounded-2xl border border-sage-500/20 bg-linen-100/90 p-4">
                   <p className="text-ink-900 font-medium">Fabric</p>
                   <p className="mt-1">{detail.fabric}</p>
                 </div>
-                <div className="rounded-2xl border border-ink-900/10 bg-linen-50/90 p-4">
+                <div className="rounded-2xl border border-sage-500/20 bg-linen-100/90 p-4">
                   <p className="text-ink-900 font-medium">Care</p>
                   <p className="mt-1">{detail.care}</p>
                 </div>
-                <div className="rounded-2xl border border-ink-900/10 bg-linen-50/90 p-4">
+                <div className="rounded-2xl border border-sage-500/20 bg-linen-100/90 p-4">
                   <p className="text-ink-900 font-medium">Fit</p>
                   <p className="mt-1">{detail.fit}</p>
                 </div>

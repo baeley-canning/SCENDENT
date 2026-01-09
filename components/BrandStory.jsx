@@ -25,13 +25,13 @@ const BrandStory = () => {
             trusted partners, and accessible resources across Aotearoa.
           </p>
           <div className="grid sm:grid-cols-3 gap-3 text-xs md:text-sm text-ink-700">
-            <div className="rounded-2xl border border-ink-900/10 bg-linen-50/90 p-4">
+            <div className="rounded-2xl border border-sage-500/25 bg-linen-100/90 p-4">
               50% of profits reinvested into the mission
             </div>
-            <div className="rounded-2xl border border-ink-900/10 bg-linen-50/90 p-4">
+            <div className="rounded-2xl border border-sage-500/25 bg-linen-100/90 p-4">
               Community events and youth-led initiatives
             </div>
-            <div className="rounded-2xl border border-ink-900/10 bg-linen-50/90 p-4">
+            <div className="rounded-2xl border border-sage-500/25 bg-linen-100/90 p-4">
               Purpose-driven media services for brands
             </div>
           </div>
@@ -41,7 +41,7 @@ const BrandStory = () => {
         </div>
 
         <div className="relative">
-          <div className="rounded-3xl overflow-hidden border border-ink-900/10 bg-linen-50/90">
+          <div className="rounded-3xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
             <Image
               className="w-full h-auto object-cover"
               src={assets.scendent_hero_mission}

@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="hidden md:flex items-center justify-between px-6 md:px-16 lg:px-32 py-2 text-[11px] uppercase tracking-[0.28em] text-ink-700 bg-linen-50/75 border-b border-ink-900/10">
+      <div className="hidden md:flex items-center justify-between px-6 md:px-16 lg:px-32 py-2 text-[11px] uppercase tracking-[0.28em] text-ink-700 bg-linen-50/75 border-b border-sage-500/20">
         <span className="flex items-center gap-2">
           <span className="h-1.5 w-1.5 rounded-full bg-sage-500"></span>
           50% of profits fund youth mental health
@@ -19,7 +19,7 @@ const Navbar = () => {
           Need support? 1737
         </Link>
       </div>
-      <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-4 border-b border-ink-900/10 text-ink-700 bg-linen-50/85 backdrop-blur">
+      <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-4 border-b border-sage-500/20 text-ink-700 bg-linen-50/85 backdrop-blur">
         <button
           className="flex flex-col leading-tight text-left"
           onClick={() => router.push("/")}

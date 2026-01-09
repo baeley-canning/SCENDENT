@@ -19,7 +19,7 @@ const NewsLetter = () => {
       </p>
       <div className="flex items-center justify-between max-w-2xl w-full md:h-14 h-12">
         <input
-          className="border border-ink-900/15 rounded-full h-full border-r-0 outline-none w-full rounded-r-none px-4 text-ink-700 bg-linen-50/90"
+          className="border border-sage-500/30 rounded-full h-full border-r-0 outline-none w-full rounded-r-none px-4 text-ink-700 bg-linen-100/90"
           type="email"
           aria-label="Email address"
           placeholder="Enter your email"

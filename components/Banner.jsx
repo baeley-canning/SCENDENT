@@ -15,14 +15,14 @@ const Banner = () => {
           Content creation, strategy, and social management for brands that want to
           grow with impact. Half of profits fund youth mental health support.
         </p>
-        <div className="flex flex-wrap gap-2 text-xs uppercase tracking-[0.24em] text-ink-700">
-          <span className="rounded-full border border-ink-900/10 bg-linen-50/80 px-3 py-1">
+        <div className="flex flex-wrap gap-2 text-xs uppercase tracking-[0.24em] text-sage-300">
+          <span className="rounded-full border border-sage-500/30 bg-linen-100/80 px-3 py-1">
             Strategy + production
           </span>
-          <span className="rounded-full border border-ink-900/10 bg-linen-50/80 px-3 py-1">
+          <span className="rounded-full border border-sage-500/30 bg-linen-100/80 px-3 py-1">
             Social systems
           </span>
-          <span className="rounded-full border border-ink-900/10 bg-linen-50/80 px-3 py-1">
+          <span className="rounded-full border border-sage-500/30 bg-linen-100/80 px-3 py-1">
             Impact-led pricing
           </span>
         </div>

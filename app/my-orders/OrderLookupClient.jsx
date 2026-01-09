@@ -6,12 +6,12 @@ import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 const statusStyles = {
-  paid: "border-sage-600/20 bg-sage-600/10 text-sage-700",
-  pending: "border-ink-900/10 bg-linen-50/90 text-ink-700",
-  failed: "border-rose-200 bg-rose-50 text-rose-700",
-  refunded: "border-amber-200 bg-amber-50 text-amber-700",
-  refunding: "border-amber-200 bg-amber-50 text-amber-700",
-  expired: "border-ink-900/10 bg-linen-100 text-ink-700",
+  paid: "border-sage-500/40 bg-sage-500/15 text-sage-300",
+  pending: "border-sage-500/25 bg-linen-100/80 text-ink-700",
+  failed: "border-rose-500/30 bg-rose-500/15 text-rose-300",
+  refunded: "border-amber-500/30 bg-amber-500/15 text-amber-300",
+  refunding: "border-amber-500/30 bg-amber-500/15 text-amber-300",
+  expired: "border-ink-900/20 bg-linen-100 text-ink-500",
 };
 
 const formatMoney = (amount, currency) => {
@@ -97,7 +97,7 @@ const OrderLookupClient = () => {
                 value={orderRef}
                 onChange={(event) => setOrderRef(event.target.value)}
                 placeholder="SC12AB34"
-                className="mt-2 w-full rounded-full border border-ink-900/15 bg-linen-50/90 px-4 py-3 text-sm text-ink-700"
+                className="mt-2 w-full rounded-full border border-sage-500/30 bg-linen-100/90 px-4 py-3 text-sm text-ink-700"
                 required
               />
             </div>
@@ -108,7 +108,7 @@ const OrderLookupClient = () => {
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
                 placeholder="you@example.com"
-                className="mt-2 w-full rounded-full border border-ink-900/15 bg-linen-50/90 px-4 py-3 text-sm text-ink-700"
+                className="mt-2 w-full rounded-full border border-sage-500/30 bg-linen-100/90 px-4 py-3 text-sm text-ink-700"
                 required
               />
             </div>
@@ -149,7 +149,7 @@ const OrderLookupClient = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
-                <div className="rounded-2xl border border-ink-900/10 bg-linen-50/90 p-4">
+                <div className="rounded-2xl border border-sage-500/20 bg-linen-100/90 p-4">
                   <p className="text-ink-900 font-medium">Total</p>
                   <p className="mt-2 text-ink-700">{formatMoney(result.amountTotal, result.currency)}</p>
                   {result.amountRefunded ? (
@@ -158,14 +158,14 @@ const OrderLookupClient = () => {
                     </p>
                   ) : null}
                 </div>
-                <div className="rounded-2xl border border-ink-900/10 bg-linen-50/90 p-4">
+                <div className="rounded-2xl border border-sage-500/20 bg-linen-100/90 p-4">
                   <p className="text-ink-900 font-medium">Payment</p>
                   <p className="mt-2 text-ink-700">{result.paymentStatus || "Pending"}</p>
                   {result.refundStatus ? (
                     <p className="text-xs text-ink-500 mt-2">Refund: {result.refundStatus}</p>
                   ) : null}
                 </div>
-                <div className="rounded-2xl border border-ink-900/10 bg-linen-50/90 p-4">
+                <div className="rounded-2xl border border-sage-500/20 bg-linen-100/90 p-4">
                   <p className="text-ink-900 font-medium">Fulfillment</p>
                   <p className="mt-2 text-ink-700">{result.fulfillmentStatus || "Pending"}</p>
                   {result.trackingUrl ? (
@@ -181,7 +181,7 @@ const OrderLookupClient = () => {
                     <p className="text-xs text-ink-500 mt-2">Tracking appears after dispatch.</p>
                   )}
                 </div>
-                <div className="rounded-2xl border border-ink-900/10 bg-linen-50/90 p-4">
+                <div className="rounded-2xl border border-sage-500/20 bg-linen-100/90 p-4">
                   <p className="text-ink-900 font-medium">Shipping</p>
                   <p className="mt-2 text-ink-700 whitespace-pre-line">
                     {result.shippingAddress || "Not yet available."}
@@ -203,7 +203,7 @@ const OrderLookupClient = () => {
             </div>
           ) : null}
 
-          <div className="rounded-2xl border border-ink-900/10 bg-linen-50/90 p-5 text-sm text-ink-700">
+          <div className="rounded-2xl border border-sage-500/20 bg-linen-100/90 p-5 text-sm text-ink-700">
             <p className="text-ink-900 font-medium">Need help?</p>
             <p className="mt-2">
               Email{" "}

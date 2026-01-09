@@ -18,7 +18,7 @@ const ProductCard = ({ product }) => {
             href={productLink}
             className="group flex flex-col items-start gap-0.5 max-w-[230px] w-full cursor-pointer"
         >
-            <div className="relative bg-linen-50/90 border border-ink-900/10 rounded-[26px] w-full h-52 flex items-center justify-center shadow-[0_14px_40px_-28px_rgba(11,14,18,0.5)] transition group-hover:-translate-y-0.5">
+            <div className="relative bg-linen-100/90 border border-sage-500/20 rounded-[26px] w-full h-52 flex items-center justify-center shadow-[0_18px_50px_-32px_rgba(0,0,0,0.7)] transition group-hover:-translate-y-0.5 group-hover:border-sage-500/50 group-hover:shadow-[0_22px_60px_-28px_rgba(57,255,20,0.25)]">
                 <Image
                     src={product.image[0]}
                     alt={imageAlt}
@@ -26,7 +26,7 @@ const ProductCard = ({ product }) => {
                     width={800}
                     height={800}
                 />
-                <button className="absolute top-3 right-3 bg-linen-50/90 p-2 rounded-full shadow-md border border-ink-900/10">
+                <button className="absolute top-3 right-3 bg-linen-100/90 p-2 rounded-full shadow-md border border-sage-500/25">
                     <Image
                         className="h-3 w-3"
                         src={assets.heart_icon}
@@ -65,7 +65,7 @@ const ProductCard = ({ product }) => {
                             addToCart(productId);
                         }
                     }}
-                    className="max-sm:hidden px-4 py-1.5 text-ink-700 border border-ink-900/15 rounded-full text-xs hover:border-ink-900/35 hover:bg-linen-100 transition"
+                    className="max-sm:hidden px-4 py-1.5 text-sage-300 border border-sage-500/40 rounded-full text-xs hover:border-sage-500 hover:bg-sage-500/10 transition"
                 >
                     Add to cart
                 </button>

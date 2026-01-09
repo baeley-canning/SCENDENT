@@ -54,7 +54,7 @@ const OrderSummary = () => {
   };
 
   return (
-    <div className="w-full md:w-96 bg-linen-50/90 border border-ink-900/10 p-6 rounded-[24px] shadow-[0_24px_60px_-45px_rgba(11,14,18,0.5)]">
+    <div className="w-full md:w-96 card-surface p-6">
       <h2 className="text-xl md:text-2xl font-medium text-ink-900">
         Order Summary
       </h2>

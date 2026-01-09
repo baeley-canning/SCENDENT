@@ -52,7 +52,7 @@ const MediaServicesPage = () => {
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {services.map((service) => (
-            <div key={service.title} className="card-surface p-6">
+            <div key={service.title} className="card-surface p-6 transition hover:-translate-y-1 hover:border-sage-500/50">
               <h2 className="text-lg font-semibold text-ink-900">{service.title}</h2>
               <p className="mt-2 text-sm text-ink-500">{service.description}</p>
             </div>
@@ -66,13 +66,13 @@ const MediaServicesPage = () => {
             expand resources, partnerships, and support for young people.
           </p>
           <div className="mt-4 grid gap-3 text-sm text-ink-700 md:grid-cols-3">
-            <div className="rounded-2xl border border-ink-900/10 bg-linen-50/80 p-4">
+            <div className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">
               Half of profits support mental health
             </div>
-            <div className="rounded-2xl border border-ink-900/10 bg-linen-50/80 p-4">
+            <div className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">
               Community-first storytelling
             </div>
-            <div className="rounded-2xl border border-ink-900/10 bg-linen-50/80 p-4">
+            <div className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">
               Strategy that serves people
             </div>
           </div>
@@ -86,9 +86,9 @@ const MediaServicesPage = () => {
             can focus on the bigger picture.
           </p>
           <ul className="mt-4 grid gap-3 text-sm text-ink-700 md:grid-cols-3">
-            <li className="rounded-2xl border border-linen-100/70 bg-linen-50/80 p-4">Clear content direction</li>
-            <li className="rounded-2xl border border-linen-100/70 bg-linen-50/80 p-4">Systems for consistent output</li>
-            <li className="rounded-2xl border border-linen-100/70 bg-linen-50/80 p-4">Impact-led storytelling</li>
+            <li className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">Clear content direction</li>
+            <li className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">Systems for consistent output</li>
+            <li className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">Impact-led storytelling</li>
           </ul>
         </div>
 

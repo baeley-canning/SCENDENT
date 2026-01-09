@@ -74,14 +74,14 @@ const ResourcesPage = () => {
           {resources.map((resource) => (
             <a
               key={resource.name}
-              className="card-surface p-5 transition hover:-translate-y-1"
+              className="card-surface p-5 transition hover:-translate-y-1 hover:border-sage-500/50"
               href={resource.link}
               target="_blank"
               rel="noopener"
             >
               <h2 className="text-base font-semibold text-ink-900">{resource.name}</h2>
               <p className="mt-2 text-sm text-ink-500">{resource.description}</p>
-              <span className="mt-3 inline-flex text-xs uppercase tracking-[0.2em] text-sage-700">
+              <span className="mt-3 inline-flex text-xs uppercase tracking-[0.2em] text-sage-300">
                 Visit resource
               </span>
             </a>
