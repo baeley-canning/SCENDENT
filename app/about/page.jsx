@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
 export const metadata = {
   title: "About Scendent | Youth Mental Health Social Enterprise",
@@ -8,6 +9,9 @@ export const metadata = {
 };
 
 const AboutPage = () => {
+  const communityPhoto =
+    "https://scendent.co.nz/cdn/shop/files/IMG_4034.jpg?v=1661904070&width=1200";
+
   return (
     <>
       <Navbar />
@@ -19,6 +23,29 @@ const AboutPage = () => {
             Scendent is a youth mental health brand and social enterprise created to
             build a lasting, sustainable change in how mental health is supported.
           </p>
+        </div>
+
+        <div className="mt-10 card-surface overflow-hidden">
+          <div className="grid md:grid-cols-[1.1fr_0.9fr] gap-6 items-center">
+            <Image
+              src={communityPhoto}
+              alt="Scendent charity community event"
+              width={1200}
+              height={800}
+              className="h-full w-full object-cover"
+              sizes="(max-width: 768px) 100vw, 560px"
+            />
+            <div className="px-6 py-8">
+              <p className="section-kicker">Community first</p>
+              <h2 className="text-2xl font-semibold text-ink-900 mt-3">
+                Real moments, real impact.
+              </h2>
+              <p className="mt-3 text-sm md:text-base text-ink-500">
+                Scendent exists to fund youth mental health support and build spaces
+                where people feel seen. Every drop fuels community-led change.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="mt-10 space-y-10 max-w-3xl text-sm md:text-base text-ink-500">

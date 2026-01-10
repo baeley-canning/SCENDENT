@@ -17,6 +17,11 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "scendent.co.nz",
+        pathname: "/cdn/shop/**",
+      },
+      {
+        protocol: "https",
         hostname: "res.cloudinary.com",
         pathname: "**",
       },

@@ -2,13 +2,16 @@ import React from "react";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 
+const communityPhoto =
+  "https://scendent.co.nz/cdn/shop/files/IMG_4034.jpg?v=1661904070&width=1200";
+
 const galleryImages = [
+  { src: communityPhoto, label: "Charity in action" },
   { src: assets.scendent_product_tee, label: "Tees" },
   { src: assets.scendent_product_hoodie, label: "Hoodies" },
   { src: assets.scendent_product_cap, label: "Caps" },
   { src: assets.scendent_product_sticker, label: "Sticker packs" },
   { src: assets.scendent_hero_events, label: "Community events" },
-  { src: assets.scendent_hero_media, label: "Media shoots" },
 ];
 
 const Gallery = () => {
@@ -32,6 +35,9 @@ const Gallery = () => {
               className="w-full h-auto object-cover group-hover:scale-[1.02] transition"
               src={image.src}
               alt={image.label}
+              width={600}
+              height={600}
+              sizes="(max-width: 768px) 50vw, 33vw"
             />
             <div className="px-4 py-3 text-xs uppercase tracking-[0.2em] text-sage-300">
               {image.label}

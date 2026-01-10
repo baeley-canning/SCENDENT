@@ -1,9 +1,11 @@
 import React from "react";
-import { assets } from "@/assets/assets";
 import Image from "next/image";
 import Link from "next/link";
 
 const BrandStory = () => {
+  const communityPhoto =
+    "https://scendent.co.nz/cdn/shop/files/IMG_4034.jpg?v=1661904070&width=1200";
+
   return (
     <section className="relative mt-16 md:mt-20 section-animate" id="mission">
       <div className="absolute -left-16 top-10 h-44 w-44 rounded-full bg-mist-200/60 blur-3xl"></div>
@@ -11,14 +13,15 @@ const BrandStory = () => {
 
       <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center card-surface px-6 md:px-12 py-12">
         <div className="space-y-5">
-          <span className="pill-tag">Our mission</span>
+          <span className="pill-tag">Charity trust</span>
           <h2 className="section-title">
             A youth mental health brand built for real change.
           </h2>
           <p className="text-sm md:text-base text-ink-700">
-            Scendent is a social enterprise built to back young people with the support
-            they deserve. Merch drops, media services, and events work together to fund
-            care, spark conversation, and grow resilience.
+            Scendent is a youth mental health charity and social enterprise built to
+            back young people with the support they deserve. Merch drops, media
+            services, and events work together to fund care, spark conversation, and
+            grow resilience.
           </p>
           <p className="text-sm md:text-base text-ink-700">
             Every purchase and project reinvests profits into youth-led initiatives,
@@ -44,8 +47,11 @@ const BrandStory = () => {
           <div className="rounded-3xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
             <Image
               className="w-full h-auto object-cover"
-              src={assets.scendent_hero_mission}
-              alt="Scendent community"
+              src={communityPhoto}
+              alt="Scendent community gathering"
+              width={1200}
+              height={800}
+              sizes="(max-width: 768px) 100vw, 520px"
             />
           </div>
           <div className="absolute left-3 -bottom-6 sm:left-6 rounded-2xl border border-sage-500/30 bg-linen-100 text-ink-900 px-4 py-3 shadow-lg">
