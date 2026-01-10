@@ -1,7 +1,7 @@
 import React from "react";
-import { assets } from "@/assets/assets";
 import Image from "next/image";
 import Link from "next/link";
+import { scendentImages, withImageWidth } from "@/lib/scendentImages";
 
 const Banner = () => {
   return (
@@ -36,16 +36,24 @@ const Banner = () => {
         </div>
       </div>
       <div className="relative flex items-center gap-4 px-6 pb-10 md:pb-0">
-        <Image
-          className="w-44 md:w-52 drop-shadow-[0_20px_50px_rgba(11,14,18,0.25)]"
-          src={assets.scendent_hero_media}
-          alt="Scendent Media"
-        />
-        <Image
-          className="w-44 md:w-52 drop-shadow-[0_20px_50px_rgba(11,14,18,0.25)]"
-          src={assets.scendent_product_hoodie}
-          alt="Scendent merch"
-        />
+        <div className="relative w-44 md:w-52 aspect-[3/4] drop-shadow-[0_20px_50px_rgba(11,14,18,0.25)]">
+          <Image
+            src={withImageWidth(scendentImages.support, 900)}
+            alt="Support Scendent mission"
+            fill
+            sizes="(max-width: 768px) 45vw, 220px"
+            className="object-cover rounded-2xl"
+          />
+        </div>
+        <div className="relative w-44 md:w-52 aspect-[3/4] drop-shadow-[0_20px_50px_rgba(11,14,18,0.25)]">
+          <Image
+            src={withImageWidth(scendentImages.mugFront, 900)}
+            alt="Scendent merch mug"
+            fill
+            sizes="(max-width: 768px) 45vw, 220px"
+            className="object-cover rounded-2xl"
+          />
+        </div>
       </div>
     </div>
   );

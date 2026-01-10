@@ -1,5 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Image from "next/image";
+import { scendentImages, withImageWidth } from "@/lib/scendentImages";
 
 export const metadata = {
   title: "Scendent Events | Community Workshops + Pop-Ups",
@@ -39,6 +41,47 @@ const EventsPage = () => {
             youth mental health initiatives. Each gathering helps build momentum for the
             mission.
           </p>
+        </div>
+
+        <div className="mt-10 card-surface p-6 md:p-8 grid gap-6 md:grid-cols-[1.1fr_0.9fr] items-center">
+          <div>
+            <h2 className="text-xl font-semibold text-ink-900">Designed for real connection</h2>
+            <p className="mt-3 text-sm md:text-base text-ink-500">
+              From pop-ups to workshops, every event creates a space for honest
+              conversations and tangible support. We partner with local venues to keep
+              the focus on community and impact.
+            </p>
+            <div className="mt-4 grid gap-3 text-sm text-ink-700 md:grid-cols-2">
+              <div className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">
+                Youth-led programming
+              </div>
+              <div className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">
+                Safe, welcoming spaces
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
+              <Image
+                src={withImageWidth(scendentImages.community, 900)}
+                alt="Scendent community event"
+                width={600}
+                height={600}
+                className="h-full w-full object-cover"
+                sizes="(max-width: 768px) 50vw, 220px"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
+              <Image
+                src={withImageWidth(scendentImages.support, 900)}
+                alt="Support the Scendent mission"
+                width={600}
+                height={600}
+                className="h-full w-full object-cover"
+                sizes="(max-width: 768px) 50vw, 220px"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">

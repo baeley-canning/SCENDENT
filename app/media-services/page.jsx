@@ -1,5 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Image from "next/image";
+import { scendentImages, withImageWidth } from "@/lib/scendentImages";
 
 export const metadata = {
   title: "Scendent Media | Purpose-Led Content + Strategy",
@@ -48,6 +50,57 @@ const MediaServicesPage = () => {
             and social systems for brands that want to grow with purpose. Half of profits
             fund youth mental health support in Aotearoa.
           </p>
+        </div>
+
+        <div className="mt-10 card-surface p-6 md:p-8 grid gap-6 md:grid-cols-[1.1fr_0.9fr] items-center">
+          <div>
+            <h2 className="text-xl font-semibold text-ink-900">Creative with impact built in</h2>
+            <p className="mt-3 text-sm md:text-base text-ink-500">
+              We blend strategy, production, and social systems so your content performs
+              and your spend fuels community support. Every project powers the Scendent
+              mission.
+            </p>
+            <div className="mt-4 grid gap-3 text-sm text-ink-700 md:grid-cols-2">
+              <div className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">
+                Strategy-led production
+              </div>
+              <div className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">
+                Impact reporting included
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
+              <Image
+                src={withImageWidth(scendentImages.tshirtLifestyle, 900)}
+                alt="Scendent merch shoot"
+                width={600}
+                height={600}
+                className="h-full w-full object-cover"
+                sizes="(max-width: 768px) 50vw, 220px"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
+              <Image
+                src={withImageWidth(scendentImages.mugAngle, 900)}
+                alt="Product content capture"
+                width={600}
+                height={600}
+                className="h-full w-full object-cover"
+                sizes="(max-width: 768px) 50vw, 220px"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90 col-span-2">
+              <Image
+                src={withImageWidth(scendentImages.community, 1200)}
+                alt="Scendent community story"
+                width={1200}
+                height={600}
+                className="h-full w-full object-cover"
+                sizes="(max-width: 768px) 100vw, 440px"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">

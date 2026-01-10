@@ -44,6 +44,16 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
       care: "Apply to clean, dry surfaces.",
       fit: "Fits laptops, bottles, boards.",
     },
+    Mugs: {
+      fabric: "Durable ceramic with a smooth gloss finish.",
+      care: "Hand wash recommended. Microwave safe.",
+      fit: "Comfort grip handle.",
+    },
+    Support: {
+      fabric: "Direct contribution to youth mental health support.",
+      care: "Share the mission and stay connected.",
+      fit: "Every donation fuels outreach and resources.",
+    },
     Bundle: {
       fabric: "Curated merch set with drop pricing.",
       care: "See each item for care guidance.",

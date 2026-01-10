@@ -1,5 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Image from "next/image";
+import { scendentImages, withImageWidth } from "@/lib/scendentImages";
 
 export const metadata = {
   title: "Scendent Resources | Directory of Mental Health Support",
@@ -54,19 +56,31 @@ const ResourcesPage = () => {
           </p>
         </div>
 
-        <div className="mt-8 card-surface p-5 md:p-6">
-          <h2 className="text-lg font-semibold text-ink-900">Need support right now?</h2>
-          <p className="mt-2 text-sm md:text-base text-ink-500">
-            Free, confidential support is available 24/7 in New Zealand through 1737.
-            If there is immediate danger, call 111.
-          </p>
-          <div className="mt-4 flex flex-wrap gap-3">
-            <a className="btn-primary" href="https://1737.org.nz" target="_blank" rel="noopener">
-              Visit 1737
-            </a>
-            <a className="btn-outline" href="tel:1737">
-              Call 1737
-            </a>
+        <div className="mt-8 card-surface p-5 md:p-6 grid gap-6 md:grid-cols-[1.1fr_0.9fr] items-center">
+          <div>
+            <h2 className="text-lg font-semibold text-ink-900">Need support right now?</h2>
+            <p className="mt-2 text-sm md:text-base text-ink-500">
+              Free, confidential support is available 24/7 in New Zealand through 1737.
+              If there is immediate danger, call 111.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <a className="btn-primary" href="https://1737.org.nz" target="_blank" rel="noopener">
+                Visit 1737
+              </a>
+              <a className="btn-outline" href="tel:1737">
+                Call 1737
+              </a>
+            </div>
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
+            <Image
+              src={withImageWidth(scendentImages.support, 1200)}
+              alt="Support for youth mental health"
+              width={1200}
+              height={720}
+              className="h-full w-full object-cover"
+              sizes="(max-width: 768px) 100vw, 420px"
+            />
           </div>
         </div>
 

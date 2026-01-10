@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import { scendentImages, withImageWidth } from "@/lib/scendentImages";
 
 export const metadata = {
   title: "About Scendent | Youth Mental Health Social Enterprise",
@@ -9,8 +10,7 @@ export const metadata = {
 };
 
 const AboutPage = () => {
-  const communityPhoto =
-    "https://scendent.co.nz/cdn/shop/files/IMG_4034.jpg?v=1661904070&width=1200";
+  const communityPhoto = withImageWidth(scendentImages.community, 1200);
 
   return (
     <>
@@ -45,6 +45,39 @@ const AboutPage = () => {
                 where people feel seen. Every drop fuels community-led change.
               </p>
             </div>
+          </div>
+        </div>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
+            <Image
+              src={withImageWidth(scendentImages.tshirtFront, 900)}
+              alt="Scendent tee drop"
+              width={600}
+              height={600}
+              className="h-full w-full object-cover"
+              sizes="(max-width: 768px) 100vw, 220px"
+            />
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
+            <Image
+              src={withImageWidth(scendentImages.mugFront, 900)}
+              alt="Scendent HACOT mug"
+              width={600}
+              height={600}
+              className="h-full w-full object-cover"
+              sizes="(max-width: 768px) 100vw, 220px"
+            />
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
+            <Image
+              src={withImageWidth(scendentImages.support, 900)}
+              alt="Support Scendent mental health mission"
+              width={600}
+              height={600}
+              className="h-full w-full object-cover"
+              sizes="(max-width: 768px) 100vw, 220px"
+            />
           </div>
         </div>
 

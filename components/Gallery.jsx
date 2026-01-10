@@ -1,17 +1,14 @@
 import React from "react";
-import { assets } from "@/assets/assets";
 import Image from "next/image";
-
-const communityPhoto =
-  "https://scendent.co.nz/cdn/shop/files/IMG_4034.jpg?v=1661904070&width=1200";
+import { scendentImages, withImageWidth } from "@/lib/scendentImages";
 
 const galleryImages = [
-  { src: communityPhoto, label: "Charity in action" },
-  { src: assets.scendent_product_tee, label: "Tees" },
-  { src: assets.scendent_product_hoodie, label: "Hoodies" },
-  { src: assets.scendent_product_cap, label: "Caps" },
-  { src: assets.scendent_product_sticker, label: "Sticker packs" },
-  { src: assets.scendent_hero_events, label: "Community events" },
+  { src: withImageWidth(scendentImages.community, 900), label: "Community events" },
+  { src: withImageWidth(scendentImages.tshirtLifestyle, 900), label: "Merch drop" },
+  { src: withImageWidth(scendentImages.tshirtFront, 900), label: "WDOYW Tee" },
+  { src: withImageWidth(scendentImages.mugFront, 900), label: "HACOT Mugs" },
+  { src: withImageWidth(scendentImages.mugStack, 900), label: "Gift sets" },
+  { src: withImageWidth(scendentImages.support, 900), label: "Support our cause" },
 ];
 
 const Gallery = () => {

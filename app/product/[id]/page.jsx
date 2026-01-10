@@ -30,7 +30,10 @@ export function generateMetadata({ params }) {
 
   const title = `${product.name} | Scendent Merch`;
   const description = product.seoDescription || product.description;
-  const image = categoryImages[product.category] || "/images/scendent_hero_merch.svg";
+  const image =
+    product.image?.[0] ||
+    categoryImages[product.category] ||
+    "/images/scendent_hero_merch.svg";
 
   return {
     title,
@@ -59,14 +62,16 @@ export function generateMetadata({ params }) {
 
 export default function ProductPage({ params }) {
   const product = productsDummyData.find((item) => item._id === params?.id) || null;
-  const image = product ? categoryImages[product.category] || "/images/scendent_hero_merch.svg" : null;
+  const image = product
+    ? product.image?.[0] || categoryImages[product.category] || "/images/scendent_hero_merch.svg"
+    : null;
   const productJsonLd = product
     ? {
         "@context": "https://schema.org",
         "@type": "Product",
         name: product.name,
         description: product.description,
-        image: [image],
+        image: product.image?.length ? product.image : [image],
         sku: product._id,
         brand: {
           "@type": "Brand",

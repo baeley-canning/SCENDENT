@@ -56,6 +56,7 @@ import scendent_product_cap from "./scendent/scendent_product_cap.svg";
 import scendent_product_sticker from "./scendent/scendent_product_sticker.svg";
 import scendent_product_tote from "./scendent/scendent_product_tote.svg";
 import scendent_product_bundle from "./scendent/scendent_product_bundle.svg";
+import { scendentImages, withImageWidth } from "@/lib/scendentImages";
 
 export const assets = {
   logo,
@@ -152,163 +153,156 @@ export const HomeIcon = () => (
 
 export const productsDummyData = [
   {
-    "_id": "tee-rise",
+    "_id": "wdoyw-tee",
     "userId": "scendent",
-    "name": "Rise Tee",
-    "description": "Premium cotton tee with the Scendent crest front and center.",
+    "name": "WDOYW Tee",
+    "description": "Classic tee with the WDOYW message to keep the conversation open.",
     "price": 55,
     "offerPrice": 45,
     "image": [
-      assets.scendent_product_tee,
-      assets.scendent_product_tee,
-      assets.scendent_product_tee
+      withImageWidth(scendentImages.tshirtFront, 1200),
+      withImageWidth(scendentImages.tshirtBack, 1200),
+      withImageWidth(scendentImages.tshirtLifestyle, 1200)
     ],
     "category": "Tees",
+    "imageAlt": "WDOYW tee front and back",
     "date": 1739000000001,
     "__v": 0
   },
   {
-    "_id": "tee-send-it",
+    "_id": "rise-tee",
+    "userId": "scendent",
+    "name": "Rise Tee",
+    "description": "Minimal Scendent branding with a fit made for everyday movement.",
+    "price": 55,
+    "offerPrice": 45,
+    "image": [
+      withImageWidth(scendentImages.tshirtLifestyle, 1200),
+      withImageWidth(scendentImages.tshirtFront, 1200),
+      withImageWidth(scendentImages.tshirtBack, 1200)
+    ],
+    "category": "Tees",
+    "imageAlt": "Scendent Rise tee",
+    "date": 1739000000002,
+    "__v": 0
+  },
+  {
+    "_id": "send-it-tee",
     "userId": "scendent",
     "name": "Send It Tee",
     "description": "A bold reminder to go beyond what feels possible.",
     "price": 55,
     "offerPrice": 45,
     "image": [
-      assets.scendent_product_tee,
-      assets.scendent_product_tee,
-      assets.scendent_product_tee
+      withImageWidth(scendentImages.tshirtBack, 1200),
+      withImageWidth(scendentImages.tshirtFront, 1200),
+      withImageWidth(scendentImages.tshirtLifestyle, 1200)
     ],
     "category": "Tees",
-    "date": 1739000000002,
-    "__v": 0
-  },
-  {
-    "_id": "hoodie-ascend",
-    "userId": "scendent",
-    "name": "Ascend Hoodie",
-    "description": "Heavyweight fleece hoodie built for late nights and big goals.",
-    "price": 110,
-    "offerPrice": 95,
-    "image": [
-      assets.scendent_product_hoodie,
-      assets.scendent_product_hoodie,
-      assets.scendent_product_hoodie
-    ],
-    "category": "Hoodies",
+    "imageAlt": "Send It tee",
     "date": 1739000000003,
     "__v": 0
   },
   {
-    "_id": "hoodie-nightshift",
+    "_id": "hacot-mug",
     "userId": "scendent",
-    "name": "Nightshift Hoodie",
-    "description": "Brushed fleece with a relaxed fit and subtle Scendent mark.",
-    "price": 110,
-    "offerPrice": 95,
+    "name": "HACOT Mug",
+    "description": "Mindful mug designed for calm starts and mental reset breaks.",
+    "price": 28,
+    "offerPrice": 22,
     "image": [
-      assets.scendent_product_hoodie,
-      assets.scendent_product_hoodie,
-      assets.scendent_product_hoodie
+      withImageWidth(scendentImages.mugFront, 1200),
+      withImageWidth(scendentImages.mugAngle, 1200),
+      withImageWidth(scendentImages.mugStack, 1200)
     ],
-    "category": "Hoodies",
+    "category": "Mugs",
+    "imageAlt": "HACOT mug",
     "date": 1739000000004,
     "__v": 0
   },
   {
-    "_id": "cap-crest",
+    "_id": "hacot-mug-set",
     "userId": "scendent",
-    "name": "Crest Cap",
-    "description": "Structured cap with an adjustable back strap.",
-    "price": 45,
-    "offerPrice": 35,
+    "name": "HACOT Mug Set",
+    "description": "A paired set for shared moments and community check-ins.",
+    "price": 48,
+    "offerPrice": 40,
     "image": [
-      assets.scendent_product_cap,
-      assets.scendent_product_cap,
-      assets.scendent_product_cap
+      withImageWidth(scendentImages.mugStack, 1200),
+      withImageWidth(scendentImages.mugAngle, 1200),
+      withImageWidth(scendentImages.mugFront, 1200)
     ],
-    "category": "Caps",
+    "category": "Mugs",
+    "imageAlt": "HACOT mug set",
     "date": 1739000000005,
     "__v": 0
   },
   {
-    "_id": "cap-forest",
+    "_id": "impact-mug",
     "userId": "scendent",
-    "name": "Forest Cap",
-    "description": "Deep green cap for everyday wear and outdoor sessions.",
-    "price": 45,
-    "offerPrice": 35,
+    "name": "Impact Mug",
+    "description": "Scendent impact mug to keep the mission close.",
+    "price": 28,
+    "offerPrice": 22,
     "image": [
-      assets.scendent_product_cap,
-      assets.scendent_product_cap,
-      assets.scendent_product_cap
+      withImageWidth(scendentImages.mugAngle, 1200),
+      withImageWidth(scendentImages.mugFront, 1200),
+      withImageWidth(scendentImages.mugStack, 1200)
     ],
-    "category": "Caps",
+    "category": "Mugs",
+    "imageAlt": "Impact mug",
     "date": 1739000000006,
     "__v": 0
   },
   {
-    "_id": "tote-crew",
+    "_id": "support-our-cause",
     "userId": "scendent",
-    "name": "Crew Tote",
-    "description": "Canvas tote for daily carry and gym runs.",
-    "price": 40,
-    "offerPrice": 30,
+    "name": "Support Our Cause",
+    "description": "Direct support for youth mental health outreach and resources.",
+    "price": 30,
+    "offerPrice": 25,
     "image": [
-      assets.scendent_product_tote,
-      assets.scendent_product_tote,
-      assets.scendent_product_tote
+      withImageWidth(scendentImages.support, 1200),
+      withImageWidth(scendentImages.community, 1200),
+      withImageWidth(scendentImages.support, 1200)
     ],
-    "category": "Accessories",
+    "category": "Support",
+    "imageAlt": "Support the Scendent cause",
     "date": 1739000000007,
     "__v": 0
   },
   {
-    "_id": "sticker-pack",
+    "_id": "impact-bundle",
     "userId": "scendent",
-    "name": "Mindset Sticker Pack",
-    "description": "Weather-resistant stickers for laptops, bottles, and boards.",
-    "price": 18,
-    "offerPrice": 12,
+    "name": "Impact Bundle",
+    "description": "Bundle of a tee + mug to back the mission.",
+    "price": 95,
+    "offerPrice": 80,
     "image": [
-      assets.scendent_product_sticker,
-      assets.scendent_product_sticker,
-      assets.scendent_product_sticker
+      withImageWidth(scendentImages.tshirtFront, 1200),
+      withImageWidth(scendentImages.mugFront, 1200),
+      withImageWidth(scendentImages.support, 1200)
     ],
-    "category": "Stickers",
+    "category": "Bundle",
+    "imageAlt": "Impact bundle with tee and mug",
     "date": 1739000000008,
     "__v": 0
   },
   {
-    "_id": "bundle-core",
+    "_id": "community-bundle",
     "userId": "scendent",
-    "name": "Core Merch Bundle",
-    "description": "Tee + cap + sticker pack at drop pricing.",
-    "price": 115,
-    "offerPrice": 95,
+    "name": "Community Bundle",
+    "description": "Merch set designed to gift support and spark conversation.",
+    "price": 110,
+    "offerPrice": 90,
     "image": [
-      assets.scendent_product_bundle,
-      assets.scendent_product_tee,
-      assets.scendent_product_cap
+      withImageWidth(scendentImages.tshirtLifestyle, 1200),
+      withImageWidth(scendentImages.mugStack, 1200),
+      withImageWidth(scendentImages.community, 1200)
     ],
     "category": "Bundle",
+    "imageAlt": "Community bundle",
     "date": 1739000000009,
-    "__v": 0
-  },
-  {
-    "_id": "bundle-impact",
-    "userId": "scendent",
-    "name": "Impact Bundle",
-    "description": "Hoodie + tote + sticker pack to fuel the mission.",
-    "price": 160,
-    "offerPrice": 140,
-    "image": [
-      assets.scendent_product_bundle,
-      assets.scendent_product_hoodie,
-      assets.scendent_product_tote
-    ],
-    "category": "Bundle",
-    "date": 1739000000010,
     "__v": 0
   }
 ]
@@ -319,10 +313,13 @@ export const userDummyData = {
   "email": "hello@scendent.co.nz",
   "imageUrl": "https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18ycnlnUnFiUDBYT2dEZ2h1ZmRXcGlpdWV5OXoiLCJyaWQiOiJ1c2VyXzJzWkZIUzFVSUl5c0p5RFZ6Q3BRaFVoVElodyJ9",
   "cartItems": {
-    // "tee-rise": 1
+    // "wdoyw-tee": 1
   },
   "__v": 0
 }
+
+const getProductById = (id) =>
+  productsDummyData.find((product) => product._id === id);
 
 export const orderDummyData = [
   {
@@ -330,43 +327,17 @@ export const orderDummyData = [
     "userId": "scendent-admin",
     "items": [
       {
-        "product": {
-          "_id": "hoodie-ascend",
-          "userId": "scendent",
-          "name": "Ascend Hoodie",
-          "description": "Heavyweight fleece hoodie built for late nights and big goals.",
-          "price": 110,
-          "offerPrice": 95,
-          "image": [
-            assets.scendent_product_hoodie
-          ],
-          "category": "Hoodies",
-          "date": 1739000000003,
-          "__v": 0
-        },
+        "product": getProductById("rise-tee"),
         "quantity": 1,
         "_id": "order-scendent-001-item-1"
       },
       {
-        "product": {
-          "_id": "cap-crest",
-          "userId": "scendent",
-          "name": "Crest Cap",
-          "description": "Structured cap with an adjustable back strap.",
-          "price": 45,
-          "offerPrice": 35,
-          "image": [
-            assets.scendent_product_cap
-          ],
-          "category": "Caps",
-          "date": 1739000000005,
-          "__v": 0
-        },
+        "product": getProductById("hacot-mug"),
         "quantity": 1,
         "_id": "order-scendent-001-item-2"
       }
     ],
-    "amount": 130,
+    "amount": 67,
     "address": {
       "_id": "address-scendent-001",
       "userId": "scendent-admin",
@@ -387,25 +358,12 @@ export const orderDummyData = [
     "userId": "scendent-admin",
     "items": [
       {
-        "product": {
-          "_id": "bundle-core",
-          "userId": "scendent",
-          "name": "Core Merch Bundle",
-          "description": "Tee + cap + sticker pack at drop pricing.",
-          "price": 115,
-          "offerPrice": 95,
-          "image": [
-            assets.scendent_product_bundle
-          ],
-          "category": "Bundle",
-          "date": 1739000000009,
-          "__v": 0
-        },
+        "product": getProductById("impact-bundle"),
         "quantity": 1,
         "_id": "order-scendent-002-item-1"
       }
     ],
-    "amount": 95,
+    "amount": 80,
     "address": {
       "_id": "address-scendent-002",
       "userId": "scendent-admin",

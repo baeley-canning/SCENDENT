@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { assets } from "@/assets/assets";
 import Image from "next/image";
 import Link from "next/link";
+import { scendentImages, withImageWidth } from "@/lib/scendentImages";
 
 const HeaderSlider = () => {
   const sliderData = [
@@ -15,7 +15,7 @@ const HeaderSlider = () => {
       buttonText2: "How the mission works",
       primaryHref: "/all-products",
       secondaryHref: "/about",
-      imgSrc: assets.scendent_hero_merch,
+      imgSrc: withImageWidth(scendentImages.tshirtLifestyle, 1200),
       highlights: ["NZ-designed drops", "Profits reinvested", "Limited runs"],
     },
     {
@@ -28,7 +28,7 @@ const HeaderSlider = () => {
       buttonText2: "Book a consult",
       primaryHref: "/media-services",
       secondaryHref: "/#contact",
-      imgSrc: assets.scendent_hero_media,
+      imgSrc: withImageWidth(scendentImages.support, 1200),
       highlights: ["Strategy + production", "Social systems", "Impact-led pricing"],
     },
     {
@@ -41,7 +41,7 @@ const HeaderSlider = () => {
       buttonText2: "Find support",
       primaryHref: "/events",
       secondaryHref: "/resources",
-      imgSrc: assets.scendent_hero_events,
+      imgSrc: withImageWidth(scendentImages.community, 1200),
       highlights: ["Community workshops", "Youth-led spaces", "Impact gatherings"],
     },
   ];
@@ -102,11 +102,15 @@ const HeaderSlider = () => {
               </div>
             </div>
             <div className="flex items-center flex-1 justify-center">
-              <Image
-                className="md:w-80 w-56 drop-shadow-[0_24px_60px_rgba(11,14,18,0.28)]"
-                src={slide.imgSrc}
-                alt={slide.title}
-              />
+              <div className="relative md:w-80 w-56 aspect-[4/5] drop-shadow-[0_24px_60px_rgba(11,14,18,0.28)]">
+                <Image
+                  src={slide.imgSrc}
+                  alt={slide.title}
+                  fill
+                  sizes="(max-width: 768px) 60vw, 320px"
+                  className="object-cover rounded-3xl"
+                />
+              </div>
             </div>
           </div>
         ))}

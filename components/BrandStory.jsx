@@ -1,11 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { scendentImages, withImageWidth } from "@/lib/scendentImages";
 
 const BrandStory = () => {
-  const communityPhoto =
-    "https://scendent.co.nz/cdn/shop/files/IMG_4034.jpg?v=1661904070&width=1200";
-
   return (
     <section className="relative mt-16 md:mt-20 section-animate" id="mission">
       <div className="absolute -left-16 top-10 h-44 w-44 rounded-full bg-mist-200/60 blur-3xl"></div>
@@ -44,21 +42,43 @@ const BrandStory = () => {
         </div>
 
         <div className="relative">
-          <div className="rounded-3xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
+          <div className="rounded-3xl overflow-hidden border border-sage-500/20 bg-linen-50/90 relative">
             <Image
               className="w-full h-auto object-cover"
-              src={communityPhoto}
+              src={withImageWidth(scendentImages.community, 1200)}
               alt="Scendent community gathering"
               width={1200}
               height={800}
               sizes="(max-width: 768px) 100vw, 520px"
             />
+            <div className="absolute left-3 bottom-3 sm:left-6 rounded-2xl border border-sage-500/30 bg-linen-100 text-ink-900 px-4 py-3 shadow-lg">
+              <p className="text-xs uppercase tracking-[0.2em] text-sage-300/80">
+                Scendent means rise
+              </p>
+              <p className="text-sm font-semibold">Community is the fuel.</p>
+            </div>
           </div>
-          <div className="absolute left-3 -bottom-6 sm:left-6 rounded-2xl border border-sage-500/30 bg-linen-100 text-ink-900 px-4 py-3 shadow-lg">
-            <p className="text-xs uppercase tracking-[0.2em] text-sage-300/80">
-              Scendent means rise
-            </p>
-            <p className="text-sm font-semibold">Community is the fuel.</p>
+          <div className="mt-4 grid grid-cols-2 gap-3">
+            <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
+              <Image
+                className="w-full h-auto object-cover"
+                src={withImageWidth(scendentImages.support, 900)}
+                alt="Support the Scendent cause"
+                width={600}
+                height={600}
+                sizes="(max-width: 768px) 50vw, 260px"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
+              <Image
+                className="w-full h-auto object-cover"
+                src={withImageWidth(scendentImages.tshirtFront, 900)}
+                alt="Scendent merch tee"
+                width={600}
+                height={600}
+                sizes="(max-width: 768px) 50vw, 260px"
+              />
+            </div>
           </div>
         </div>
       </div>
