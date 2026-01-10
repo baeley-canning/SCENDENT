@@ -10,7 +10,7 @@ export const metadata = {
 };
 
 const AboutPage = () => {
-  const communityPhoto = withImageWidth(scendentImages.community, 1200);
+  const communityPhoto = withImageWidth(scendentImages.charityGroup, 1200);
 
   return (
     <>
@@ -51,8 +51,8 @@ const AboutPage = () => {
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
           <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
             <Image
-              src={withImageWidth(scendentImages.tshirtFront, 900)}
-              alt="Scendent tee drop"
+              src={withImageWidth(scendentImages.community, 900)}
+              alt="Scendent community gathering"
               width={600}
               height={600}
               className="h-full w-full object-cover"
@@ -61,8 +61,8 @@ const AboutPage = () => {
           </div>
           <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
             <Image
-              src={withImageWidth(scendentImages.mugFront, 900)}
-              alt="Scendent HACOT mug"
+              src={withImageWidth(scendentImages.ryanWorking, 900)}
+              alt="Scendent team working on youth initiatives"
               width={600}
               height={600}
               className="h-full w-full object-cover"
@@ -71,8 +71,8 @@ const AboutPage = () => {
           </div>
           <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
             <Image
-              src={withImageWidth(scendentImages.support, 900)}
-              alt="Support Scendent mental health mission"
+              src={withImageWidth(scendentImages.lakePortrait, 900)}
+              alt="Wellbeing in nature"
               width={600}
               height={600}
               className="h-full w-full object-cover"

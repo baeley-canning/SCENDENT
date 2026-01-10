@@ -63,8 +63,8 @@ const EventsPage = () => {
           <div className="grid grid-cols-2 gap-3">
             <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
               <Image
-                src={withImageWidth(scendentImages.community, 900)}
-                alt="Scendent community event"
+                src={withImageWidth(scendentImages.eventCrowd, 900)}
+                alt="Scendent event crowd"
                 width={600}
                 height={600}
                 className="h-full w-full object-cover"
@@ -73,8 +73,8 @@ const EventsPage = () => {
             </div>
             <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
               <Image
-                src={withImageWidth(scendentImages.support, 900)}
-                alt="Support the Scendent mission"
+                src={withImageWidth(scendentImages.ourPlace, 900)}
+                alt="Scendent community event group"
                 width={600}
                 height={600}
                 className="h-full w-full object-cover"

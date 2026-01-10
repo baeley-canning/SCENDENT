@@ -3,12 +3,12 @@ import Image from "next/image";
 import { scendentImages, withImageWidth } from "@/lib/scendentImages";
 
 const galleryImages = [
-  { src: withImageWidth(scendentImages.community, 900), label: "Community events" },
-  { src: withImageWidth(scendentImages.tshirtLifestyle, 900), label: "Merch drop" },
-  { src: withImageWidth(scendentImages.tshirtFront, 900), label: "WDOYW Tee" },
-  { src: withImageWidth(scendentImages.mugFront, 900), label: "HACOT Mugs" },
-  { src: withImageWidth(scendentImages.mugStack, 900), label: "Gift sets" },
-  { src: withImageWidth(scendentImages.support, 900), label: "Support our cause" },
+  { src: withImageWidth(scendentImages.community, 900), label: "Community gatherings" },
+  { src: withImageWidth(scendentImages.charityGroup, 900), label: "Youth-led initiatives" },
+  { src: withImageWidth(scendentImages.eventDj, 900), label: "Events + pop-ups" },
+  { src: withImageWidth(scendentImages.ryanBlur, 900), label: "Merch in the wild" },
+  { src: withImageWidth(scendentImages.mugFront, 900), label: "HACOT mugs" },
+  { src: withImageWidth(scendentImages.hopscotch, 900), label: "Support in action" },
 ];
 
 const Gallery = () => {

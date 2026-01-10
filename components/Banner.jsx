@@ -38,8 +38,8 @@ const Banner = () => {
       <div className="relative flex items-center gap-4 px-6 pb-10 md:pb-0">
         <div className="relative w-44 md:w-52 aspect-[3/4] drop-shadow-[0_20px_50px_rgba(11,14,18,0.25)]">
           <Image
-            src={withImageWidth(scendentImages.support, 900)}
-            alt="Support Scendent mission"
+            src={withImageWidth(scendentImages.ryanWorking, 900)}
+            alt="Scendent Media strategy session"
             fill
             sizes="(max-width: 768px) 45vw, 220px"
             className="object-cover rounded-2xl"
@@ -47,8 +47,8 @@ const Banner = () => {
         </div>
         <div className="relative w-44 md:w-52 aspect-[3/4] drop-shadow-[0_20px_50px_rgba(11,14,18,0.25)]">
           <Image
-            src={withImageWidth(scendentImages.mugFront, 900)}
-            alt="Scendent merch mug"
+            src={withImageWidth(scendentImages.filmReel, 900)}
+            alt="Creative production in motion"
             fill
             sizes="(max-width: 768px) 45vw, 220px"
             className="object-cover rounded-2xl"

@@ -72,8 +72,8 @@ const MediaServicesPage = () => {
           <div className="grid grid-cols-2 gap-3">
             <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
               <Image
-                src={withImageWidth(scendentImages.tshirtLifestyle, 900)}
-                alt="Scendent merch shoot"
+                src={withImageWidth(scendentImages.ryanWorking, 900)}
+                alt="Content planning session"
                 width={600}
                 height={600}
                 className="h-full w-full object-cover"
@@ -82,8 +82,8 @@ const MediaServicesPage = () => {
             </div>
             <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
               <Image
-                src={withImageWidth(scendentImages.mugAngle, 900)}
-                alt="Product content capture"
+                src={withImageWidth(scendentImages.filmReel, 900)}
+                alt="Scendent Media production"
                 width={600}
                 height={600}
                 className="h-full w-full object-cover"
@@ -92,8 +92,8 @@ const MediaServicesPage = () => {
             </div>
             <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90 col-span-2">
               <Image
-                src={withImageWidth(scendentImages.community, 1200)}
-                alt="Scendent community story"
+                src={withImageWidth(scendentImages.eventStage, 1200)}
+                alt="Event coverage and storytelling"
                 width={1200}
                 height={600}
                 className="h-full w-full object-cover"

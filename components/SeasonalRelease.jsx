@@ -41,7 +41,7 @@ const SeasonalRelease = () => {
           <div className="flex justify-center">
             <div className="relative w-64 md:w-72 aspect-[4/5] drop-shadow-[0_18px_40px_rgba(43,36,31,0.25)]">
               <Image
-                src={withImageWidth(scendentImages.community, 1200)}
+                src={withImageWidth(scendentImages.eventDj, 1200)}
                 alt="Scendent community events"
                 fill
                 sizes="(max-width: 768px) 70vw, 320px"

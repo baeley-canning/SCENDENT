@@ -15,7 +15,7 @@ const HeaderSlider = () => {
       buttonText2: "How the mission works",
       primaryHref: "/all-products",
       secondaryHref: "/about",
-      imgSrc: withImageWidth(scendentImages.tshirtLifestyle, 1200),
+      imgSrc: withImageWidth(scendentImages.ryanBlur, 1200),
       highlights: ["NZ-designed drops", "Profits reinvested", "Limited runs"],
     },
     {
@@ -28,7 +28,7 @@ const HeaderSlider = () => {
       buttonText2: "Book a consult",
       primaryHref: "/media-services",
       secondaryHref: "/#contact",
-      imgSrc: withImageWidth(scendentImages.support, 1200),
+      imgSrc: withImageWidth(scendentImages.ryanWorking, 1200),
       highlights: ["Strategy + production", "Social systems", "Impact-led pricing"],
     },
     {
@@ -41,7 +41,7 @@ const HeaderSlider = () => {
       buttonText2: "Find support",
       primaryHref: "/events",
       secondaryHref: "/resources",
-      imgSrc: withImageWidth(scendentImages.community, 1200),
+      imgSrc: withImageWidth(scendentImages.eventCrowd, 1200),
       highlights: ["Community workshops", "Youth-led spaces", "Impact gatherings"],
     },
   ];

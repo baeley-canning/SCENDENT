@@ -74,8 +74,8 @@ const ResourcesPage = () => {
           </div>
           <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
             <Image
-              src={withImageWidth(scendentImages.support, 1200)}
-              alt="Support for youth mental health"
+              src={withImageWidth(scendentImages.womanSmile, 1200)}
+              alt="Mental wellbeing support"
               width={1200}
               height={720}
               className="h-full w-full object-cover"

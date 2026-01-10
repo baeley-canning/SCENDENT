@@ -45,8 +45,8 @@ const BrandStory = () => {
           <div className="rounded-3xl overflow-hidden border border-sage-500/20 bg-linen-50/90 relative">
             <Image
               className="w-full h-auto object-cover"
-              src={withImageWidth(scendentImages.community, 1200)}
-              alt="Scendent community gathering"
+              src={withImageWidth(scendentImages.charityGroup, 1200)}
+              alt="Scendent youth mental health community group"
               width={1200}
               height={800}
               sizes="(max-width: 768px) 100vw, 520px"
@@ -62,8 +62,8 @@ const BrandStory = () => {
             <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
               <Image
                 className="w-full h-auto object-cover"
-                src={withImageWidth(scendentImages.support, 900)}
-                alt="Support the Scendent cause"
+                src={withImageWidth(scendentImages.womanSmile, 900)}
+                alt="Wellbeing support in nature"
                 width={600}
                 height={600}
                 sizes="(max-width: 768px) 50vw, 260px"
@@ -72,8 +72,8 @@ const BrandStory = () => {
             <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
               <Image
                 className="w-full h-auto object-cover"
-                src={withImageWidth(scendentImages.tshirtFront, 900)}
-                alt="Scendent merch tee"
+                src={withImageWidth(scendentImages.hopscotch, 900)}
+                alt="Youth wellbeing in action"
                 width={600}
                 height={600}
                 sizes="(max-width: 768px) 50vw, 260px"

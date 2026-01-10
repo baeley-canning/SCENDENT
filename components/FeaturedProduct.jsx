@@ -13,14 +13,14 @@ const products = [
   },
   {
     id: 2,
-    image: withImageWidth(scendentImages.community, 1200),
+    image: withImageWidth(scendentImages.eventDj, 1200),
     title: "Events + Community",
     description: "Workshops and festivals that connect people and amplify change.",
     href: "/events",
   },
   {
     id: 3,
-    image: withImageWidth(scendentImages.support, 1200),
+    image: withImageWidth(scendentImages.filmReel, 1200),
     title: "Scendent Media",
     description: "Content and strategy services that grow purpose-led brands.",
     href: "/media-services",
