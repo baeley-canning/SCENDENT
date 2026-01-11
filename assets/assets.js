@@ -161,8 +161,7 @@ export const productsDummyData = [
     "offerPrice": 45,
     "image": [
       withImageWidth(scendentImages.tshirtFront, 1200),
-      withImageWidth(scendentImages.tshirtBack, 1200),
-      withImageWidth(scendentImages.tshirtLifestyle, 1200)
+      withImageWidth(scendentImages.tshirtBack, 1200)
     ],
     "category": "Tees",
     "imageAlt": "WDOYW tee front and back",
@@ -177,7 +176,6 @@ export const productsDummyData = [
     "price": 55,
     "offerPrice": 45,
     "image": [
-      withImageWidth(scendentImages.tshirtLifestyle, 1200),
       withImageWidth(scendentImages.tshirtFront, 1200),
       withImageWidth(scendentImages.tshirtBack, 1200)
     ],
@@ -194,9 +192,8 @@ export const productsDummyData = [
     "price": 55,
     "offerPrice": 45,
     "image": [
-      withImageWidth(scendentImages.tshirtBack, 1200),
       withImageWidth(scendentImages.tshirtFront, 1200),
-      withImageWidth(scendentImages.tshirtLifestyle, 1200)
+      withImageWidth(scendentImages.tshirtBack, 1200)
     ],
     "category": "Tees",
     "imageAlt": "Send It tee",
@@ -281,7 +278,7 @@ export const productsDummyData = [
     "image": [
       withImageWidth(scendentImages.tshirtFront, 1200),
       withImageWidth(scendentImages.mugFront, 1200),
-      withImageWidth(scendentImages.support, 1200)
+      withImageWidth(scendentImages.mugAngle, 1200)
     ],
     "category": "Bundle",
     "imageAlt": "Impact bundle with tee and mug",
@@ -296,9 +293,9 @@ export const productsDummyData = [
     "price": 110,
     "offerPrice": 90,
     "image": [
-      withImageWidth(scendentImages.tshirtLifestyle, 1200),
-      withImageWidth(scendentImages.mugStack, 1200),
-      withImageWidth(scendentImages.community, 1200)
+      withImageWidth(scendentImages.tshirtFront, 1200),
+      withImageWidth(scendentImages.tshirtBack, 1200),
+      withImageWidth(scendentImages.mugStack, 1200)
     ],
     "category": "Bundle",
     "imageAlt": "Community bundle",
