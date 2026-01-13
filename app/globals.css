@@ -95,17 +95,7 @@ body::before {
 }
 
 body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%),
-        linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.03), rgba(0, 0, 255, 0.04));
-    background-size: 100% 2px, 3px 100%;
-    opacity: 0.6;
-    pointer-events: none;
-    z-index: 0;
-    animation: scendent-flicker 0.12s infinite;
+    content: none;
 }
 
 :focus-visible {
