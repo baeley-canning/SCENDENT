@@ -94,9 +94,17 @@ export const viewport = {
 export default function RootLayout({ children }) {
   const basePath = getBasePath();
   const assetPrefix = getAssetPrefix();
+  const meadowBackground = `url(${assetPrefix}images/meadow_background.png)`;
 
   return (
-      <html lang="en" style={{ "--base-path": basePath, "--asset-prefix": assetPrefix }}>
+      <html
+        lang="en"
+        style={{
+          "--base-path": basePath,
+          "--asset-prefix": assetPrefix,
+          "--meadow-bg": meadowBackground,
+        }}
+      >
         <body className="antialiased text-ink-900">
           <script
             type="application/ld+json"
