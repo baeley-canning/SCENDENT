@@ -239,6 +239,66 @@ body::after {
         @apply h-px w-full bg-sage-500/30;
     }
 
+    .crt-tv-shell {
+        @apply relative mx-auto w-full max-w-6xl;
+    }
+
+    .crt-tv {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 3491 / 3248;
+        --tv-screen-left: 25.5%;
+        --tv-screen-top: 16.5%;
+        --tv-screen-width: 49%;
+        --tv-screen-height: 36%;
+    }
+
+    .crt-tv-image {
+        object-fit: contain;
+        filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
+    }
+
+    .crt-tv-screen {
+        position: absolute;
+        left: var(--tv-screen-left);
+        top: var(--tv-screen-top);
+        width: var(--tv-screen-width);
+        height: var(--tv-screen-height);
+        background: #0b0d0b;
+        border-radius: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        overflow: hidden;
+        box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.7);
+    }
+
+    .crt-tv-screen::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: repeating-linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.06) 0px,
+            rgba(255, 255, 255, 0.02) 1px,
+            transparent 3px,
+            transparent 5px
+        );
+        opacity: 0.45;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .crt-tv-screen::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.7) 90%);
+        pointer-events: none;
+        z-index: 1;
+    }
+
     .crt-shell {
         @apply relative mx-auto w-full max-w-6xl;
     }
@@ -295,6 +355,37 @@ body::after {
         border: 1px solid #9c9c9c;
         padding: 22px 28px 26px;
         box-shadow: 0 18px 40px -30px rgba(0, 0, 0, 0.8);
+    }
+
+    .crt-window--tv {
+        width: min(92%, 520px);
+        padding: 16px 18px 18px;
+        border-radius: 14px;
+    }
+
+    .crt-window--tv .crt-titlebar {
+        font-size: 9px;
+        letter-spacing: 0.24em;
+        padding-bottom: 10px;
+    }
+
+    .crt-window--tv .crt-brand {
+        font-size: 16px;
+    }
+
+    .crt-window--tv .crt-subtitle {
+        font-size: 8px;
+    }
+
+    .crt-window--tv .crt-grid {
+        gap: 14px 16px;
+        padding-top: 14px;
+    }
+
+    .crt-window--tv .crt-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 12px;
     }
 
     .crt-titlebar {
@@ -380,9 +471,9 @@ body::after {
 
     .crt-mini {
         position: absolute;
-        top: 28px;
-        right: 32px;
-        width: 190px;
+        top: 10px;
+        right: 10px;
+        width: clamp(120px, 16vw, 170px);
         z-index: 3;
         border-radius: 12px;
         overflow: hidden;
@@ -430,7 +521,7 @@ body::after {
 
     .crt-footer {
         position: absolute;
-        bottom: 16px;
+        bottom: 10px;
         left: 0;
         right: 0;
         z-index: 2;
@@ -439,7 +530,7 @@ body::after {
         align-items: center;
         gap: 6px;
         color: rgba(230, 230, 230, 0.85);
-        font-size: 10px;
+        font-size: 9px;
         text-transform: uppercase;
         letter-spacing: 0.24em;
         font-family: var(--font-accent);
@@ -447,8 +538,8 @@ body::after {
 
     .crt-footer-links {
         display: flex;
-        gap: 16px;
-        font-size: 9px;
+        gap: 14px;
+        font-size: 8px;
     }
 
     .crt-brandplate {
@@ -509,17 +600,20 @@ body::after {
         }
 
         .crt-mini {
-            position: static;
-            width: 100%;
-            margin-top: 18px;
+            width: clamp(110px, 22vw, 150px);
+            top: 6px;
+            right: 6px;
         }
 
-        .crt-screen {
-            padding: 32px 24px 80px;
+        .crt-window--tv {
+            width: min(96%, 460px);
         }
 
-        .crt-frame {
-            padding: 22px;
+        .crt-tv {
+            --tv-screen-left: 23%;
+            --tv-screen-top: 15%;
+            --tv-screen-width: 54%;
+            --tv-screen-height: 38%;
         }
     }
 
@@ -527,6 +621,27 @@ body::after {
         .crt-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 16px;
+        }
+
+        .crt-mini {
+            display: none;
+        }
+
+        .crt-tv {
+            --tv-screen-left: 20%;
+            --tv-screen-top: 15%;
+            --tv-screen-width: 60%;
+            --tv-screen-height: 40%;
+        }
+
+        .crt-window--tv {
+            padding: 12px 12px 14px;
+        }
+
+        .crt-window--tv .crt-titlebar {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 6px;
         }
 
         .crt-icon {

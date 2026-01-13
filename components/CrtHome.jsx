@@ -89,10 +89,18 @@ const tiles = [
 const CrtHome = () => {
   return (
     <main className="px-6 md:px-16 lg:px-32 py-10">
-      <section className="crt-shell">
-        <div className="crt-frame">
-          <div className="crt-screen">
-            <div className="crt-window">
+      <section className="crt-tv-shell">
+        <div className="crt-tv">
+          <Image
+            src="/images/tv-frame.jpg"
+            alt="Vintage television frame"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 70vw"
+            className="crt-tv-image"
+          />
+          <div className="crt-tv-screen">
+            <div className="crt-window crt-window--tv">
               <div className="crt-titlebar">
                 <div>
                   <p className="crt-brand">Scendent</p>
