@@ -186,26 +186,37 @@ body::after {
     }
 
     .crt-tv-shell {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        --crt-screen-top: 10%;
-        --crt-screen-right: 15%;
-        --crt-screen-bottom: 14.9%;
-        --crt-screen-left: 15%;
+        @apply relative mx-auto w-full max-w-6xl;
     }
 
     .crt-home {
-        width: 100%;
-        height: 100vh;
-        position: relative;
-        overflow: hidden;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(12px, 3vh, 32px) 0;
     }
 
-    .crt-tv-stage {
+    .crt-tv-photo {
         position: relative;
+        width: min(90vw, 940px, calc(100vh * 1.25));
+        margin: 0 auto;
+        aspect-ratio: 3 / 2;
+        --crt-screen-top: 9%;
+        --crt-screen-right: 15.2%;
+        --crt-screen-bottom: 12.9%;
+        --crt-screen-left: 15.8%;
+    }
+
+    .crt-tv-photo-image {
         width: 100%;
         height: 100%;
+        object-fit: contain;
+        display: block;
+        position: relative;
+        z-index: 2;
+        pointer-events: none;
+        user-select: none;
     }
 
     .crt-tv-screen {
@@ -214,11 +225,11 @@ body::after {
         inset: var(--crt-screen-top) var(--crt-screen-right) var(--crt-screen-bottom) var(--crt-screen-left);
         background: #0b0d0b;
         border-radius: clamp(18px, 3vw, 28px);
-        border: none;
+        border: clamp(6px, 1.2vw, 10px) solid #1c1c1c;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: clamp(8px, 1.6vw, 14px);
+        padding: clamp(10px, 2vw, 16px);
         overflow: hidden;
         box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.7);
     }
@@ -557,6 +568,10 @@ body::after {
         .crt-window--tv {
             width: min(96%, 460px);
         }
+
+        .crt-tv-photo {
+            width: min(100%, 860px);
+        }
     }
 
     @media (max-width: 640px) {
@@ -567,6 +582,10 @@ body::after {
 
         .crt-mini {
             display: none;
+        }
+
+        .crt-tv-photo {
+            width: 100%;
         }
 
         .crt-window--tv {

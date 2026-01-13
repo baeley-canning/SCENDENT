@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getBasePath } from "@/lib/basePath";
 import { scendentImages, withImageWidth } from "@/lib/scendentImages";
 
 const tiles = [
@@ -87,10 +88,19 @@ const tiles = [
 ];
 
 const CrtHome = () => {
+  const basePath = getBasePath();
+  const tvFrameSrc = `${basePath}/images/tv_screen_transparent_better.png`;
+
   return (
-    <main className="crt-home">
+    <main className="crt-home px-6 md:px-16 lg:px-32">
       <section className="crt-tv-shell">
-        <div className="crt-tv-stage">
+        <div className="crt-tv-photo">
+          <img
+            src={tvFrameSrc}
+            alt=""
+            aria-hidden="true"
+            className="crt-tv-photo-image"
+          />
           <div className="crt-tv-screen">
             <div className="crt-window crt-window--tv">
               <div className="crt-titlebar">
@@ -139,6 +149,7 @@ const CrtHome = () => {
             </div>
           </div>
         </div>
+        <p className="crt-brandplate">SCENDENT</p>
       </section>
 
     </main>
