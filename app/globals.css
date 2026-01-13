@@ -33,11 +33,15 @@
     body {
         font-family: var(--font-body);
         color: rgb(var(--ink-900));
-        background-color: #0b0d0b;
-        background-image: var(--meadow-bg, none);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        background-color: rgb(var(--linen-50));
+        background-image:
+            linear-gradient(rgb(var(--sage-500) / 0.08) 1px, transparent 1px),
+            linear-gradient(90deg, rgb(var(--sage-500) / 0.08) 1px, transparent 1px),
+            radial-gradient(800px 520px at 50% -20%, rgb(var(--sage-500) / 0.16), transparent 65%),
+            radial-gradient(900px 650px at 100% 100%, rgb(var(--sage-500) / 0.08), transparent 70%),
+            linear-gradient(160deg, rgb(var(--linen-50)) 0%, rgb(var(--linen-100)) 60%, rgb(var(--linen-50)) 100%);
+        background-size: 72px 72px, 72px 72px, auto, auto, auto;
+        background-position: -10px -10px, -10px -10px, center, center, center;
         position: relative;
         min-height: 100vh;
     }
