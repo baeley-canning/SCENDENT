@@ -214,15 +214,16 @@ body::after {
     .crt-tv {
         position: relative;
         width: 100%;
-        aspect-ratio: 3491 / 3248;
-        --tv-screen-left: 25.5%;
-        --tv-screen-top: 16.5%;
-        --tv-screen-width: 49%;
-        --tv-screen-height: 36%;
+        aspect-ratio: 4 / 3;
+        --tv-screen-left: 17%;
+        --tv-screen-top: 20%;
+        --tv-screen-width: 52%;
+        --tv-screen-height: 32%;
     }
 
     .crt-tv-image {
-        object-fit: contain;
+        object-fit: cover;
+        object-position: 50% 38%;
         filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
     }
 
@@ -578,10 +579,10 @@ body::after {
         }
 
         .crt-tv {
-            --tv-screen-left: 23%;
-            --tv-screen-top: 15%;
-            --tv-screen-width: 54%;
-            --tv-screen-height: 38%;
+            --tv-screen-left: 15%;
+            --tv-screen-top: 19%;
+            --tv-screen-width: 56%;
+            --tv-screen-height: 34%;
         }
     }
 
@@ -596,10 +597,10 @@ body::after {
         }
 
         .crt-tv {
-            --tv-screen-left: 20%;
-            --tv-screen-top: 15%;
-            --tv-screen-width: 60%;
-            --tv-screen-height: 40%;
+            --tv-screen-left: 14%;
+            --tv-screen-top: 19%;
+            --tv-screen-width: 58%;
+            --tv-screen-height: 36%;
         }
 
         .crt-window--tv {
