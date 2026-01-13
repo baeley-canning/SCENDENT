@@ -92,7 +92,7 @@ const CrtHome = () => {
   const tvFrameSrc = `${basePath}/images/tv_screen_transparent_better.png`;
 
   return (
-    <main className="px-6 md:px-16 lg:px-32 py-10">
+    <main className="crt-home px-6 md:px-16 lg:px-32">
       <section className="crt-tv-shell">
         <div className="crt-tv-photo">
           <img
@@ -152,54 +152,6 @@ const CrtHome = () => {
         <p className="crt-brandplate">SCENDENT</p>
       </section>
 
-      <section className="mt-12 grid gap-6 lg:grid-cols-3">
-        <div className="crt-card">
-          <p className="crt-card-kicker">Mission</p>
-          <h2 className="crt-card-title">Merch, media, and mental health</h2>
-          <p className="crt-card-body">
-            Every drop, campaign, and event funds youth mental health support across
-            Aotearoa.
-          </p>
-          <Link href="/about" className="crt-card-link">Learn the story</Link>
-        </div>
-        <div className="crt-card">
-          <p className="crt-card-kicker">Merch drop</p>
-          <h2 className="crt-card-title">Limited runs, real impact</h2>
-          <p className="crt-card-body">
-            Clean fits and bold reminders. Secure checkout with Stripe and NZ-wide
-            shipping.
-          </p>
-          <Link href="/all-products" className="crt-card-link">Shop the drop</Link>
-        </div>
-        <div className="crt-card">
-          <p className="crt-card-kicker">Scendent Media</p>
-          <h2 className="crt-card-title">Content that converts</h2>
-          <p className="crt-card-body">
-            Strategy, production, and social systems for brands that want purpose-led
-            growth.
-          </p>
-          <Link href="/media-services" className="crt-card-link">View services</Link>
-        </div>
-      </section>
-
-      <section className="mt-8 grid gap-6 lg:grid-cols-2">
-        <div className="crt-card">
-          <p className="crt-card-kicker">Events</p>
-          <h2 className="crt-card-title">Community-led gatherings</h2>
-          <p className="crt-card-body">
-            Workshops, pop-ups, and festivals that spark conversation and fund support.
-          </p>
-          <Link href="/events" className="crt-card-link">See upcoming events</Link>
-        </div>
-        <div className="crt-card" id="contact">
-          <p className="crt-card-kicker">Contact</p>
-          <h2 className="crt-card-title">Get in touch</h2>
-          <p className="crt-card-body">
-            Email hello@scendent.co.nz for collabs, media bookings, or support.
-          </p>
-          <a href="mailto:hello@scendent.co.nz" className="crt-card-link">Email Scendent</a>
-        </div>
-      </section>
     </main>
   );
 };
