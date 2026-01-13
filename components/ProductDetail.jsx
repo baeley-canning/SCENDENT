@@ -102,7 +102,7 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
       <div className="px-6 md:px-16 lg:px-32 pt-14 space-y-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="px-5 lg:px-16 xl:px-20">
-            <div className="rounded-xl overflow-hidden bg-linen-100/90 border border-sage-500/25 mb-4">
+            <div className="rounded-sm overflow-hidden bg-linen-100/90 border border-sage-500/25 mb-4">
               <Image
                 src={mainImage || product.image[0]}
                 alt={imageAlt}
@@ -117,7 +117,7 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
                 <div
                   key={index}
                   onClick={() => setMainImage(image)}
-                  className="cursor-pointer rounded-lg overflow-hidden bg-linen-100/90 border border-sage-500/25"
+                  className="cursor-pointer rounded-sm overflow-hidden bg-linen-100/90 border border-sage-500/25"
                 >
                   <Image
                     src={image}
@@ -132,7 +132,7 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
           </div>
 
           <div className="flex flex-col">
-            <h1 className="text-3xl font-medium text-ink-900 mb-4 uppercase tracking-[0.14em]">
+            <h1 className="text-3xl font-medium text-ink-900 mb-4 uppercase tracking-[0.14em] font-display">
               {product.name}
             </h1>
             <div className="flex items-center gap-2">
@@ -159,15 +159,15 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
               <table className="table-auto border-collapse w-full max-w-72">
                 <tbody>
                   <tr>
-                    <td className="text-ink-500 font-medium uppercase tracking-[0.18em] text-xs">Brand</td>
+                    <td className="text-ink-500 font-medium uppercase tracking-[0.18em] text-xs font-accent">Brand</td>
                     <td className="text-ink-700/70">Scendent</td>
                   </tr>
                   <tr>
-                    <td className="text-ink-500 font-medium uppercase tracking-[0.18em] text-xs">Collection</td>
+                    <td className="text-ink-500 font-medium uppercase tracking-[0.18em] text-xs font-accent">Collection</td>
                     <td className="text-ink-700/70">{product.category}</td>
                   </tr>
                   <tr>
-                    <td className="text-ink-500 font-medium uppercase tracking-[0.18em] text-xs">Impact</td>
+                    <td className="text-ink-500 font-medium uppercase tracking-[0.18em] text-xs font-accent">Impact</td>
                     <td className="text-ink-700/70">Profits support youth mental health</td>
                   </tr>
                 </tbody>
@@ -176,16 +176,16 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
 
             {detail ? (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 text-sm text-ink-700">
-                <div className="rounded-lg border border-sage-500/25 bg-linen-100/90 p-4 uppercase tracking-[0.16em]">
-                  <p className="text-ink-900 font-medium text-xs">Fabric</p>
+                <div className="rounded-sm border border-sage-500/25 bg-linen-100/90 p-4 uppercase tracking-[0.16em]">
+                  <p className="text-ink-900 font-medium text-xs font-accent">Fabric</p>
                   <p className="mt-1">{detail.fabric}</p>
                 </div>
-                <div className="rounded-lg border border-sage-500/25 bg-linen-100/90 p-4 uppercase tracking-[0.16em]">
-                  <p className="text-ink-900 font-medium text-xs">Care</p>
+                <div className="rounded-sm border border-sage-500/25 bg-linen-100/90 p-4 uppercase tracking-[0.16em]">
+                  <p className="text-ink-900 font-medium text-xs font-accent">Care</p>
                   <p className="mt-1">{detail.care}</p>
                 </div>
-                <div className="rounded-lg border border-sage-500/25 bg-linen-100/90 p-4 uppercase tracking-[0.16em]">
-                  <p className="text-ink-900 font-medium text-xs">Fit</p>
+                <div className="rounded-sm border border-sage-500/25 bg-linen-100/90 p-4 uppercase tracking-[0.16em]">
+                  <p className="text-ink-900 font-medium text-xs font-accent">Fit</p>
                   <p className="mt-1">{detail.fit}</p>
                 </div>
               </div>
@@ -194,13 +194,13 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
             <div className="flex items-center mt-10 gap-4">
               <button
                 onClick={() => addToCart(product._id)}
-                className="w-full py-3.5 bg-linen-100 text-ink-700 hover:bg-linen-50 transition rounded-md uppercase tracking-[0.28em] text-xs"
+                className="btn-outline w-full py-3.5 text-xs"
               >
                 Add to Cart
               </button>
               <button
                 onClick={() => { addToCart(product._id); router.push("/cart"); }}
-                className="w-full py-3.5 bg-sage-500 text-linen-50 hover:bg-sage-600 transition rounded-md uppercase tracking-[0.28em] text-xs"
+                className="btn-primary w-full py-3.5 text-xs"
               >
                 Buy now
               </button>
@@ -209,7 +209,7 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
         </div>
         <div className="flex flex-col items-center">
           <div className="flex flex-col items-center mb-4 mt-16">
-            <p className="text-3xl font-medium uppercase tracking-[0.18em]">
+            <p className="text-3xl font-medium uppercase tracking-[0.18em] font-display">
               Featured <span className="font-medium text-sage-600">Products</span>
             </p>
             <div className="w-28 h-px bg-sage-600 mt-2"></div>

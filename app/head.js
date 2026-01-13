@@ -10,9 +10,23 @@ export default function Head() {
       />
       <link
         rel="preload"
+        href="/fonts/manrope-variable.woff2"
+        as="font"
+        type="font/woff2"
+        crossOrigin="anonymous"
+      />
+      <link
+        rel="preload"
         href="/fonts/source-sans-3-variable.woff2"
         as="font"
         type="font/woff2"
+        crossOrigin="anonymous"
+      />
+      <link
+        rel="preload"
+        href="/fonts/press-start-2p-regular.ttf"
+        as="font"
+        type="font/ttf"
         crossOrigin="anonymous"
       />
     </>

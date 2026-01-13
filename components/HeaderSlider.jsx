@@ -73,18 +73,24 @@ const HeaderSlider = () => {
             className="hero-surface flex flex-col-reverse md:flex-row items-center justify-between py-12 md:px-14 px-6 mt-6 min-w-full"
           >
             <div className="relative md:pl-8 mt-10 md:mt-0">
-              <span className="pill-tag">{slide.offer}</span>
-              <h1 className="max-w-xl text-3xl md:text-[50px] md:leading-[54px] font-semibold text-ink-900 mt-4 uppercase">
+              <div className="flex items-center gap-3">
+                <span className="sc-label">Signal {String(index + 1).padStart(2, "0")}</span>
+                <span className="pill-tag">{slide.offer}</span>
+              </div>
+              <h1
+                className="max-w-xl text-3xl md:text-[50px] md:leading-[54px] font-semibold text-ink-900 mt-4 uppercase glitch"
+                data-text={slide.title}
+              >
                 {slide.title}
               </h1>
               <p className="mt-3 max-w-lg text-sm md:text-base text-ink-700">
                 {slide.description}
               </p>
-              <div className="mt-5 flex flex-wrap gap-2 text-[10px] uppercase tracking-[0.34em] text-sage-300">
+              <div className="mt-5 flex flex-wrap gap-2 text-[10px] uppercase tracking-[0.34em] text-sage-300 font-accent">
                 {slide.highlights.map((highlight) => (
                   <span
                     key={highlight}
-                    className="rounded-md border border-sage-500/35 bg-linen-100/70 px-3 py-1"
+                    className="rounded-sm border border-sage-500/35 bg-linen-100/70 px-3 py-1"
                   >
                     {highlight}
                   </span>
@@ -106,7 +112,7 @@ const HeaderSlider = () => {
                   alt={slide.title}
                   fill
                   sizes="(max-width: 768px) 60vw, 320px"
-                  className="object-cover rounded-2xl border border-sage-500/30"
+                  className="object-cover rounded-sm border border-sage-500/30"
                 />
               </div>
             </div>
@@ -119,7 +125,7 @@ const HeaderSlider = () => {
             <button
               key={index}
               onClick={() => handleSlideChange(index)}
-              className={`h-2 w-2 rounded-full cursor-pointer ${
+              className={`h-2 w-2 rounded-sm cursor-pointer ${
               currentSlide === index ? "bg-sage-500" : "bg-ink-500/40"
             }`}
               aria-label={`Go to slide ${index + 1}`}

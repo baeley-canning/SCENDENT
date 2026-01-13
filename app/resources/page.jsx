@@ -58,7 +58,7 @@ const ResourcesPage = () => {
 
         <div className="mt-8 card-surface p-5 md:p-6 grid gap-6 md:grid-cols-[1.1fr_0.9fr] items-center">
           <div>
-            <h2 className="text-lg font-semibold text-ink-900 uppercase tracking-[0.16em]">Need support right now?</h2>
+            <h2 className="text-lg font-semibold text-ink-900 uppercase tracking-[0.16em] font-display">Need support right now?</h2>
             <p className="mt-2 text-sm md:text-base text-ink-500">
               Free, confidential support is available 24/7 in New Zealand through 1737.
               If there is immediate danger, call 111.
@@ -72,9 +72,9 @@ const ResourcesPage = () => {
               </a>
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
+          <div className="rounded-sm overflow-hidden border border-sage-500/20 bg-linen-50/90">
             <Image
-              src={withImageWidth(scendentImages.womanSmile, 1200)}
+              src={withImageWidth(scendentImages.support, 1200)}
               alt="Mental wellbeing support"
               width={1200}
               height={720}
@@ -93,9 +93,9 @@ const ResourcesPage = () => {
               target="_blank"
               rel="noopener"
             >
-              <h2 className="text-base font-semibold text-ink-900 uppercase tracking-[0.14em]">{resource.name}</h2>
+              <h2 className="text-base font-semibold text-ink-900 uppercase tracking-[0.14em] font-display">{resource.name}</h2>
               <p className="mt-2 text-sm text-ink-500">{resource.description}</p>
-              <span className="mt-3 inline-flex text-xs uppercase tracking-[0.2em] text-sage-300">
+              <span className="mt-3 inline-flex text-xs uppercase tracking-[0.2em] text-sage-300 font-accent">
                 Visit resource
               </span>
             </a>
@@ -103,7 +103,7 @@ const ResourcesPage = () => {
         </div>
 
         <div className="mt-12 card-surface p-6 md:p-8">
-          <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em]">Want to contribute?</h2>
+          <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em] font-display">Want to contribute?</h2>
           <p className="mt-3 text-sm md:text-base text-ink-500">
             We are always looking for more trusted partners and support services. Email
             hello@scendent.co.nz with recommendations or collaboration ideas.

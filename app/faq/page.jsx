@@ -67,9 +67,9 @@ const FaqPage = () => {
           {faqs.map((faq) => (
             <details
               key={faq.question}
-              className="group rounded-xl border border-sage-500/25 bg-linen-100/80 p-5"
+              className="group rounded-sm border border-sage-500/25 bg-linen-100/80 p-5"
             >
-              <summary className="flex cursor-pointer list-none items-center justify-between text-base font-medium text-ink-900 uppercase tracking-[0.16em]">
+              <summary className="flex cursor-pointer list-none items-center justify-between text-base font-medium text-ink-900 uppercase tracking-[0.16em] font-display">
                 <span>{faq.question}</span>
                 <span className="text-ink-500 group-open:rotate-45 transition">+</span>
               </summary>

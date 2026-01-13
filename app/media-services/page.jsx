@@ -54,23 +54,23 @@ const MediaServicesPage = () => {
 
         <div className="mt-10 card-surface p-6 md:p-8 grid gap-6 md:grid-cols-[1.1fr_0.9fr] items-center">
           <div>
-            <h2 className="text-xl font-semibold text-ink-900">Creative with impact built in</h2>
+            <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em]">Creative with impact built in</h2>
             <p className="mt-3 text-sm md:text-base text-ink-500">
               We blend strategy, production, and social systems so your content performs
               and your spend fuels community support. Every project powers the Scendent
               mission.
             </p>
             <div className="mt-4 grid gap-3 text-sm text-ink-700 md:grid-cols-2">
-              <div className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">
+              <div className="rounded-sm border border-sage-500/20 bg-linen-100/80 p-4 font-accent text-[10px] uppercase tracking-[0.3em]">
                 Strategy-led production
               </div>
-              <div className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">
+              <div className="rounded-sm border border-sage-500/20 bg-linen-100/80 p-4 font-accent text-[10px] uppercase tracking-[0.3em]">
                 Impact reporting included
               </div>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
+            <div className="rounded-sm overflow-hidden border border-sage-500/20 bg-linen-50/90">
               <Image
                 src={withImageWidth(scendentImages.ryanWorking, 900)}
                 alt="Content planning session"
@@ -80,7 +80,7 @@ const MediaServicesPage = () => {
                 sizes="(max-width: 768px) 50vw, 220px"
               />
             </div>
-            <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
+            <div className="rounded-sm overflow-hidden border border-sage-500/20 bg-linen-50/90">
               <Image
                 src={withImageWidth(scendentImages.filmReel, 900)}
                 alt="Scendent Media production"
@@ -90,7 +90,7 @@ const MediaServicesPage = () => {
                 sizes="(max-width: 768px) 50vw, 220px"
               />
             </div>
-            <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90 col-span-2">
+            <div className="rounded-sm overflow-hidden border border-sage-500/20 bg-linen-50/90 col-span-2">
               <Image
                 src={withImageWidth(scendentImages.eventStage, 1200)}
                 alt="Event coverage and storytelling"
@@ -106,47 +106,47 @@ const MediaServicesPage = () => {
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {services.map((service) => (
             <div key={service.title} className="card-surface p-6 transition hover:-translate-y-1 hover:border-sage-500/50">
-              <h2 className="text-lg font-semibold text-ink-900 uppercase tracking-[0.16em]">{service.title}</h2>
+              <h2 className="text-lg font-semibold text-ink-900 uppercase tracking-[0.16em] font-display">{service.title}</h2>
               <p className="mt-2 text-sm text-ink-500">{service.description}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-12 card-surface p-6 md:p-8">
-          <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em]">Impact built in</h2>
+          <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em] font-display">Impact built in</h2>
           <p className="mt-3 text-sm md:text-base text-ink-500">
             Every Scendent Media project funds the wider mission. Your campaigns help
             expand resources, partnerships, and support for young people.
           </p>
           <div className="mt-4 grid gap-3 text-sm text-ink-700 md:grid-cols-3">
-            <div className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">
+            <div className="rounded-sm border border-sage-500/20 bg-linen-100/80 p-4 font-accent text-[10px] uppercase tracking-[0.3em]">
               Half of profits support mental health
             </div>
-            <div className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">
+            <div className="rounded-sm border border-sage-500/20 bg-linen-100/80 p-4 font-accent text-[10px] uppercase tracking-[0.3em]">
               Community-first storytelling
             </div>
-            <div className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">
+            <div className="rounded-sm border border-sage-500/20 bg-linen-100/80 p-4 font-accent text-[10px] uppercase tracking-[0.3em]">
               Strategy that serves people
             </div>
           </div>
         </div>
 
         <div className="mt-12 card-surface p-6 md:p-8">
-          <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em]">Why Scendent Media</h2>
+          <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em] font-display">Why Scendent Media</h2>
           <p className="mt-3 text-sm md:text-base text-ink-500">
             We build content that reflects the deeper values of your business while still
             driving leads and sales. Our team handles strategy through to delivery so you
             can focus on the bigger picture.
           </p>
           <ul className="mt-4 grid gap-3 text-sm text-ink-700 md:grid-cols-3">
-            <li className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">Clear content direction</li>
-            <li className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">Systems for consistent output</li>
-            <li className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">Impact-led storytelling</li>
+            <li className="rounded-sm border border-sage-500/20 bg-linen-100/80 p-4 font-accent text-[10px] uppercase tracking-[0.3em]">Clear content direction</li>
+            <li className="rounded-sm border border-sage-500/20 bg-linen-100/80 p-4 font-accent text-[10px] uppercase tracking-[0.3em]">Systems for consistent output</li>
+            <li className="rounded-sm border border-sage-500/20 bg-linen-100/80 p-4 font-accent text-[10px] uppercase tracking-[0.3em]">Impact-led storytelling</li>
           </ul>
         </div>
 
         <div className="mt-12 card-surface p-6 md:p-8">
-          <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em]">Book a consult</h2>
+          <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em] font-display">Book a consult</h2>
           <p className="mt-3 text-sm md:text-base text-ink-500">
             Tell us about your brand, goals, and upcoming campaigns. We will respond with
             a tailored plan and timeline.

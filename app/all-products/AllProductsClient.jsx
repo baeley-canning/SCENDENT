@@ -42,11 +42,11 @@ const AllProductsClient = () => {
           <p className="mt-3 text-sm md:text-base text-ink-700 max-w-2xl">
             Every order supports youth mental health initiatives and community-led care.
           </p>
-          <div className="w-16 h-0.5 bg-sage-600 rounded-full mt-4"></div>
+          <div className="w-16 h-0.5 bg-sage-600 rounded-sm mt-4"></div>
         </div>
         <div className="flex flex-wrap items-center gap-2 mt-8">
           <button
-            className={`px-4 py-1.5 rounded-md text-xs uppercase tracking-[0.28em] border transition ${
+            className={`px-4 py-1.5 rounded-sm text-xs uppercase tracking-[0.28em] border transition font-accent ${
               activeCategory === "All"
                 ? "bg-sage-500 text-linen-50 border-sage-500"
                 : "border-ink-900/15 text-ink-700 hover:border-sage-500/60 hover:text-sage-300 hover:bg-linen-100"
@@ -58,7 +58,7 @@ const AllProductsClient = () => {
           {categories.map((category) => (
             <button
               key={category}
-              className={`px-4 py-1.5 rounded-md text-xs uppercase tracking-[0.28em] border transition ${
+              className={`px-4 py-1.5 rounded-sm text-xs uppercase tracking-[0.28em] border transition font-accent ${
                 activeCategory === category
                   ? "bg-sage-500 text-linen-50 border-sage-500"
                   : "border-ink-900/15 text-ink-700 hover:border-sage-500/60 hover:text-sage-300 hover:bg-linen-100"

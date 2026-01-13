@@ -15,14 +15,14 @@ const SeasonalRelease = () => {
               From workshops to festivals, Scendent events bring people together and
               fund mental health support for young adults.
             </p>
-            <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.3em] text-sage-300">
-              <span className="rounded-md border border-sage-500/35 bg-linen-100/90 px-4 py-1.5">
+            <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.3em] text-sage-300 font-accent">
+              <span className="rounded-sm border border-sage-500/35 bg-linen-100/90 px-4 py-1.5">
                 Purpose-led gatherings
               </span>
-              <span className="rounded-md border border-sage-500/35 bg-linen-100/90 px-4 py-1.5">
+              <span className="rounded-sm border border-sage-500/35 bg-linen-100/90 px-4 py-1.5">
                 Local collabs and pop-ups
               </span>
-              <span className="rounded-md border border-sage-500/35 bg-linen-100/90 px-4 py-1.5">
+              <span className="rounded-sm border border-sage-500/35 bg-linen-100/90 px-4 py-1.5">
                 All profits fuel the mission
               </span>
             </div>
@@ -38,11 +38,11 @@ const SeasonalRelease = () => {
           <div className="flex justify-center">
             <div className="relative w-64 md:w-72 aspect-[4/5] drop-shadow-[0_18px_40px_rgba(43,36,31,0.25)]">
               <Image
-                src={withImageWidth(scendentImages.eventDj, 1200)}
+                src={withImageWidth(scendentImages.eventCrowd, 1200)}
                 alt="Scendent community events"
                 fill
                 sizes="(max-width: 768px) 70vw, 320px"
-                className="object-cover rounded-3xl"
+                className="object-cover rounded-sm border border-sage-500/25"
               />
             </div>
           </div>

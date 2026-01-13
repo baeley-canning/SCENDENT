@@ -11,6 +11,22 @@
 }
 
 @font-face {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 300 800;
+    font-display: swap;
+    src: url("/fonts/manrope-variable.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Press Start 2P";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/press-start-2p-regular.ttf") format("truetype");
+}
+
+@font-face {
     font-family: "Source Sans 3";
     font-style: normal;
     font-weight: 300 700;
@@ -24,24 +40,26 @@
 
 @layer base {
     :root {
-        --ink-900: 240 244 245;
-        --ink-700: 178 186 192;
-        --ink-500: 140 150 160;
-        --sage-700: 25 196 46;
-        --sage-600: 35 224 85;
+        --ink-900: 248 250 248;
+        --ink-700: 198 204 198;
+        --ink-500: 132 140 132;
+        --sage-700: 24 210 70;
+        --sage-600: 42 235 90;
         --sage-500: 57 255 20;
-        --sage-300: 125 255 106;
+        --sage-300: 134 255 124;
         --clay-600: 120 255 40;
         --clay-500: 160 255 80;
         --clay-300: 200 255 140;
-        --linen-50: 7 8 10;
-        --linen-100: 14 16 18;
-        --mist-200: 18 34 26;
-        --blush-200: 22 28 32;
+        --linen-50: 3 4 3;
+        --linen-100: 10 12 10;
+        --mist-200: 18 20 18;
+        --blush-200: 24 26 24;
         --background: var(--linen-50);
         --foreground: var(--ink-900);
         --font-display: "Space Grotesk", sans-serif;
-        --font-body: "Source Sans 3", sans-serif;
+        --font-body: "Manrope", sans-serif;
+        --font-accent: "Press Start 2P", sans-serif;
+        color-scheme: dark;
     }
 
     body {
@@ -49,12 +67,13 @@
         color: rgb(var(--ink-900));
         background-color: rgb(var(--linen-50));
         background-image:
-            linear-gradient(rgb(var(--sage-500) / 0.06) 1px, transparent 1px),
-            linear-gradient(90deg, rgb(var(--sage-500) / 0.06) 1px, transparent 1px),
-            radial-gradient(900px 600px at 50% -10%, rgb(var(--sage-500) / 0.14), transparent 65%),
+            linear-gradient(rgb(var(--sage-500) / 0.08) 1px, transparent 1px),
+            linear-gradient(90deg, rgb(var(--sage-500) / 0.08) 1px, transparent 1px),
+            radial-gradient(800px 520px at 50% -20%, rgb(var(--sage-500) / 0.16), transparent 65%),
+            radial-gradient(900px 650px at 100% 100%, rgb(var(--sage-500) / 0.08), transparent 70%),
             linear-gradient(160deg, rgb(var(--linen-50)) 0%, rgb(var(--linen-100)) 60%, rgb(var(--linen-50)) 100%);
-        background-size: 90px 90px, 90px 90px, auto, auto;
-        background-position: -12px -12px, -12px -12px, center, center;
+        background-size: 72px 72px, 72px 72px, auto, auto, auto;
+        background-position: -10px -10px, -10px -10px, center, center, center;
         position: relative;
         min-height: 100vh;
     }
@@ -70,7 +89,9 @@
     h3,
     h4 {
         font-family: var(--font-display);
-        letter-spacing: -0.01em;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        text-shadow: 0 0 18px rgb(var(--sage-500) / 0.18);
     }
 
     .font-display {
@@ -79,6 +100,10 @@
 
     .font-body {
         font-family: var(--font-body);
+    }
+
+    .font-accent {
+        font-family: var(--font-accent);
     }
 
     input[type="number"]::-webkit-inner-spin-button,
@@ -97,10 +122,10 @@ body::before {
     content: "";
     position: fixed;
     inset: 18px;
-    border: 1px solid rgb(var(--sage-500) / 0.35);
+    border: 1px solid rgb(var(--sage-500) / 0.45);
     box-shadow:
         0 0 0 1px rgb(var(--sage-500) / 0.08),
-        0 0 35px rgb(var(--sage-500) / 0.15);
+        0 0 40px rgb(var(--sage-500) / 0.18);
     pointer-events: none;
     z-index: 0;
 }
@@ -109,9 +134,14 @@ body::after {
     content: "";
     position: fixed;
     inset: 0;
-    background-image: linear-gradient(180deg, rgb(var(--linen-50)) 0%, transparent 22%, transparent 78%, rgb(var(--linen-50)) 100%);
+    background-image:
+        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%),
+        linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.03), rgba(0, 0, 255, 0.04));
+    background-size: 100% 2px, 3px 100%;
+    opacity: 0.6;
     pointer-events: none;
     z-index: 0;
+    animation: scendent-flicker 0.12s infinite;
 }
 
 :focus-visible {
@@ -125,11 +155,13 @@ body::after {
 
 @layer components {
     .btn-primary {
-        @apply inline-flex items-center justify-center rounded-md border border-sage-500 bg-sage-500 px-6 py-2.5 text-[11px] font-semibold uppercase tracking-[0.32em] text-linen-50 shadow-[0_20px_40px_-26px_rgba(57,255,20,0.6)] transition hover:bg-sage-600;
+        @apply inline-flex items-center justify-center rounded-sm border border-sage-500 bg-sage-500 px-6 py-2.5 text-[11px] font-semibold uppercase tracking-[0.32em] text-linen-50 shadow-[0_16px_30px_-20px_rgba(57,255,20,0.45)] transition hover:bg-sage-600 hover:shadow-[0_18px_34px_-22px_rgba(57,255,20,0.6)];
+        font-family: var(--font-display);
     }
 
     .btn-outline {
-        @apply inline-flex items-center justify-center rounded-md border border-sage-500/45 bg-linen-100/70 px-6 py-2.5 text-[11px] font-semibold uppercase tracking-[0.32em] text-ink-900 transition hover:border-sage-500 hover:text-sage-300 hover:bg-linen-100;
+        @apply inline-flex items-center justify-center rounded-sm border border-sage-500/45 bg-linen-100/40 px-6 py-2.5 text-[11px] font-semibold uppercase tracking-[0.32em] text-ink-900 transition hover:border-sage-500 hover:text-sage-300 hover:bg-linen-100/70;
+        font-family: var(--font-display);
     }
 
     .btn-ghost {
@@ -138,6 +170,7 @@ body::after {
 
     .section-kicker {
         @apply text-[11px] uppercase tracking-[0.42em] text-sage-500;
+        font-family: var(--font-accent);
     }
 
     .section-title {
@@ -145,32 +178,61 @@ body::after {
     }
 
     .card-surface {
-        @apply rounded-xl border border-sage-500/25 bg-linen-50/95;
-        background: linear-gradient(150deg, rgb(var(--linen-50)) 0%, rgb(var(--linen-100)) 65%, rgb(var(--mist-200) / 0.2) 100%);
-        box-shadow: 0 30px 70px -55px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(57, 255, 20, 0.12);
+        @apply rounded-sm border border-sage-500/25 bg-linen-50/95;
+        background: linear-gradient(150deg, rgb(var(--linen-50)) 0%, rgb(var(--linen-100)) 65%, rgb(var(--mist-200) / 0.25) 100%);
+        box-shadow: 0 26px 60px -52px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(57, 255, 20, 0.12);
     }
 
     .hero-surface {
-        @apply relative overflow-hidden rounded-2xl border border-sage-500/25 bg-linen-50/95;
-        background: linear-gradient(145deg, rgb(var(--linen-50)) 0%, rgb(var(--linen-100)) 55%, rgb(var(--mist-200) / 0.25) 100%);
-        box-shadow: 0 34px 90px -65px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(57, 255, 20, 0.16);
+        @apply relative overflow-hidden rounded-sm border border-sage-500/25 bg-linen-50/95;
+        background: linear-gradient(145deg, rgb(var(--linen-50)) 0%, rgb(var(--linen-100)) 55%, rgb(var(--mist-200) / 0.3) 100%);
+        box-shadow: 0 34px 90px -65px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(57, 255, 20, 0.18);
     }
 
     .pill-tag {
-        @apply inline-flex items-center rounded-md border border-sage-500/35 bg-linen-50/85 px-3 py-1 text-[10px] uppercase tracking-[0.35em] text-sage-300;
+        @apply inline-flex items-center rounded-sm border border-sage-500/45 bg-linen-50/85 px-3 py-1 text-[10px] uppercase tracking-[0.35em] text-sage-300;
+        font-family: var(--font-accent);
     }
 
     .site-shell {
         @apply relative z-10;
     }
 
+    .glitch {
+        position: relative;
+        display: inline-block;
+    }
+
+    .glitch::before,
+    .glitch::after {
+        content: attr(data-text);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.85;
+        pointer-events: none;
+    }
+
+    .glitch::before {
+        text-shadow: -2px 0 rgb(0, 255, 140);
+        animation: scendent-glitch-1 1.8s infinite linear;
+    }
+
+    .glitch::after {
+        text-shadow: 2px 0 rgb(255, 80, 80);
+        animation: scendent-glitch-2 1.4s infinite linear;
+    }
+
     .sc-panel {
-        @apply rounded-xl border border-sage-500/25 bg-linen-50/95;
-        box-shadow: 0 22px 50px -40px rgba(0, 0, 0, 0.65), inset 0 0 0 1px rgba(57, 255, 20, 0.08);
+        @apply rounded-sm border border-sage-500/25 bg-linen-50/95;
+        box-shadow: 0 22px 50px -40px rgba(0, 0, 0, 0.65), inset 0 0 0 1px rgba(57, 255, 20, 0.1);
     }
 
     .sc-label {
         @apply text-[10px] uppercase tracking-[0.4em] text-ink-500;
+        font-family: var(--font-accent);
     }
 
     .sc-divider {
@@ -189,6 +251,48 @@ body::after {
     }
 }
 
+@keyframes scendent-flicker {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.35;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes scendent-glitch-1 {
+    0% {
+        clip-path: inset(0 0 80% 0);
+        transform: translate(-1px, -1px);
+    }
+    50% {
+        clip-path: inset(40% 0 40% 0);
+        transform: translate(1px, 0);
+    }
+    100% {
+        clip-path: inset(80% 0 0 0);
+        transform: translate(0, 1px);
+    }
+}
+
+@keyframes scendent-glitch-2 {
+    0% {
+        clip-path: inset(10% 0 70% 0);
+        transform: translate(1px, 0);
+    }
+    50% {
+        clip-path: inset(60% 0 20% 0);
+        transform: translate(-1px, 1px);
+    }
+    100% {
+        clip-path: inset(70% 0 10% 0);
+        transform: translate(0, -1px);
+    }
+}
+
 .section-animate {
     animation: scendent-rise 0.8s ease-out both;
 }
@@ -199,6 +303,10 @@ body::after {
     }
 
     .section-animate {
+        animation: none;
+    }
+
+    body::after {
         animation: none;
     }
 }

@@ -24,33 +24,33 @@ const AddAddressClient = () => {
       <Navbar />
       <div className="px-6 md:px-16 lg:px-32 py-16 flex flex-col md:flex-row justify-between">
         <form onSubmit={onSubmitHandler} className="w-full">
-          <p className="text-2xl md:text-3xl text-ink-900 uppercase tracking-[0.18em]">
+          <p className="text-2xl md:text-3xl text-ink-900 uppercase tracking-[0.18em] font-display">
             Add Shipping <span className="font-semibold text-ink-900">Address</span>
           </p>
           <div className="space-y-3 max-w-sm mt-10">
             <input
-              className="px-3 py-2.5 focus:border-sage-500 transition border border-sage-500/30 rounded-lg outline-none w-full text-ink-700 bg-linen-100/90"
+              className="px-3 py-2.5 focus:border-sage-500 transition border border-sage-500/30 rounded-sm outline-none w-full text-ink-700 bg-linen-100/90"
               type="text"
               placeholder="Full name"
               onChange={(e) => setAddress({ ...address, fullName: e.target.value })}
               value={address.fullName}
             />
             <input
-              className="px-3 py-2.5 focus:border-sage-500 transition border border-sage-500/30 rounded-lg outline-none w-full text-ink-700 bg-linen-100/90"
+              className="px-3 py-2.5 focus:border-sage-500 transition border border-sage-500/30 rounded-sm outline-none w-full text-ink-700 bg-linen-100/90"
               type="text"
               placeholder="Phone number"
               onChange={(e) => setAddress({ ...address, phoneNumber: e.target.value })}
               value={address.phoneNumber}
             />
             <input
-              className="px-3 py-2.5 focus:border-sage-500 transition border border-sage-500/30 rounded-lg outline-none w-full text-ink-700 bg-linen-100/90"
+              className="px-3 py-2.5 focus:border-sage-500 transition border border-sage-500/30 rounded-sm outline-none w-full text-ink-700 bg-linen-100/90"
               type="text"
               placeholder="Pin code"
               onChange={(e) => setAddress({ ...address, pincode: e.target.value })}
               value={address.pincode}
             />
             <textarea
-              className="px-3 py-2.5 focus:border-sage-500 transition border border-sage-500/30 rounded-lg outline-none w-full text-ink-700 bg-linen-100/90 resize-none"
+              className="px-3 py-2.5 focus:border-sage-500 transition border border-sage-500/30 rounded-sm outline-none w-full text-ink-700 bg-linen-100/90 resize-none"
               type="text"
               rows={4}
               placeholder="Address (Area and Street)"
@@ -59,14 +59,14 @@ const AddAddressClient = () => {
             ></textarea>
             <div className="flex space-x-3">
               <input
-                className="px-3 py-2.5 focus:border-sage-500 transition border border-sage-500/30 rounded-lg outline-none w-full text-ink-700 bg-linen-100/90"
+                className="px-3 py-2.5 focus:border-sage-500 transition border border-sage-500/30 rounded-sm outline-none w-full text-ink-700 bg-linen-100/90"
                 type="text"
                 placeholder="City/District/Town"
                 onChange={(e) => setAddress({ ...address, city: e.target.value })}
                 value={address.city}
               />
               <input
-                className="px-3 py-2.5 focus:border-sage-500 transition border border-sage-500/30 rounded-lg outline-none w-full text-ink-700 bg-linen-100/90"
+                className="px-3 py-2.5 focus:border-sage-500 transition border border-sage-500/30 rounded-sm outline-none w-full text-ink-700 bg-linen-100/90"
                 type="text"
                 placeholder="State"
                 onChange={(e) => setAddress({ ...address, state: e.target.value })}

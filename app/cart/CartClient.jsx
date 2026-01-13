@@ -16,10 +16,10 @@ const CartClient = () => {
         <div className="flex-1">
           <div className="flex flex-wrap items-center justify-between gap-4 mb-8 border-b border-sage-500/20 pb-6">
             <div>
-              <p className="text-2xl md:text-3xl text-ink-700 uppercase tracking-[0.18em]">
+              <p className="text-2xl md:text-3xl text-ink-700 uppercase tracking-[0.18em] font-display">
                 Your <span className="font-semibold text-ink-900">Cart</span>
               </p>
-              <p className="text-sm text-ink-500 mt-1 uppercase tracking-[0.28em]">{cartCount} Items</p>
+              <p className="text-sm text-ink-500 mt-1 uppercase tracking-[0.28em] font-accent">{cartCount} Items</p>
             </div>
             {cartCount > 0 ? (
               <button
@@ -47,7 +47,7 @@ const CartClient = () => {
             <>
               <div className="overflow-x-auto">
                 <table className="min-w-full table-auto">
-                  <thead className="text-left uppercase tracking-[0.24em] text-xs">
+                  <thead className="text-left uppercase tracking-[0.24em] text-xs font-accent">
                     <tr>
                       <th className="text-nowrap pb-6 md:px-4 px-1 text-ink-500 font-medium">
                         Product Details
@@ -73,7 +73,7 @@ const CartClient = () => {
                         <tr key={itemId}>
                           <td className="flex items-center gap-4 py-4 md:px-4 px-1">
                             <div>
-                              <div className="rounded-xl overflow-hidden bg-linen-100/90 border border-sage-500/20 p-2">
+                              <div className="rounded-sm overflow-hidden bg-linen-100/90 border border-sage-500/20 p-2">
                                 <Image
                                   src={product.image[0]}
                                   alt={product.name}
@@ -90,7 +90,7 @@ const CartClient = () => {
                               </button>
                             </div>
                             <div className="text-sm hidden md:block">
-                              <p className="text-ink-900 uppercase tracking-[0.14em]">{product.name}</p>
+                              <p className="text-ink-900 uppercase tracking-[0.14em] font-display">{product.name}</p>
                               {product.price > product.offerPrice ? (
                                 <p className="text-xs text-sage-300 mt-1 uppercase tracking-[0.2em]">
                                   You save {currency}{(product.price - product.offerPrice).toFixed(2)}
@@ -127,7 +127,7 @@ const CartClient = () => {
                                 min="0"
                                 value={cartItems[itemId]}
                                 aria-label={`${product.name} quantity`}
-                                className="w-10 border border-sage-500/30 rounded-md text-center appearance-none bg-linen-100/80 text-ink-900"
+                                className="w-10 border border-sage-500/30 rounded-sm text-center appearance-none bg-linen-100/80 text-ink-900"
                               />
                               <button onClick={() => addToCart(product._id)}>
                                 <Image
@@ -147,19 +147,19 @@ const CartClient = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 text-sm text-ink-700">
                 <div className="card-surface p-4">
-                  <p className="text-ink-900 font-medium uppercase tracking-[0.2em] text-xs">What happens next</p>
+                  <p className="text-ink-900 font-medium uppercase tracking-[0.2em] text-xs font-accent">What happens next</p>
                   <p className="mt-1">
                     You will complete checkout on Stripe and receive a receipt by email.
                   </p>
                 </div>
                 <div className="card-surface p-4">
-                  <p className="text-ink-900 font-medium uppercase tracking-[0.2em] text-xs">Shipping timeline</p>
+                  <p className="text-ink-900 font-medium uppercase tracking-[0.2em] text-xs font-accent">Shipping timeline</p>
                   <p className="mt-1">
                     In-stock merch ships within 2-5 business days across NZ.
                   </p>
                 </div>
                 <div className="card-surface p-4">
-                  <p className="text-ink-900 font-medium uppercase tracking-[0.2em] text-xs">Every order matters</p>
+                  <p className="text-ink-900 font-medium uppercase tracking-[0.2em] text-xs font-accent">Every order matters</p>
                   <p className="mt-1">
                     Your purchase funds youth mental health support and community events.
                   </p>
