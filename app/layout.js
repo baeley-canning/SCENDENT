@@ -94,7 +94,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   const basePath = getBasePath();
   const assetPrefix = getAssetPrefix();
-  const meadowBackground = `url(${assetPrefix}images/tv_full_1440p_extended_v2.png)`;
+  const meadowBackground = `url(${assetPrefix}images/meadow_background.png)`;
 
   return (
       <html
