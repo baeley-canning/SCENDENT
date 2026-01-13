@@ -51,11 +51,12 @@
         background-image:
             linear-gradient(rgb(var(--sage-500) / 0.06) 1px, transparent 1px),
             linear-gradient(90deg, rgb(var(--sage-500) / 0.06) 1px, transparent 1px),
-            radial-gradient(1100px 800px at 10% -10%, rgb(var(--sage-500) / 0.18), transparent 55%),
-            radial-gradient(900px 700px at 100% 0%, rgb(var(--clay-300) / 0.16), transparent 60%),
-            linear-gradient(140deg, rgb(var(--linen-50)) 0%, rgb(var(--linen-100)) 100%);
-        background-size: 120px 120px, 120px 120px, auto, auto, auto;
-        background-position: -10px -10px, -10px -10px, center, center, center;
+            radial-gradient(900px 600px at 50% -10%, rgb(var(--sage-500) / 0.14), transparent 65%),
+            linear-gradient(160deg, rgb(var(--linen-50)) 0%, rgb(var(--linen-100)) 60%, rgb(var(--linen-50)) 100%);
+        background-size: 90px 90px, 90px 90px, auto, auto;
+        background-position: -12px -12px, -12px -12px, center, center;
+        position: relative;
+        min-height: 100vh;
     }
 
     @media (max-width: 768px) {
@@ -69,7 +70,7 @@
     h3,
     h4 {
         font-family: var(--font-display);
-        letter-spacing: -0.02em;
+        letter-spacing: -0.01em;
     }
 
     .font-display {
@@ -92,6 +93,27 @@
     color: rgb(var(--ink-900));
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    inset: 18px;
+    border: 1px solid rgb(var(--sage-500) / 0.35);
+    box-shadow:
+        0 0 0 1px rgb(var(--sage-500) / 0.08),
+        0 0 35px rgb(var(--sage-500) / 0.15);
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(180deg, rgb(var(--linen-50)) 0%, transparent 22%, transparent 78%, rgb(var(--linen-50)) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+
 :focus-visible {
     outline: 2px solid rgb(var(--sage-500));
     outline-offset: 3px;
@@ -103,39 +125,56 @@
 
 @layer components {
     .btn-primary {
-        @apply inline-flex items-center justify-center rounded-full bg-sage-500 px-6 py-2.5 text-sm font-semibold text-linen-50 shadow-[0_16px_36px_-22px_rgba(57,255,20,0.55)] transition hover:bg-sage-600;
+        @apply inline-flex items-center justify-center rounded-md border border-sage-500 bg-sage-500 px-6 py-2.5 text-[11px] font-semibold uppercase tracking-[0.32em] text-linen-50 shadow-[0_20px_40px_-26px_rgba(57,255,20,0.6)] transition hover:bg-sage-600;
     }
 
     .btn-outline {
-        @apply inline-flex items-center justify-center rounded-full border border-sage-500/40 bg-linen-100/80 px-6 py-2.5 text-sm font-semibold text-ink-900 transition hover:border-sage-500 hover:text-sage-300 hover:bg-linen-100;
+        @apply inline-flex items-center justify-center rounded-md border border-sage-500/45 bg-linen-100/70 px-6 py-2.5 text-[11px] font-semibold uppercase tracking-[0.32em] text-ink-900 transition hover:border-sage-500 hover:text-sage-300 hover:bg-linen-100;
     }
 
     .btn-ghost {
-        @apply inline-flex items-center gap-2 text-ink-700 transition hover:text-sage-300;
+        @apply inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-ink-700 transition hover:text-sage-300;
     }
 
     .section-kicker {
-        @apply text-xs uppercase tracking-[0.32em] text-sage-500;
+        @apply text-[11px] uppercase tracking-[0.42em] text-sage-500;
     }
 
     .section-title {
-        @apply font-display text-3xl md:text-[44px] leading-tight;
+        @apply font-display text-3xl md:text-[52px] leading-[1.05] uppercase;
     }
 
     .card-surface {
-        @apply rounded-[28px] border border-sage-500/15 bg-linen-50/90;
-        background: linear-gradient(140deg, rgb(var(--linen-50)) 0%, rgb(var(--linen-100)) 60%, rgb(var(--mist-200) / 0.28) 100%);
-        box-shadow: 0 30px 70px -55px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(57, 255, 20, 0.08);
+        @apply rounded-xl border border-sage-500/25 bg-linen-50/95;
+        background: linear-gradient(150deg, rgb(var(--linen-50)) 0%, rgb(var(--linen-100)) 65%, rgb(var(--mist-200) / 0.2) 100%);
+        box-shadow: 0 30px 70px -55px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(57, 255, 20, 0.12);
     }
 
     .hero-surface {
-        @apply relative overflow-hidden rounded-[36px] border border-sage-500/20 bg-linen-50/95;
-        background: linear-gradient(135deg, rgb(var(--linen-50)) 0%, rgb(var(--linen-100)) 50%, rgb(var(--mist-200) / 0.25) 100%);
-        box-shadow: 0 34px 90px -65px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(57, 255, 20, 0.12);
+        @apply relative overflow-hidden rounded-2xl border border-sage-500/25 bg-linen-50/95;
+        background: linear-gradient(145deg, rgb(var(--linen-50)) 0%, rgb(var(--linen-100)) 55%, rgb(var(--mist-200) / 0.25) 100%);
+        box-shadow: 0 34px 90px -65px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(57, 255, 20, 0.16);
     }
 
     .pill-tag {
-        @apply inline-flex items-center rounded-full border border-sage-500/30 bg-linen-50/80 px-4 py-1 text-[11px] uppercase tracking-[0.3em] text-sage-300;
+        @apply inline-flex items-center rounded-md border border-sage-500/35 bg-linen-50/85 px-3 py-1 text-[10px] uppercase tracking-[0.35em] text-sage-300;
+    }
+
+    .site-shell {
+        @apply relative z-10;
+    }
+
+    .sc-panel {
+        @apply rounded-xl border border-sage-500/25 bg-linen-50/95;
+        box-shadow: 0 22px 50px -40px rgba(0, 0, 0, 0.65), inset 0 0 0 1px rgba(57, 255, 20, 0.08);
+    }
+
+    .sc-label {
+        @apply text-[10px] uppercase tracking-[0.4em] text-ink-500;
+    }
+
+    .sc-divider {
+        @apply h-px w-full bg-sage-500/30;
     }
 }
 

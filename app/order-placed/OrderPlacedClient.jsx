@@ -18,10 +18,10 @@ const OrderPlacedClient = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-6">
       <div className="card-surface max-w-lg w-full text-center px-8 py-10">
-        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-sage-500/30 bg-linen-100/90">
+        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-md border border-sage-500/30 bg-linen-100/90">
           <Image className="w-10 h-10" src={assets.checkmark} alt="Order confirmed" />
         </div>
-        <h1 className="text-2xl md:text-3xl font-semibold mt-6">Order confirmed</h1>
+        <h1 className="text-2xl md:text-3xl font-semibold mt-6 uppercase tracking-[0.18em]">Order confirmed</h1>
         <p className="text-sm md:text-base text-ink-700 mt-3">
           Thank you for supporting Scendent. Stripe will email your receipt and
           shipping confirmation. If you need anything, reach us at{" "}
@@ -31,9 +31,9 @@ const OrderPlacedClient = () => {
           .
         </p>
         {orderRef ? (
-          <div className="mt-6 rounded-[22px] border border-sage-500/20 bg-linen-100/90 px-4 py-3 text-sm text-ink-700">
-            <p className="text-xs uppercase tracking-[0.2em] text-ink-500">Order reference</p>
-            <p className="mt-2 font-semibold text-ink-900">{orderRef}</p>
+          <div className="mt-6 rounded-xl border border-sage-500/20 bg-linen-100/90 px-4 py-3 text-sm text-ink-700">
+            <p className="text-xs uppercase tracking-[0.3em] text-ink-500">Order reference</p>
+            <p className="mt-2 font-semibold text-ink-900 uppercase tracking-[0.12em]">{orderRef}</p>
             <p className="text-xs text-ink-500 mt-2">
               Use this reference with your checkout email on the order lookup page.
             </p>

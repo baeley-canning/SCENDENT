@@ -45,7 +45,7 @@ const EventsPage = () => {
 
         <div className="mt-10 card-surface p-6 md:p-8 grid gap-6 md:grid-cols-[1.1fr_0.9fr] items-center">
           <div>
-            <h2 className="text-xl font-semibold text-ink-900">Designed for real connection</h2>
+            <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em]">Designed for real connection</h2>
             <p className="mt-3 text-sm md:text-base text-ink-500">
               From pop-ups to workshops, every event creates a space for honest
               conversations and tangible support. We partner with local venues to keep
@@ -87,14 +87,14 @@ const EventsPage = () => {
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {events.map((event) => (
             <div key={event.title} className="card-surface p-6 transition hover:-translate-y-1 hover:border-sage-500/50">
-              <h2 className="text-lg font-semibold text-ink-900">{event.title}</h2>
+              <h2 className="text-lg font-semibold text-ink-900 uppercase tracking-[0.16em]">{event.title}</h2>
               <p className="mt-2 text-sm text-ink-500">{event.description}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-12 card-surface p-6 md:p-8">
-          <h2 className="text-xl font-semibold text-ink-900">Partner with Scendent</h2>
+          <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em]">Partner with Scendent</h2>
           <p className="mt-3 text-sm md:text-base text-ink-500">
             Interested in hosting an event or supporting the mission? We partner with
             local businesses and venues to create impact-led experiences.

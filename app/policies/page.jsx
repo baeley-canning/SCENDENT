@@ -23,7 +23,7 @@ const PoliciesPage = () => {
 
         <div className="mt-10 space-y-10 max-w-3xl text-sm md:text-base text-ink-500">
           <section className="space-y-3">
-            <h2 className="text-xl font-semibold text-ink-900">Returns</h2>
+            <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em]">Returns</h2>
             <p>
               Change of mind returns are accepted on unworn, unused merch within 14 days
               of delivery. Items must be in original condition with tags attached.
@@ -35,7 +35,7 @@ const PoliciesPage = () => {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-xl font-semibold text-ink-900">Faulty or incorrect items</h2>
+            <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em]">Faulty or incorrect items</h2>
             <p>
               If your order arrives damaged, faulty, or incorrect, contact us within 7 days
               with your order number and a photo. We will arrange a replacement or refund.
@@ -43,7 +43,7 @@ const PoliciesPage = () => {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-xl font-semibold text-ink-900">Consumer Guarantees Act (NZ)</h2>
+            <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em]">Consumer Guarantees Act (NZ)</h2>
             <p>
               Our goods come with guarantees that cannot be excluded under the Consumer
               Guarantees Act 1993. You are entitled to a replacement or refund for a major
@@ -55,7 +55,7 @@ const PoliciesPage = () => {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-xl font-semibold text-ink-900">Shipping</h2>
+            <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em]">Shipping</h2>
             <p>
               In-stock merch ships within 2-5 business days across New Zealand. Tracking
               is provided once dispatched.
@@ -67,7 +67,7 @@ const PoliciesPage = () => {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-xl font-semibold text-ink-900">Contact</h2>
+            <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em]">Contact</h2>
             <p>
               For any questions about returns or your order, email us at
               <span className="text-ink-900"> hello@scendent.co.nz</span>.

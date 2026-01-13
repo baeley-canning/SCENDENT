@@ -106,14 +106,14 @@ const MediaServicesPage = () => {
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {services.map((service) => (
             <div key={service.title} className="card-surface p-6 transition hover:-translate-y-1 hover:border-sage-500/50">
-              <h2 className="text-lg font-semibold text-ink-900">{service.title}</h2>
+              <h2 className="text-lg font-semibold text-ink-900 uppercase tracking-[0.16em]">{service.title}</h2>
               <p className="mt-2 text-sm text-ink-500">{service.description}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-12 card-surface p-6 md:p-8">
-          <h2 className="text-xl font-semibold text-ink-900">Impact built in</h2>
+          <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em]">Impact built in</h2>
           <p className="mt-3 text-sm md:text-base text-ink-500">
             Every Scendent Media project funds the wider mission. Your campaigns help
             expand resources, partnerships, and support for young people.
@@ -132,7 +132,7 @@ const MediaServicesPage = () => {
         </div>
 
         <div className="mt-12 card-surface p-6 md:p-8">
-          <h2 className="text-xl font-semibold text-ink-900">Why Scendent Media</h2>
+          <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em]">Why Scendent Media</h2>
           <p className="mt-3 text-sm md:text-base text-ink-500">
             We build content that reflects the deeper values of your business while still
             driving leads and sales. Our team handles strategy through to delivery so you
@@ -146,7 +146,7 @@ const MediaServicesPage = () => {
         </div>
 
         <div className="mt-12 card-surface p-6 md:p-8">
-          <h2 className="text-xl font-semibold text-ink-900">Book a consult</h2>
+          <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em]">Book a consult</h2>
           <p className="mt-3 text-sm md:text-base text-ink-500">
             Tell us about your brand, goals, and upcoming campaigns. We will respond with
             a tailored plan and timeline.

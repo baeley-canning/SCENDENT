@@ -16,14 +16,14 @@ const CartClient = () => {
         <div className="flex-1">
           <div className="flex flex-wrap items-center justify-between gap-4 mb-8 border-b border-sage-500/20 pb-6">
             <div>
-              <p className="text-2xl md:text-3xl text-ink-700">
+              <p className="text-2xl md:text-3xl text-ink-700 uppercase tracking-[0.18em]">
                 Your <span className="font-semibold text-ink-900">Cart</span>
               </p>
-              <p className="text-sm text-ink-500 mt-1">{cartCount} Items</p>
+              <p className="text-sm text-ink-500 mt-1 uppercase tracking-[0.28em]">{cartCount} Items</p>
             </div>
             {cartCount > 0 ? (
               <button
-                className="text-xs uppercase tracking-[0.2em] text-ink-500 hover:text-sage-300 transition"
+                className="text-xs uppercase tracking-[0.32em] text-ink-500 hover:text-sage-300 transition"
                 onClick={clearCart}
               >
                 Clear cart
@@ -47,7 +47,7 @@ const CartClient = () => {
             <>
               <div className="overflow-x-auto">
                 <table className="min-w-full table-auto">
-                  <thead className="text-left">
+                  <thead className="text-left uppercase tracking-[0.24em] text-xs">
                     <tr>
                       <th className="text-nowrap pb-6 md:px-4 px-1 text-ink-500 font-medium">
                         Product Details
@@ -90,9 +90,9 @@ const CartClient = () => {
                               </button>
                             </div>
                             <div className="text-sm hidden md:block">
-                              <p className="text-ink-900">{product.name}</p>
+                              <p className="text-ink-900 uppercase tracking-[0.14em]">{product.name}</p>
                               {product.price > product.offerPrice ? (
-                                <p className="text-xs text-sage-300 mt-1">
+                                <p className="text-xs text-sage-300 mt-1 uppercase tracking-[0.2em]">
                                   You save {currency}{(product.price - product.offerPrice).toFixed(2)}
                                 </p>
                               ) : null}
@@ -146,20 +146,20 @@ const CartClient = () => {
                 </table>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 text-sm text-ink-700">
-                <div className="card-surface p-4 rounded-[20px]">
-                  <p className="text-ink-900 font-medium">What happens next</p>
+                <div className="card-surface p-4">
+                  <p className="text-ink-900 font-medium uppercase tracking-[0.2em] text-xs">What happens next</p>
                   <p className="mt-1">
                     You will complete checkout on Stripe and receive a receipt by email.
                   </p>
                 </div>
-                <div className="card-surface p-4 rounded-[20px]">
-                  <p className="text-ink-900 font-medium">Shipping timeline</p>
+                <div className="card-surface p-4">
+                  <p className="text-ink-900 font-medium uppercase tracking-[0.2em] text-xs">Shipping timeline</p>
                   <p className="mt-1">
                     In-stock merch ships within 2-5 business days across NZ.
                   </p>
                 </div>
-                <div className="card-surface p-4 rounded-[20px]">
-                  <p className="text-ink-900 font-medium">Every order matters</p>
+                <div className="card-surface p-4">
+                  <p className="text-ink-900 font-medium uppercase tracking-[0.2em] text-xs">Every order matters</p>
                   <p className="mt-1">
                     Your purchase funds youth mental health support and community events.
                   </p>

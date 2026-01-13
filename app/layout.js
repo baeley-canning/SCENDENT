@@ -100,7 +100,7 @@ export default function RootLayout({ children }) {
           />
           <Toaster />
           <AppContextProvider>
-            {children}
+            <div className="site-shell">{children}</div>
           </AppContextProvider>
         </body>
       </html>

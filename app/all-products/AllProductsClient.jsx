@@ -46,7 +46,7 @@ const AllProductsClient = () => {
         </div>
         <div className="flex flex-wrap items-center gap-2 mt-8">
           <button
-            className={`px-4 py-1.5 rounded-full text-sm border transition ${
+            className={`px-4 py-1.5 rounded-md text-xs uppercase tracking-[0.28em] border transition ${
               activeCategory === "All"
                 ? "bg-sage-500 text-linen-50 border-sage-500"
                 : "border-ink-900/15 text-ink-700 hover:border-sage-500/60 hover:text-sage-300 hover:bg-linen-100"
@@ -58,7 +58,7 @@ const AllProductsClient = () => {
           {categories.map((category) => (
             <button
               key={category}
-              className={`px-4 py-1.5 rounded-full text-sm border transition ${
+              className={`px-4 py-1.5 rounded-md text-xs uppercase tracking-[0.28em] border transition ${
                 activeCategory === category
                   ? "bg-sage-500 text-linen-50 border-sage-500"
                   : "border-ink-900/15 text-ink-700 hover:border-sage-500/60 hover:text-sage-300 hover:bg-linen-100"

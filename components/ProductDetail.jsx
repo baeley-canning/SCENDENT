@@ -78,7 +78,7 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
       <>
         <Navbar />
         <div className="px-6 md:px-16 lg:px-32 pt-16">
-          <div className="card-surface p-10 text-center">
+          <div className="sc-panel p-10 text-center">
             <p className="text-ink-900 text-lg font-medium">Product not found.</p>
             <p className="text-sm text-ink-700 mt-2">
               Try browsing the merch drop to find something similar.
@@ -102,7 +102,7 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
       <div className="px-6 md:px-16 lg:px-32 pt-14 space-y-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="px-5 lg:px-16 xl:px-20">
-            <div className="rounded-2xl overflow-hidden bg-linen-100/90 border border-sage-500/20 mb-4">
+            <div className="rounded-xl overflow-hidden bg-linen-100/90 border border-sage-500/25 mb-4">
               <Image
                 src={mainImage || product.image[0]}
                 alt={imageAlt}
@@ -117,7 +117,7 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
                 <div
                   key={index}
                   onClick={() => setMainImage(image)}
-                  className="cursor-pointer rounded-xl overflow-hidden bg-linen-100/90 border border-sage-500/20"
+                  className="cursor-pointer rounded-lg overflow-hidden bg-linen-100/90 border border-sage-500/25"
                 >
                   <Image
                     src={image}
@@ -132,7 +132,7 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
           </div>
 
           <div className="flex flex-col">
-            <h1 className="text-3xl font-medium text-ink-900 mb-4">
+            <h1 className="text-3xl font-medium text-ink-900 mb-4 uppercase tracking-[0.14em]">
               {product.name}
             </h1>
             <div className="flex items-center gap-2">
@@ -159,15 +159,15 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
               <table className="table-auto border-collapse w-full max-w-72">
                 <tbody>
                   <tr>
-                    <td className="text-ink-500 font-medium">Brand</td>
+                    <td className="text-ink-500 font-medium uppercase tracking-[0.18em] text-xs">Brand</td>
                     <td className="text-ink-700/70">Scendent</td>
                   </tr>
                   <tr>
-                    <td className="text-ink-500 font-medium">Collection</td>
+                    <td className="text-ink-500 font-medium uppercase tracking-[0.18em] text-xs">Collection</td>
                     <td className="text-ink-700/70">{product.category}</td>
                   </tr>
                   <tr>
-                    <td className="text-ink-500 font-medium">Impact</td>
+                    <td className="text-ink-500 font-medium uppercase tracking-[0.18em] text-xs">Impact</td>
                     <td className="text-ink-700/70">Profits support youth mental health</td>
                   </tr>
                 </tbody>
@@ -176,16 +176,16 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
 
             {detail ? (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 text-sm text-ink-700">
-                <div className="rounded-2xl border border-sage-500/20 bg-linen-100/90 p-4">
-                  <p className="text-ink-900 font-medium">Fabric</p>
+                <div className="rounded-lg border border-sage-500/25 bg-linen-100/90 p-4 uppercase tracking-[0.16em]">
+                  <p className="text-ink-900 font-medium text-xs">Fabric</p>
                   <p className="mt-1">{detail.fabric}</p>
                 </div>
-                <div className="rounded-2xl border border-sage-500/20 bg-linen-100/90 p-4">
-                  <p className="text-ink-900 font-medium">Care</p>
+                <div className="rounded-lg border border-sage-500/25 bg-linen-100/90 p-4 uppercase tracking-[0.16em]">
+                  <p className="text-ink-900 font-medium text-xs">Care</p>
                   <p className="mt-1">{detail.care}</p>
                 </div>
-                <div className="rounded-2xl border border-sage-500/20 bg-linen-100/90 p-4">
-                  <p className="text-ink-900 font-medium">Fit</p>
+                <div className="rounded-lg border border-sage-500/25 bg-linen-100/90 p-4 uppercase tracking-[0.16em]">
+                  <p className="text-ink-900 font-medium text-xs">Fit</p>
                   <p className="mt-1">{detail.fit}</p>
                 </div>
               </div>
@@ -194,13 +194,13 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
             <div className="flex items-center mt-10 gap-4">
               <button
                 onClick={() => addToCart(product._id)}
-                className="w-full py-3.5 bg-linen-100 text-ink-700 hover:bg-linen-50 transition rounded-full"
+                className="w-full py-3.5 bg-linen-100 text-ink-700 hover:bg-linen-50 transition rounded-md uppercase tracking-[0.28em] text-xs"
               >
                 Add to Cart
               </button>
               <button
                 onClick={() => { addToCart(product._id); router.push("/cart"); }}
-                className="w-full py-3.5 bg-sage-500 text-linen-50 hover:bg-sage-600 transition rounded-full"
+                className="w-full py-3.5 bg-sage-500 text-linen-50 hover:bg-sage-600 transition rounded-md uppercase tracking-[0.28em] text-xs"
               >
                 Buy now
               </button>
@@ -209,10 +209,10 @@ const ProductDetail = ({ product, featuredProducts, isLoading }) => {
         </div>
         <div className="flex flex-col items-center">
           <div className="flex flex-col items-center mb-4 mt-16">
-            <p className="text-3xl font-medium">
+            <p className="text-3xl font-medium uppercase tracking-[0.18em]">
               Featured <span className="font-medium text-sage-600">Products</span>
             </p>
-            <div className="w-28 h-0.5 bg-sage-600 mt-2"></div>
+            <div className="w-28 h-px bg-sage-600 mt-2"></div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-6 pb-14 w-full">
             {(featuredProducts || []).slice(0, 5).map((item, index) => (

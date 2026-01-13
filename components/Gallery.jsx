@@ -26,7 +26,7 @@ const Gallery = () => {
         {galleryImages.map((image) => (
           <div
             key={image.label}
-            className="group rounded-[24px] overflow-hidden border border-sage-500/20 bg-linen-100/90 shadow-[0_18px_45px_-32px_rgba(0,0,0,0.7)] transition hover:shadow-[0_18px_55px_-28px_rgba(57,255,20,0.2)]"
+            className="group rounded-2xl overflow-hidden border border-sage-500/25 bg-linen-100/90 shadow-[0_18px_45px_-32px_rgba(0,0,0,0.7)] transition hover:shadow-[0_18px_55px_-28px_rgba(57,255,20,0.2)]"
           >
             <Image
               className="w-full h-auto object-cover group-hover:scale-[1.02] transition"
@@ -36,7 +36,7 @@ const Gallery = () => {
               height={600}
               sizes="(max-width: 768px) 50vw, 33vw"
             />
-            <div className="px-4 py-3 text-xs uppercase tracking-[0.2em] text-sage-300">
+            <div className="px-4 py-3 text-[10px] uppercase tracking-[0.35em] text-sage-300">
               {image.label}
             </div>
           </div>

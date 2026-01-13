@@ -24,7 +24,7 @@ const AddAddressClient = () => {
       <Navbar />
       <div className="px-6 md:px-16 lg:px-32 py-16 flex flex-col md:flex-row justify-between">
         <form onSubmit={onSubmitHandler} className="w-full">
-          <p className="text-2xl md:text-3xl text-ink-900">
+          <p className="text-2xl md:text-3xl text-ink-900 uppercase tracking-[0.18em]">
             Add Shipping <span className="font-semibold text-ink-900">Address</span>
           </p>
           <div className="space-y-3 max-w-sm mt-10">
