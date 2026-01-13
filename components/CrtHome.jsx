@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getBasePath } from "@/lib/basePath";
 import { scendentImages, withImageWidth } from "@/lib/scendentImages";
 
 const tiles = [
@@ -87,10 +88,13 @@ const tiles = [
 ];
 
 const CrtHome = () => {
+  const basePath = getBasePath();
+  const backgroundSrc = `${basePath}/images/tv_full_1440p_extended_v2.png`;
+
   return (
     <main className="crt-home">
       <section className="crt-tv-shell">
-        <div className="crt-tv-stage">
+        <div className="crt-tv-stage" style={{ backgroundImage: `url(${backgroundSrc})` }}>
           <div className="crt-tv-screen">
             <div className="crt-window crt-window--tv">
               <div className="crt-titlebar">
