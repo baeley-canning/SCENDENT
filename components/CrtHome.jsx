@@ -89,19 +89,17 @@ const tiles = [
 
 const CrtHome = () => {
   const basePath = getBasePath();
-  const tvFrameSrc = basePath ? `${basePath}/images/tv-frame.jpg` : "/images/tv-frame.jpg";
+  const tvFrameSrc = `${basePath}/images/tv_screen_transparent_better.png`;
 
   return (
     <main className="px-6 md:px-16 lg:px-32 py-10">
       <section className="crt-tv-shell">
-        <div className="crt-tv">
-          <Image
+        <div className="crt-tv-photo">
+          <img
             src={tvFrameSrc}
-            alt="Vintage television frame"
-            fill
-            priority
-            sizes="(max-width: 768px) 100vw, 70vw"
-            className="crt-tv-image"
+            alt=""
+            aria-hidden="true"
+            className="crt-tv-photo-image"
           />
           <div className="crt-tv-screen">
             <div className="crt-window crt-window--tv">

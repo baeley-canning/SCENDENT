@@ -211,34 +211,39 @@ body::after {
         @apply relative mx-auto w-full max-w-6xl;
     }
 
-    .crt-tv {
+    .crt-tv-photo {
         position: relative;
-        width: 100%;
-        aspect-ratio: 4 / 3;
-        --tv-screen-left: 17%;
-        --tv-screen-top: 20%;
-        --tv-screen-width: 52%;
-        --tv-screen-height: 32%;
+        width: min(100%, 980px);
+        margin: 0 auto;
+        aspect-ratio: 3 / 2;
+        --crt-screen-top: 9%;
+        --crt-screen-right: 15.2%;
+        --crt-screen-bottom: 12.9%;
+        --crt-screen-left: 15.8%;
     }
 
-    .crt-tv-image {
-        object-fit: cover;
-        object-position: 50% 38%;
-        filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
+    .crt-tv-photo-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        position: relative;
+        z-index: 2;
+        pointer-events: none;
+        user-select: none;
     }
 
     .crt-tv-screen {
         position: absolute;
-        left: var(--tv-screen-left);
-        top: var(--tv-screen-top);
-        width: var(--tv-screen-width);
-        height: var(--tv-screen-height);
+        z-index: 1;
+        inset: var(--crt-screen-top) var(--crt-screen-right) var(--crt-screen-bottom) var(--crt-screen-left);
         background: #0b0d0b;
-        border-radius: 22px;
+        border-radius: clamp(18px, 3vw, 28px);
+        border: clamp(6px, 1.2vw, 10px) solid #1c1c1c;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 12px;
+        padding: clamp(10px, 2vw, 16px);
         overflow: hidden;
         box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.7);
     }
@@ -578,11 +583,8 @@ body::after {
             width: min(96%, 460px);
         }
 
-        .crt-tv {
-            --tv-screen-left: 15%;
-            --tv-screen-top: 19%;
-            --tv-screen-width: 56%;
-            --tv-screen-height: 34%;
+        .crt-tv-photo {
+            width: min(100%, 860px);
         }
     }
 
@@ -596,11 +598,8 @@ body::after {
             display: none;
         }
 
-        .crt-tv {
-            --tv-screen-left: 14%;
-            --tv-screen-top: 19%;
-            --tv-screen-width: 58%;
-            --tv-screen-height: 36%;
+        .crt-tv-photo {
+            width: 100%;
         }
 
         .crt-window--tv {
