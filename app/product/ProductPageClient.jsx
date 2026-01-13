@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useAppContext } from "@/context/AppContext";
 import ProductDetail from "@/components/ProductDetail";
+import { getBasePath } from "@/lib/basePath";
 
 const ProductPageClient = () => {
   const searchParams = useSearchParams();
@@ -14,7 +15,7 @@ const ProductPageClient = () => {
   const [resolvedId, setResolvedId] = useState("");
   const [hasResolvedId, setHasResolvedId] = useState(false);
 
-  const basePath = (process.env.NEXT_PUBLIC_BASE_PATH || "").replace(/\/$/, "");
+  const basePath = getBasePath();
 
   const isInvalidId = (value) => {
     const normalized = String(value || "").trim().toLowerCase();

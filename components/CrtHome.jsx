@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getBasePath } from "@/lib/basePath";
 import { scendentImages, withImageWidth } from "@/lib/scendentImages";
 
 const tiles = [
@@ -87,12 +88,15 @@ const tiles = [
 ];
 
 const CrtHome = () => {
+  const basePath = getBasePath();
+  const tvFrameSrc = basePath ? `${basePath}/images/tv-frame.jpg` : "/images/tv-frame.jpg";
+
   return (
     <main className="px-6 md:px-16 lg:px-32 py-10">
       <section className="crt-tv-shell">
         <div className="crt-tv">
           <Image
-            src="/images/tv-frame.jpg"
+            src={tvFrameSrc}
             alt="Vintage television frame"
             fill
             priority

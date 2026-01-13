@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Script from "next/script";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { getBasePath } from "@/lib/basePath";
 
 const statusStyles = {
   paid: "border-sage-500/40 bg-sage-500/15 text-sage-300",
@@ -29,7 +30,7 @@ const OrderLookupClient = () => {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const basePath = (process.env.NEXT_PUBLIC_BASE_PATH || "").replace(/\/$/, "");
+  const basePath = getBasePath();
   const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "";
 
   useEffect(() => {

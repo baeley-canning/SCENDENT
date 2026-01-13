@@ -1,4 +1,5 @@
 import { useAppContext } from "@/context/AppContext";
+import { getBasePath } from "@/lib/basePath";
 import React, { useState } from "react";
 
 const OrderSummary = () => {
@@ -11,7 +12,7 @@ const OrderSummary = () => {
   const cartAmount = getCartAmount();
   const cartSubtotal = getCartSubtotal();
   const cartSavings = getCartSavings();
-  const basePath = (process.env.NEXT_PUBLIC_BASE_PATH || "").replace(/\/$/, "");
+  const basePath = getBasePath();
 
   const buildLineItems = () => {
     return Object.entries(cartItems)
