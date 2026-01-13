@@ -92,17 +92,17 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-      <html lang="en">
-        <body className="antialiased text-ink-900">
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-          />
-          <Toaster />
-          <AppContextProvider>
-            {children}
-          </AppContextProvider>
-        </body>
-      </html>
+    <html lang="en">
+      <body className="win-desktop antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <Toaster />
+        <AppContextProvider>
+          <div className="win-window win-app-window">{children}</div>
+        </AppContextProvider>
+      </body>
+    </html>
   );
 }

@@ -24,38 +24,43 @@
 
 @layer base {
     :root {
-        --ink-900: 240 244 245;
-        --ink-700: 178 186 192;
-        --ink-500: 140 150 160;
-        --sage-700: 25 196 46;
-        --sage-600: 35 224 85;
-        --sage-500: 57 255 20;
-        --sage-300: 125 255 106;
-        --clay-600: 120 255 40;
-        --clay-500: 160 255 80;
-        --clay-300: 200 255 140;
-        --linen-50: 7 8 10;
-        --linen-100: 14 16 18;
-        --mist-200: 18 34 26;
-        --blush-200: 22 28 32;
+        --win-bg: 0 128 128;
+        --win-window: 192 192 192;
+        --win-window-light: 223 223 223;
+        --win-window-dark: 128 128 128;
+        --win-window-shadow: 0 0 0;
+        --win-title: 0 0 128;
+        --win-title-text: 255 255 255;
+        --win-accent: 0 0 128;
+        --win-accent-text: 255 255 255;
+        --ink-900: 0 0 0;
+        --ink-700: 48 48 48;
+        --ink-500: 96 96 96;
+        --sage-700: 0 0 96;
+        --sage-600: 0 0 128;
+        --sage-500: 0 0 160;
+        --sage-300: 64 96 192;
+        --clay-600: 128 0 0;
+        --clay-500: 160 32 32;
+        --clay-300: 192 80 80;
+        --linen-50: 192 192 192;
+        --linen-100: 223 223 223;
+        --mist-200: 255 255 255;
+        --blush-200: 128 128 128;
         --background: var(--linen-50);
         --foreground: var(--ink-900);
-        --font-display: "Space Grotesk", sans-serif;
-        --font-body: "Source Sans 3", sans-serif;
+        --font-display: "MS Sans Serif", "Tahoma", "Verdana", "Arial", sans-serif;
+        --font-body: "MS Sans Serif", "Tahoma", "Verdana", "Arial", sans-serif;
     }
 
     body {
         font-family: var(--font-body);
         color: rgb(var(--ink-900));
-        background-color: rgb(var(--linen-50));
-        background-image:
-            linear-gradient(rgb(var(--sage-500) / 0.06) 1px, transparent 1px),
-            linear-gradient(90deg, rgb(var(--sage-500) / 0.06) 1px, transparent 1px),
-            radial-gradient(1100px 800px at 10% -10%, rgb(var(--sage-500) / 0.18), transparent 55%),
-            radial-gradient(900px 700px at 100% 0%, rgb(var(--clay-300) / 0.16), transparent 60%),
-            linear-gradient(140deg, rgb(var(--linen-50)) 0%, rgb(var(--linen-100)) 100%);
-        background-size: 120px 120px, 120px 120px, auto, auto, auto;
-        background-position: -10px -10px, -10px -10px, center, center, center;
+        background-color: rgb(var(--win-bg));
+    }
+
+    .win-desktop [class*="rounded"] {
+        border-radius: 0 !important;
     }
 
     @media (max-width: 768px) {
@@ -69,7 +74,7 @@
     h3,
     h4 {
         font-family: var(--font-display);
-        letter-spacing: -0.02em;
+        letter-spacing: 0;
     }
 
     .font-display {
@@ -84,6 +89,24 @@
     input[type="number"]::-webkit-outer-spin-button {
         -webkit-appearance: none;
         margin: 0;
+    }
+
+    input,
+    select,
+    textarea {
+        font-family: var(--font-body);
+        font-size: 13px;
+        color: rgb(var(--ink-900));
+        background: #ffffff;
+        border: 2px solid #808080;
+        border-right-color: #ffffff;
+        border-bottom-color: #ffffff;
+        padding: 2px 6px;
+    }
+
+    button {
+        font-family: var(--font-body);
+        font-size: 13px;
     }
 }
 
@@ -103,39 +126,289 @@
 
 @layer components {
     .btn-primary {
-        @apply inline-flex items-center justify-center rounded-full bg-sage-500 px-6 py-2.5 text-sm font-semibold text-linen-50 shadow-[0_16px_36px_-22px_rgba(57,255,20,0.55)] transition hover:bg-sage-600;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 12px;
+        font-weight: 600;
+        color: rgb(var(--ink-900));
+        background: rgb(var(--win-window-light));
+        border: 1px solid #000000;
+        box-shadow:
+            inset 1px 1px 0 #ffffff,
+            inset -1px -1px 0 #808080,
+            inset 2px 2px 0 #dfdfdf,
+            inset -2px -2px 0 #404040;
     }
 
     .btn-outline {
-        @apply inline-flex items-center justify-center rounded-full border border-sage-500/40 bg-linen-100/80 px-6 py-2.5 text-sm font-semibold text-ink-900 transition hover:border-sage-500 hover:text-sage-300 hover:bg-linen-100;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 12px;
+        font-weight: 600;
+        color: rgb(var(--ink-900));
+        background: rgb(var(--win-window));
+        border: 1px solid #000000;
+        box-shadow:
+            inset 1px 1px 0 #ffffff,
+            inset -1px -1px 0 #808080,
+            inset 2px 2px 0 #dfdfdf,
+            inset -2px -2px 0 #404040;
     }
 
     .btn-ghost {
-        @apply inline-flex items-center gap-2 text-ink-700 transition hover:text-sage-300;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: rgb(var(--sage-600));
+        text-decoration: underline;
     }
 
     .section-kicker {
-        @apply text-xs uppercase tracking-[0.32em] text-sage-500;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        color: rgb(var(--ink-700));
     }
 
     .section-title {
-        @apply font-display text-3xl md:text-[44px] leading-tight;
+        font-family: var(--font-display);
+        font-size: clamp(20px, 3vw, 28px);
+        font-weight: 700;
+        line-height: 1.2;
     }
 
     .card-surface {
-        @apply rounded-[28px] border border-sage-500/15 bg-linen-50/90;
-        background: linear-gradient(140deg, rgb(var(--linen-50)) 0%, rgb(var(--linen-100)) 60%, rgb(var(--mist-200) / 0.28) 100%);
-        box-shadow: 0 30px 70px -55px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(57, 255, 20, 0.08);
+        border-radius: 0;
+        border: 1px solid #808080;
+        background: rgb(var(--win-window));
+        box-shadow:
+            inset 1px 1px 0 #ffffff,
+            inset -1px -1px 0 #808080;
     }
 
     .hero-surface {
-        @apply relative overflow-hidden rounded-[36px] border border-sage-500/20 bg-linen-50/95;
-        background: linear-gradient(135deg, rgb(var(--linen-50)) 0%, rgb(var(--linen-100)) 50%, rgb(var(--mist-200) / 0.25) 100%);
-        box-shadow: 0 34px 90px -65px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(57, 255, 20, 0.12);
+        position: relative;
+        overflow: hidden;
+        border-radius: 0;
+        border: 1px solid #808080;
+        background: rgb(var(--win-window-light));
+        box-shadow:
+            inset 1px 1px 0 #ffffff,
+            inset -1px -1px 0 #808080;
     }
 
     .pill-tag {
-        @apply inline-flex items-center rounded-full border border-sage-500/30 bg-linen-50/80 px-4 py-1 text-[11px] uppercase tracking-[0.3em] text-sage-300;
+        display: inline-flex;
+        align-items: center;
+        border-radius: 0;
+        border: 1px solid #808080;
+        background: rgb(var(--win-window-light));
+        padding: 2px 6px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        color: rgb(var(--ink-700));
+    }
+
+    .btn-primary:active,
+    .btn-outline:active {
+        box-shadow:
+            inset -1px -1px 0 #ffffff,
+            inset 1px 1px 0 #808080,
+            inset -2px -2px 0 #dfdfdf,
+            inset 2px 2px 0 #404040;
+        transform: translate(1px, 1px);
+    }
+
+    .win-desktop {
+        min-height: 100vh;
+        background: rgb(var(--win-bg));
+        padding: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .win-window {
+        width: min(1200px, 94vw);
+        background: rgb(var(--win-window));
+        border: 2px solid #dfdfdf;
+        box-shadow:
+            inset 1px 1px 0 #ffffff,
+            inset -1px -1px 0 #808080,
+            2px 2px 0 #000000;
+    }
+
+    .win-app-window {
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - 48px);
+    }
+
+    .win-titlebar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgb(var(--win-title));
+        color: rgb(var(--win-title-text));
+        padding: 4px 8px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .win-titlebar-left {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .win-titlebar-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        background: rgb(var(--win-window));
+        color: rgb(var(--ink-900));
+        font-size: 10px;
+        border: 1px solid #000000;
+        box-shadow:
+            inset 1px 1px 0 #ffffff,
+            inset -1px -1px 0 #808080;
+    }
+
+    .win-titlebar-controls {
+        display: inline-flex;
+        gap: 4px;
+    }
+
+    .win-titlebar-btn {
+        width: 16px;
+        height: 14px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(var(--win-window));
+        border: 1px solid #000000;
+        font-size: 10px;
+        color: rgb(var(--ink-900));
+        box-shadow:
+            inset 1px 1px 0 #ffffff,
+            inset -1px -1px 0 #808080;
+        cursor: pointer;
+    }
+
+    .win-menubar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        background: rgb(var(--win-window));
+        border-top: 1px solid #ffffff;
+        border-bottom: 1px solid #808080;
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    .win-menu-group {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .win-menu-item {
+        padding: 2px 6px;
+        border: 1px solid transparent;
+        cursor: pointer;
+    }
+
+    .win-menu-item:hover {
+        border-color: #000000;
+        background: rgb(var(--win-title));
+        color: rgb(var(--win-title-text));
+    }
+
+    .win-toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        background: rgb(var(--win-window));
+        border-bottom: 1px solid #808080;
+        padding: 6px 8px;
+    }
+
+    .win-toolbar-group {
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .win-toolbar-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 3px 10px;
+        background: rgb(var(--win-window));
+        border: 1px solid #000000;
+        font-size: 12px;
+        cursor: pointer;
+        box-shadow:
+            inset 1px 1px 0 #ffffff,
+            inset -1px -1px 0 #808080;
+    }
+
+    .win-toolbar-btn:hover {
+        background: rgb(var(--win-window-light));
+    }
+
+    .win-toolbar-btn:active,
+    .win-titlebar-btn:active {
+        box-shadow:
+            inset -1px -1px 0 #ffffff,
+            inset 1px 1px 0 #808080;
+        transform: translate(1px, 1px);
+    }
+
+    .win-status-pill {
+        padding: 2px 8px;
+        border: 1px solid #808080;
+        background: #ffffff;
+        font-size: 11px;
+    }
+
+    .win-panel {
+        border: 1px solid #808080;
+        background: rgb(var(--win-window-light));
+        box-shadow:
+            inset 1px 1px 0 #ffffff,
+            inset -1px -1px 0 #808080;
+        padding: 10px;
+    }
+
+    .win-statusbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        background: rgb(var(--win-window));
+        border-top: 1px solid #ffffff;
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+
+    @media (max-width: 640px) {
+        .win-desktop {
+            padding: 12px;
+        }
+
+        .win-app-window {
+            min-height: calc(100vh - 24px);
+        }
     }
 }
 

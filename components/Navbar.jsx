@@ -4,77 +4,79 @@ import Link from "next/link";
 import { useAppContext } from "@/context/AppContext";
 
 const Navbar = () => {
-
-  const { router, getCartCount } = useAppContext();
+  const { getCartCount } = useAppContext();
   const cartCount = getCartCount();
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="hidden md:flex items-center justify-between px-6 md:px-16 lg:px-32 py-2 text-[11px] uppercase tracking-[0.28em] text-ink-700 bg-linen-50/75 border-b border-sage-500/20">
-        <span className="flex items-center gap-2">
-          <span className="h-1.5 w-1.5 rounded-full bg-sage-500"></span>
-          50% of profits fund youth mental health
-        </span>
-        <Link href="/resources" className="hover:text-ink-900 transition">
-          Need support? 1737
+      <div className="win-titlebar">
+        <Link href="/" className="win-titlebar-left">
+          <span className="win-titlebar-icon">S</span>
+          <span>Scendent Control Panel</span>
         </Link>
+        <div className="win-titlebar-controls" aria-label="Window controls">
+          <button className="win-titlebar-btn" type="button" aria-label="Minimize">
+            _
+          </button>
+          <button className="win-titlebar-btn" type="button" aria-label="Maximize">
+            []
+          </button>
+          <button className="win-titlebar-btn" type="button" aria-label="Close">
+            X
+          </button>
+        </div>
       </div>
-      <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-4 border-b border-sage-500/20 text-ink-700 bg-linen-50/85 backdrop-blur">
-        <button
-          className="flex flex-col leading-tight text-left"
-          onClick={() => router.push("/")}
-        >
-          <span className="font-display text-xl md:text-2xl text-ink-900">Scendent</span>
-          <span className="text-[10px] uppercase tracking-[0.32em] text-ink-500">
-            Mental Health + Media Studio
+
+      <div className="win-menubar flex-col md:flex-row md:items-center">
+        <div className="win-menu-group flex-wrap">
+          <button className="win-menu-item" type="button">File</button>
+          <button className="win-menu-item" type="button">Edit</button>
+          <button className="win-menu-item" type="button">View</button>
+          <button className="win-menu-item" type="button">Help</button>
+        </div>
+        <div className="win-menu-group flex-wrap">
+          <span className="win-status-pill">
+            50% of profits fund youth mental health
           </span>
-        </button>
-        <div className="flex items-center gap-4 lg:gap-8 max-md:hidden">
-          <Link href="/" className="hover:text-ink-900 transition">
+          <Link href="/resources" className="win-menu-item">
+            Need support? 1737
+          </Link>
+        </div>
+      </div>
+
+      <nav className="win-toolbar">
+        <div className="win-toolbar-group">
+          <Link href="/" className="win-toolbar-btn">
             Home
           </Link>
-          <Link href="/all-products" className="hover:text-ink-900 transition">
+          <Link href="/all-products" className="win-toolbar-btn">
             Merch
           </Link>
-          <Link href="/media-services" className="hover:text-ink-900 transition">
+          <Link href="/media-services" className="win-toolbar-btn">
             Media
           </Link>
-          <Link href="/events" className="hover:text-ink-900 transition">
+          <Link href="/events" className="win-toolbar-btn">
             Events
           </Link>
-          <Link href="/resources" className="hover:text-ink-900 transition">
+          <Link href="/resources" className="win-toolbar-btn">
             Resources
           </Link>
-          <Link href="/about" className="hover:text-ink-900 transition">
+          <Link href="/about" className="win-toolbar-btn">
             About
           </Link>
-          <Link href="/#contact" className="hover:text-ink-900 transition">
+          <Link href="/#contact" className="win-toolbar-btn">
             Contact
           </Link>
-          <Link href="/faq" className="hover:text-ink-900 transition">
+          <Link href="/faq" className="win-toolbar-btn">
             FAQ
           </Link>
         </div>
 
-        <div className="hidden md:flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-ink-700">
-          <Link
-            href="/cart"
-            className="btn-outline !text-xs !px-4 !py-2"
-          >
+        <div className="win-toolbar-group">
+          <Link href="/cart" className="win-toolbar-btn">
             Checkout
           </Link>
-          <span className="rounded-full bg-sage-500/15 px-2 py-1 text-[10px] tracking-[0.2em] text-sage-300">
-            Cart {cartCount}
-          </span>
-        </div>
-
-        <div className="flex md:hidden items-center gap-2 text-xs uppercase tracking-[0.2em] text-ink-700">
-          <Link href="/all-products" className="btn-outline !text-xs !px-4 !py-2">
-            Shop
-          </Link>
-          <Link href="/cart" className="btn-primary !text-xs !px-4 !py-2">
-            Cart {cartCount}
-          </Link>
+          <span className="win-status-pill">Cart {cartCount}</span>
         </div>
       </nav>
     </header>
