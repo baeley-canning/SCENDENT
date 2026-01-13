@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar";
 import Script from "next/script";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { getBasePath } from "@/lib/basePath";
 
 const statusStyles = {
   paid: "border-sage-500/40 bg-sage-500/15 text-sage-300",
@@ -30,7 +29,7 @@ const OrderLookupClient = () => {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const basePath = getBasePath();
+  const basePath = (process.env.NEXT_PUBLIC_BASE_PATH || "").replace(/\/$/, "");
   const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "";
 
   useEffect(() => {
@@ -83,7 +82,7 @@ const OrderLookupClient = () => {
       <div className="flex flex-col justify-between px-6 md:px-16 lg:px-32 py-14 min-h-screen section-animate">
         <div className="space-y-6 max-w-3xl">
           <div>
-            <h2 className="text-2xl font-medium text-ink-900 uppercase tracking-[0.18em] font-display">Order lookup</h2>
+            <h2 className="text-2xl font-medium text-ink-900">Order lookup</h2>
             <p className="text-sm md:text-base text-ink-700 mt-2">
               We keep checkout simple with no accounts. Use your order reference and the
               email from checkout to view your merch order status.
@@ -92,24 +91,24 @@ const OrderLookupClient = () => {
 
           <form onSubmit={handleSubmit} className="card-surface px-6 py-6 space-y-4">
             <div>
-              <label className="block text-xs uppercase tracking-[0.3em] text-ink-500 font-accent">Order reference</label>
+              <label className="block text-xs uppercase tracking-[0.2em] text-ink-500">Order reference</label>
               <input
                 type="text"
                 value={orderRef}
                 onChange={(event) => setOrderRef(event.target.value)}
                 placeholder="SC12AB34"
-                className="mt-2 w-full rounded-sm border border-sage-500/30 bg-linen-100/90 px-4 py-3 text-sm text-ink-700"
+                className="mt-2 w-full rounded-full border border-sage-500/30 bg-linen-100/90 px-4 py-3 text-sm text-ink-700"
                 required
               />
             </div>
             <div>
-              <label className="block text-xs uppercase tracking-[0.3em] text-ink-500 font-accent">Checkout email</label>
+              <label className="block text-xs uppercase tracking-[0.2em] text-ink-500">Checkout email</label>
               <input
                 type="email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
                 placeholder="you@example.com"
-                className="mt-2 w-full rounded-sm border border-sage-500/30 bg-linen-100/90 px-4 py-3 text-sm text-ink-700"
+                className="mt-2 w-full rounded-full border border-sage-500/30 bg-linen-100/90 px-4 py-3 text-sm text-ink-700"
                 required
               />
             </div>
@@ -140,18 +139,18 @@ const OrderLookupClient = () => {
             <div className="card-surface px-6 py-6 space-y-4">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-ink-500 font-accent">Order</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-ink-500">Order</p>
                   <p className="text-lg font-semibold text-ink-900">{result.orderRef}</p>
                   <p className="text-xs text-ink-500 mt-1">{result.createdAt}</p>
                 </div>
-                <span className={`inline-flex items-center rounded-sm border px-3 py-1 text-xs uppercase tracking-[0.3em] ${statusClass}`}>
+                <span className={`inline-flex items-center rounded-full border px-3 py-1 text-xs uppercase tracking-[0.2em] ${statusClass}`}>
                   {result.status}
                 </span>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
-                <div className="rounded-sm border border-sage-500/20 bg-linen-100/90 p-4">
-                  <p className="text-ink-900 font-medium uppercase tracking-[0.16em] text-xs font-accent">Total</p>
+                <div className="rounded-2xl border border-sage-500/20 bg-linen-100/90 p-4">
+                  <p className="text-ink-900 font-medium">Total</p>
                   <p className="mt-2 text-ink-700">{formatMoney(result.amountTotal, result.currency)}</p>
                   {result.amountRefunded ? (
                     <p className="text-xs text-ink-500 mt-2">
@@ -159,15 +158,15 @@ const OrderLookupClient = () => {
                     </p>
                   ) : null}
                 </div>
-                <div className="rounded-sm border border-sage-500/20 bg-linen-100/90 p-4">
-                  <p className="text-ink-900 font-medium uppercase tracking-[0.16em] text-xs font-accent">Payment</p>
+                <div className="rounded-2xl border border-sage-500/20 bg-linen-100/90 p-4">
+                  <p className="text-ink-900 font-medium">Payment</p>
                   <p className="mt-2 text-ink-700">{result.paymentStatus || "Pending"}</p>
                   {result.refundStatus ? (
                     <p className="text-xs text-ink-500 mt-2">Refund: {result.refundStatus}</p>
                   ) : null}
                 </div>
-                <div className="rounded-sm border border-sage-500/20 bg-linen-100/90 p-4">
-                  <p className="text-ink-900 font-medium uppercase tracking-[0.16em] text-xs font-accent">Fulfillment</p>
+                <div className="rounded-2xl border border-sage-500/20 bg-linen-100/90 p-4">
+                  <p className="text-ink-900 font-medium">Fulfillment</p>
                   <p className="mt-2 text-ink-700">{result.fulfillmentStatus || "Pending"}</p>
                   {result.trackingUrl ? (
                     <a
@@ -182,8 +181,8 @@ const OrderLookupClient = () => {
                     <p className="text-xs text-ink-500 mt-2">Tracking appears after dispatch.</p>
                   )}
                 </div>
-                <div className="rounded-sm border border-sage-500/20 bg-linen-100/90 p-4">
-                  <p className="text-ink-900 font-medium uppercase tracking-[0.16em] text-xs font-accent">Shipping</p>
+                <div className="rounded-2xl border border-sage-500/20 bg-linen-100/90 p-4">
+                  <p className="text-ink-900 font-medium">Shipping</p>
                   <p className="mt-2 text-ink-700 whitespace-pre-line">
                     {result.shippingAddress || "Not yet available."}
                   </p>
@@ -191,7 +190,7 @@ const OrderLookupClient = () => {
               </div>
 
               <div>
-                <p className="text-sm font-medium text-ink-900 uppercase tracking-[0.16em] font-accent">Items</p>
+                <p className="text-sm font-medium text-ink-900">Items</p>
                 <div className="mt-3 space-y-2">
                   {(result.items || []).map((item, index) => (
                     <div key={`${item.product_name}-${index}`} className="flex items-center justify-between text-sm text-ink-700">
@@ -204,8 +203,8 @@ const OrderLookupClient = () => {
             </div>
           ) : null}
 
-          <div className="rounded-sm border border-sage-500/20 bg-linen-100/90 p-5 text-sm text-ink-700">
-            <p className="text-ink-900 font-medium uppercase tracking-[0.18em] text-xs font-accent">Need help?</p>
+          <div className="rounded-2xl border border-sage-500/20 bg-linen-100/90 p-5 text-sm text-ink-700">
+            <p className="text-ink-900 font-medium">Need help?</p>
             <p className="mt-2">
               Email{" "}
               <a className="text-ink-900 hover:text-ink-700 transition" href="mailto:hello@scendent.co.nz">

@@ -2,7 +2,6 @@
 import { productsDummyData, userDummyData } from "@/assets/assets";
 import { useRouter } from "next/navigation";
 import { createContext, useContext, useEffect, useState } from "react";
-import { getBasePath } from "@/lib/basePath";
 
 export const AppContext = createContext();
 
@@ -15,7 +14,7 @@ export const AppContextProvider = (props) => {
     const currency = process.env.NEXT_PUBLIC_CURRENCY
     const router = useRouter()
     const cartStorageKey = "scendent_cart"
-    const basePath = getBasePath()
+    const basePath = (process.env.NEXT_PUBLIC_BASE_PATH || "").replace(/\/$/, "")
 
     const [products, setProducts] = useState([])
     const [userData, setUserData] = useState(false)
@@ -23,11 +22,6 @@ export const AppContextProvider = (props) => {
     const [hasHydratedCart, setHasHydratedCart] = useState(false)
 
     const fetchProductData = async () => {
-        if (typeof window !== "undefined" && window.location.hostname.includes("github.io")) {
-            setProducts(productsDummyData);
-            return;
-        }
-
         try {
             const response = await fetch(`${basePath}/api/products.php`, {
                 cache: "no-store",

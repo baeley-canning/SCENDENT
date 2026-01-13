@@ -15,14 +15,14 @@ const HomeProducts = () => {
           Clean fits, bold reminders, and purpose-driven pieces. Every order supports
           youth mental health initiatives.
         </p>
-        <div className="mt-6 grid gap-3 text-xs md:text-sm text-ink-700 sm:grid-cols-3 max-w-2xl uppercase tracking-[0.18em]">
-          <div className="sc-panel px-4 py-3 font-accent text-[10px]">
+        <div className="mt-6 grid gap-3 text-xs md:text-sm text-ink-700 sm:grid-cols-3 max-w-2xl">
+          <div className="rounded-2xl border border-sage-500/25 bg-linen-100/90 px-4 py-3">
             NZ-wide shipping on all drops
           </div>
-          <div className="sc-panel px-4 py-3 font-accent text-[10px]">
+          <div className="rounded-2xl border border-sage-500/25 bg-linen-100/90 px-4 py-3">
             14-day returns on unopened merch
           </div>
-          <div className="sc-panel px-4 py-3 font-accent text-[10px]">
+          <div className="rounded-2xl border border-sage-500/25 bg-linen-100/90 px-4 py-3">
             Secure checkout via Stripe
           </div>
         </div>

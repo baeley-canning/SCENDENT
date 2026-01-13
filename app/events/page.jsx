@@ -45,23 +45,23 @@ const EventsPage = () => {
 
         <div className="mt-10 card-surface p-6 md:p-8 grid gap-6 md:grid-cols-[1.1fr_0.9fr] items-center">
           <div>
-            <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em] font-display">Designed for real connection</h2>
+            <h2 className="text-xl font-semibold text-ink-900">Designed for real connection</h2>
             <p className="mt-3 text-sm md:text-base text-ink-500">
               From pop-ups to workshops, every event creates a space for honest
               conversations and tangible support. We partner with local venues to keep
               the focus on community and impact.
             </p>
             <div className="mt-4 grid gap-3 text-sm text-ink-700 md:grid-cols-2">
-              <div className="rounded-sm border border-sage-500/20 bg-linen-100/80 p-4 font-accent text-[10px] uppercase tracking-[0.3em]">
+              <div className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">
                 Youth-led programming
               </div>
-              <div className="rounded-sm border border-sage-500/20 bg-linen-100/80 p-4 font-accent text-[10px] uppercase tracking-[0.3em]">
+              <div className="rounded-2xl border border-sage-500/20 bg-linen-100/80 p-4">
                 Safe, welcoming spaces
               </div>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            <div className="rounded-sm overflow-hidden border border-sage-500/20 bg-linen-50/90">
+            <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
               <Image
                 src={withImageWidth(scendentImages.eventCrowd, 900)}
                 alt="Scendent event crowd"
@@ -71,7 +71,7 @@ const EventsPage = () => {
                 sizes="(max-width: 768px) 50vw, 220px"
               />
             </div>
-            <div className="rounded-sm overflow-hidden border border-sage-500/20 bg-linen-50/90">
+            <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
               <Image
                 src={withImageWidth(scendentImages.ourPlace, 900)}
                 alt="Scendent community event group"
@@ -87,14 +87,14 @@ const EventsPage = () => {
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {events.map((event) => (
             <div key={event.title} className="card-surface p-6 transition hover:-translate-y-1 hover:border-sage-500/50">
-              <h2 className="text-lg font-semibold text-ink-900 uppercase tracking-[0.16em] font-display">{event.title}</h2>
+              <h2 className="text-lg font-semibold text-ink-900">{event.title}</h2>
               <p className="mt-2 text-sm text-ink-500">{event.description}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-12 card-surface p-6 md:p-8">
-          <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em] font-display">Partner with Scendent</h2>
+          <h2 className="text-xl font-semibold text-ink-900">Partner with Scendent</h2>
           <p className="mt-3 text-sm md:text-base text-ink-500">
             Interested in hosting an event or supporting the mission? We partner with
             local businesses and venues to create impact-led experiences.

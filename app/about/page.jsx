@@ -37,7 +37,7 @@ const AboutPage = () => {
             />
             <div className="px-6 py-8">
               <p className="section-kicker">Community first</p>
-              <h2 className="text-2xl font-semibold text-ink-900 mt-3 uppercase tracking-[0.16em] font-display">
+              <h2 className="text-2xl font-semibold text-ink-900 mt-3">
                 Real moments, real impact.
               </h2>
               <p className="mt-3 text-sm md:text-base text-ink-500">
@@ -49,7 +49,7 @@ const AboutPage = () => {
         </div>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
-          <div className="rounded-sm overflow-hidden border border-sage-500/20 bg-linen-50/90">
+          <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
             <Image
               src={withImageWidth(scendentImages.community, 900)}
               alt="Scendent community gathering"
@@ -59,17 +59,17 @@ const AboutPage = () => {
               sizes="(max-width: 768px) 100vw, 220px"
             />
           </div>
-          <div className="rounded-sm overflow-hidden border border-sage-500/20 bg-linen-50/90">
+          <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
             <Image
-              src={withImageWidth(scendentImages.eventCrowd, 900)}
-              alt="Scendent community event"
+              src={withImageWidth(scendentImages.ryanWorking, 900)}
+              alt="Scendent team working on youth initiatives"
               width={600}
               height={600}
               className="h-full w-full object-cover"
               sizes="(max-width: 768px) 100vw, 220px"
             />
           </div>
-          <div className="rounded-sm overflow-hidden border border-sage-500/20 bg-linen-50/90">
+          <div className="rounded-2xl overflow-hidden border border-sage-500/20 bg-linen-50/90">
             <Image
               src={withImageWidth(scendentImages.lakePortrait, 900)}
               alt="Wellbeing in nature"
@@ -83,7 +83,7 @@ const AboutPage = () => {
 
         <div className="mt-10 space-y-10 max-w-3xl text-sm md:text-base text-ink-500">
           <section className="space-y-3">
-            <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em] font-display">Our mission</h2>
+            <h2 className="text-xl font-semibold text-ink-900">Our mission</h2>
             <p>
               On the surface, Scendent is a mental health brand. In depth, we are a
               charitable trust and a series of businesses that work in harmony to fund
@@ -97,7 +97,7 @@ const AboutPage = () => {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em] font-display">How the model works</h2>
+            <h2 className="text-xl font-semibold text-ink-900">How the model works</h2>
             <p>
               Merch and media fuel the trust. That means the community can buy apparel
               they believe in, businesses can book Scendent Media, and together we can
@@ -110,7 +110,7 @@ const AboutPage = () => {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em] font-display">Community and events</h2>
+            <h2 className="text-xl font-semibold text-ink-900">Community and events</h2>
             <p>
               We create spaces to connect, celebrate wins, share stories, and grow in a
               supportive environment. Events and workshops are designed to be fun,
@@ -119,7 +119,7 @@ const AboutPage = () => {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em] font-display">Scendent Media</h2>
+            <h2 className="text-xl font-semibold text-ink-900">Scendent Media</h2>
             <p>
               Our media arm offers content creation, social strategy, and training
               programs that help brands grow. Half of profits from this stream are
@@ -128,7 +128,7 @@ const AboutPage = () => {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-xl font-semibold text-ink-900 uppercase tracking-[0.16em] font-display">Get in touch</h2>
+            <h2 className="text-xl font-semibold text-ink-900">Get in touch</h2>
             <p>
               Email us at{" "}
               <a className="text-ink-900 hover:text-ink-700 transition" href="mailto:hello@scendent.co.nz">

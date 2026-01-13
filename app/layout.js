@@ -1,7 +1,6 @@
 import "./globals.css";
 import { AppContextProvider } from "@/context/AppContext";
 import { Toaster } from "react-hot-toast";
-import { getAssetPrefix, getBasePath } from "@/lib/basePath";
 
 const jsonLd = [
   {
@@ -88,15 +87,12 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: "#030403",
+  themeColor: "#0a0c0d",
 };
 
 export default function RootLayout({ children }) {
-  const basePath = getBasePath();
-  const assetPrefix = getAssetPrefix();
-
   return (
-      <html lang="en" style={{ "--base-path": basePath, "--asset-prefix": assetPrefix }}>
+      <html lang="en">
         <body className="antialiased text-ink-900">
           <script
             type="application/ld+json"
@@ -104,7 +100,7 @@ export default function RootLayout({ children }) {
           />
           <Toaster />
           <AppContextProvider>
-            <div className="site-shell">{children}</div>
+            {children}
           </AppContextProvider>
         </body>
       </html>

@@ -2,12 +2,12 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="mt-12 border-t border-sage-500/20 bg-linen-100/80">
-      <div className="grid gap-10 px-6 md:px-16 lg:px-32 py-14 text-ink-700 md:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr]">
-        <div>
+    <footer className="mt-10 border-t border-sage-500/20 bg-linen-100/80">
+      <div className="flex flex-col md:flex-row items-start justify-center px-6 md:px-16 lg:px-32 gap-10 py-14 text-ink-700">
+        <div className="w-full md:w-2/5">
           <div className="flex flex-col leading-tight">
-            <span className="font-display text-2xl text-ink-900 uppercase tracking-[0.2em]">Scendent</span>
-            <span className="text-[10px] uppercase tracking-[0.45em] text-ink-500">
+            <span className="font-display text-2xl text-ink-900">Scendent</span>
+            <span className="text-[11px] uppercase tracking-[0.35em] text-ink-500">
               Mental Health + Media
             </span>
           </div>
@@ -16,14 +16,15 @@ const Footer = () => {
             merch drop, event, and media project funds support for young adults and the
             community that surrounds them.
           </p>
-          <p className="mt-4 text-xs text-ink-500 max-w-sm uppercase tracking-[0.28em]">
-            NZ-wide shipping + secure Stripe checkout.
+          <p className="mt-4 text-xs text-ink-500 max-w-sm">
+            NZ-wide shipping, 14-day returns on unopened merch, and secure checkout via
+            Stripe.
           </p>
         </div>
 
-        <div>
-          <p className="sc-label mb-4">Shop</p>
-          <ul className="text-sm space-y-2 uppercase tracking-[0.2em]">
+        <div className="w-full md:w-1/5">
+          <h2 className="font-medium text-ink-900 mb-5">Shop</h2>
+          <ul className="text-sm space-y-2">
             <li>
               <a className="hover:text-ink-900 transition" href="/all-products">All merch</a>
             </li>
@@ -36,9 +37,9 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div>
-          <p className="sc-label mb-4">Impact</p>
-          <ul className="text-sm space-y-2 uppercase tracking-[0.2em]">
+        <div className="w-full md:w-1/5">
+          <h2 className="font-medium text-ink-900 mb-5">Impact</h2>
+          <ul className="text-sm space-y-2">
             <li>
               <a className="hover:text-ink-900 transition" href="/events">Events</a>
             </li>
@@ -51,9 +52,9 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div>
-          <p className="sc-label mb-4">Support</p>
-          <ul className="text-sm space-y-2 uppercase tracking-[0.2em]">
+        <div className="w-full md:w-1/5">
+          <h2 className="font-medium text-ink-900 mb-5">Support</h2>
+          <ul className="text-sm space-y-2">
             <li>
               <a className="hover:text-ink-900 transition" href="/media-services">Scendent Media</a>
             </li>
@@ -68,18 +69,39 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-      </div>
 
-      <div className="border-t border-sage-500/20 px-6 md:px-16 lg:px-32 py-6 text-xs uppercase tracking-[0.28em] text-ink-500 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-        <span>Copyright 2025 Scendent. All rights reserved.</span>
-        <span className="text-ink-600">
-          Need urgent help? Call 111 or 1737.{" "}
-          <a className="text-ink-900 hover:text-ink-700 transition" href="/resources">
-            Find support
-          </a>
-          .
-        </span>
+        <div className="w-full md:w-1/5">
+          <h2 className="font-medium text-ink-900 mb-5">Get in touch</h2>
+          <div className="text-sm space-y-2">
+            <p>Aotearoa New Zealand</p>
+            <p>hello@scendent.co.nz</p>
+            <p className="text-xs text-ink-500">
+              Need urgent help? Call 111 or 1737 in New Zealand.{" "}
+              <a className="text-ink-900 hover:text-ink-700 transition" href="/resources">
+                Find support
+              </a>
+              .
+            </p>
+            <div className="flex flex-wrap gap-3 text-xs">
+              <a className="hover:text-ink-900 transition" href="https://www.instagram.com/scendentofficial/" target="_blank" rel="noopener">
+                Instagram
+              </a>
+              <a className="hover:text-ink-900 transition" href="http://www.tiktok.com/@scendent" target="_blank" rel="noopener">
+                TikTok
+              </a>
+              <a className="hover:text-ink-900 transition" href="https://www.facebook.com/scendentofficial" target="_blank" rel="noopener">
+                Facebook
+              </a>
+              <a className="hover:text-ink-900 transition" href="https://www.youtube.com/channel/UCvCEm4fblaA0gfrDfjg-33Q" target="_blank" rel="noopener">
+                YouTube
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+      <p className="py-4 text-center text-xs md:text-sm text-ink-500">
+        Copyright 2025 Scendent. All rights reserved.
+      </p>
     </footer>
   );
 };
