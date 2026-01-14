@@ -11,16 +11,12 @@ import BrandStory from "@/components/BrandStory";
 import Gallery from "@/components/Gallery";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import DesktopIcons from "@/components/DesktopIcons";
 
 const Home = () => {
   return (
     <>
       <Navbar/>
       <div className="px-6 md:px-16 lg:px-32">
-        <div className="mt-6">
-          <DesktopIcons />
-        </div>
         <HeaderSlider />
         <BrandStory />
         <HomeProducts />

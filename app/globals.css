@@ -401,61 +401,6 @@
         font-size: 11px;
     }
 
-    .win-desktop-surface {
-        background: rgb(var(--win-bg));
-        border: 2px solid #808080;
-        box-shadow:
-            inset 1px 1px 0 #ffffff,
-            inset -1px -1px 0 #000000;
-        padding: 16px;
-        min-height: 220px;
-    }
-
-    .win-desktop-icons {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-        gap: 16px 20px;
-        justify-items: start;
-    }
-
-    .win-desktop-icon {
-        display: grid;
-        justify-items: center;
-        gap: 6px;
-        width: 110px;
-        color: #ffffff;
-        font-size: 11px;
-        text-decoration: none;
-        text-align: center;
-    }
-
-    .win-desktop-icon:focus-visible {
-        outline: 2px dotted #ffffff;
-        outline-offset: 4px;
-    }
-
-    .win-desktop-icon-box {
-        width: 44px;
-        height: 44px;
-        display: grid;
-        place-items: center;
-        background: #c0c0c0;
-        border: 1px solid #000000;
-        box-shadow:
-            inset 1px 1px 0 #ffffff,
-            inset -1px -1px 0 #808080;
-    }
-
-    .win-desktop-icon-svg {
-        width: 34px;
-        height: 34px;
-    }
-
-    .win-desktop-icon-label {
-        padding: 2px 4px;
-        text-shadow: 1px 1px 0 #000000;
-    }
-
     .win-player {
         border: 2px solid #dfdfdf;
         background: rgb(var(--win-window));
