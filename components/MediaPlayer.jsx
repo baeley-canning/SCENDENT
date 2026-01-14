@@ -10,6 +10,7 @@ const MediaPlayer = ({
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
+  const [showNativeControls, setShowNativeControls] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -23,6 +24,19 @@ const MediaPlayer = ({
         .catch(() => setIsPlaying(false));
     }
   }, [src]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const updateControls = () => setShowNativeControls(mediaQuery.matches);
+    updateControls();
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", updateControls);
+      return () => mediaQuery.removeEventListener("change", updateControls);
+    }
+    mediaQuery.addListener(updateControls);
+    return () => mediaQuery.removeListener(updateControls);
+  }, []);
 
   const handleTogglePlay = () => {
     const video = videoRef.current;
@@ -95,9 +109,11 @@ const MediaPlayer = ({
             muted={isMuted}
             loop
             playsInline
+            controls={showNativeControls}
             preload="metadata"
             onPlay={() => setIsPlaying(true)}
             onPause={() => setIsPlaying(false)}
+            onClick={handleTogglePlay}
           />
           <div className="win-player-overlay">
             <span>Now Playing</span>

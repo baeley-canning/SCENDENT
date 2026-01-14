@@ -39,8 +39,12 @@ const services = [
 ];
 
 const MediaServicesPage = () => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH
+    ? `/${process.env.NEXT_PUBLIC_BASE_PATH.replace(/^\/+|\/+$/g, "")}`
+    : "";
   const mediaReelSrc =
-    process.env.NEXT_PUBLIC_MEDIA_REEL_URL || "/videos/scendent-media-reel.mp4";
+    process.env.NEXT_PUBLIC_MEDIA_REEL_URL ||
+    `${basePath}/videos/scendent-media-reel.mp4`;
   const mediaReelPoster = withImageWidth(scendentImages.eventStage, 1200);
 
   return (
