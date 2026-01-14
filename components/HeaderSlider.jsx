@@ -6,19 +6,6 @@ import { scendentImages, withImageWidth } from "@/lib/scendentImages";
 const HeaderSlider = () => {
   const sliderData = [
     {
-      id: 1,
-      title: "Merch that funds youth mental health support.",
-      offer: "Wear the rise",
-      description:
-        "Limited drops designed in Aotearoa. Every order backs community-led support and early intervention.",
-      buttonText1: "Shop the drop",
-      buttonText2: "How the mission works",
-      primaryHref: "/all-products",
-      secondaryHref: "/about",
-      imgSrc: withImageWidth(scendentImages.ryanBlur, 1200),
-      highlights: ["NZ-designed drops", "Profits reinvested", "Limited runs"],
-    },
-    {
       id: 2,
       title: "Scendent Media for brands that lead with purpose.",
       offer: "Content + strategy",
@@ -30,6 +17,19 @@ const HeaderSlider = () => {
       secondaryHref: "/#contact",
       imgSrc: withImageWidth(scendentImages.ryanWorking, 1200),
       highlights: ["Strategy + production", "Social systems", "Impact-led pricing"],
+    },
+    {
+      id: 1,
+      title: "Merch that funds youth mental health support.",
+      offer: "Wear the rise",
+      description:
+        "Limited drops designed in Aotearoa. Every order backs community-led support and early intervention.",
+      buttonText1: "Shop the drop",
+      buttonText2: "How the mission works",
+      primaryHref: "/all-products",
+      secondaryHref: "/about",
+      imgSrc: withImageWidth(scendentImages.ryanBlur, 1200),
+      highlights: ["NZ-designed drops", "Profits reinvested", "Limited runs"],
     },
     {
       id: 3,

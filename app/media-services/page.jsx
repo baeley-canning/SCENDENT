@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import { scendentImages, withImageWidth } from "@/lib/scendentImages";
+import MediaPlayer from "@/components/MediaPlayer";
 
 export const metadata = {
   title: "Scendent Media | Purpose-Led Content + Strategy",
@@ -38,6 +39,10 @@ const services = [
 ];
 
 const MediaServicesPage = () => {
+  const mediaReelSrc =
+    process.env.NEXT_PUBLIC_MEDIA_REEL_URL || "/videos/scendent-media-reel.mp4";
+  const mediaReelPoster = withImageWidth(scendentImages.eventStage, 1200);
+
   return (
     <>
       <Navbar />
@@ -50,6 +55,42 @@ const MediaServicesPage = () => {
             and social systems for brands that want to grow with purpose. Half of profits
             fund youth mental health support in Aotearoa.
           </p>
+        </div>
+
+        <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr] items-start">
+          <MediaPlayer
+            src={mediaReelSrc}
+            poster={mediaReelPoster}
+            title="Scendent Media Player"
+            nowPlaying="Purpose-led showreel"
+          />
+          <div className="space-y-4">
+            <div className="win-panel">
+              <p className="section-kicker">Featured work</p>
+              <h2 className="section-title mt-2">Content that funds real impact</h2>
+              <p className="mt-3 text-sm md:text-base text-ink-500">
+                Scendent Media is the creative arm of the mission. Every campaign helps
+                fund youth mental health support while delivering high-performing
+                content for your brand.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                <a className="btn-primary" href="mailto:hello@scendent.co.nz">
+                  Book a consult
+                </a>
+                <a className="btn-outline" href="/#contact">
+                  Talk about your project
+                </a>
+              </div>
+            </div>
+            <div className="grid gap-3 md:grid-cols-2">
+              <div className="win-panel text-xs">
+                Showreels, social ads, launch videos, and event recaps that convert.
+              </div>
+              <div className="win-panel text-xs">
+                Half of profits fund youth mental health support in Aotearoa.
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="mt-10 card-surface p-6 md:p-8 grid gap-6 md:grid-cols-[1.1fr_0.9fr] items-center">
