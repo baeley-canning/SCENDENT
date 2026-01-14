@@ -111,7 +111,18 @@ const Footer = () => {
       </div>
       <div className="win-statusbar">
         <span>Copyright 2025 Scendent. All rights reserved.</span>
-        <span>Need urgent help? Call 111 or 1737.</span>
+        <span>
+          Need urgent help? Call 111 or 1737. Site by{" "}
+          <a
+            className="underline hover:text-ink-900 transition"
+            href="https://slateseo.co.nz"
+            target="_blank"
+            rel="noopener"
+          >
+            SlateSEO
+          </a>
+          .
+        </span>
       </div>
     </footer>
   );
